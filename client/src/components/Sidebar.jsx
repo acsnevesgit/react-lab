@@ -1,7 +1,7 @@
 import { useStickyBox } from "react-sticky-box";
+import { NavLink } from 'react-router-dom';
 
 //Components
-import ReactLogo from "../assets/images/anim-react-logo.png";
 
 const Sidebar = () => {
   const stickyRef = useStickyBox({
@@ -10,21 +10,19 @@ const Sidebar = () => {
     bottom: false
   })
 
+  // ----- Render -----
+
   return (
-    <div className="container">
-      <div className="sidebar" ref={stickyRef}>
-        <img src={ReactLogo} alt='logo' style={{ width: '10em', height: 'auto' }} />
-      </div>
-      <div className="contents" ref={stickyRef}>
-        <h2>Components</h2>
-        <p>Card payment</p>
-        <p>Date picker</p>
-        <p>Form validation</p>
-        <p>Custom counter</p>
-        <p>Avatar selector</p>
-        <p>List management</p>
-        <p>Language selector</p>
-      </div>
+    <div className="sidebar" ref={stickyRef}>
+      <h2>Choose :</h2>
+      <NavLink to="/cardpayment">Card payment</NavLink>
+      <NavLink to="/datepicker">Date picker</NavLink>
+      <NavLink to="/formvalidation">Form validation</NavLink>
+      <NavLink to="/customcounter">Custom counter</NavLink>
+      <NavLink to="/avatarselector">Avatar selector</NavLink>
+      <NavLink to="/listmanagement">List management</NavLink>
+      <NavLink to="/languageselector">Language selector</NavLink>
+      <NavLink to="/moviesearch">Movie Search</NavLink>
     </div>
   )
 };

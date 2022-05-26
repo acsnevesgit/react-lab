@@ -8,8 +8,10 @@ const MovieSelector = () => {
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [selectedCountry, setSelectedCountry] = useState(null);
 
+  // ----- Render -----
+
   return (
-    <div>
+    <div className="container">
       <Select
         className='movieGenre'
         defaultValue={selectedGenre}
