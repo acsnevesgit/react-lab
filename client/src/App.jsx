@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation,ImageList, LanguageSelector, ListManagement, MovieSearch, StepperEdit } from './pages/index';
+import { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineChrono } from './pages/index';
 
 const App = () => {
   // ----- Render -----
@@ -76,9 +76,21 @@ const App = () => {
             }
           />
           <Route
+            path='progressbar'
+            element={
+              <ProgressBar />
+            }
+          />
+          <Route
             path='stepperedit'
             element={
               <StepperEdit />
+            }
+          />
+          <Route
+            path='timeline'
+            element={
+              <TimelineChrono />
             }
           />
           <Route

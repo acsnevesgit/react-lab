@@ -44,8 +44,9 @@ footer {
 .light-mode nav {
   background-color: var(--dark);
   color: var(--light);
-  background-image: url('./assets/images/light.gif');
+  background-image: url('./assets/images/light.png');
   background-size: cover;
+  transition: all 1s ease;
 }
 
 .light-mode footer {
@@ -70,6 +71,7 @@ footer {
   color: var(--dark);
   background-image: url('./assets/images/dark.gif');
   background-size: cover;
+  transition: all 1s ease;
 }
 
 .dark-mode footer {
@@ -105,7 +107,7 @@ footer {
   margin: 1em 1em;
   font-size: 1.2rem;
   line-height: 1.1;
-  height: 90vh;
+  /* height: 90vh; */
 }
 
 .logo {

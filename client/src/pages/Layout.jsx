@@ -49,22 +49,24 @@ const Layout = () => {
             <div className="sidebar" ref={stickyRef}>
               <NavLink to="/homepage"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Home" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/cardpayment"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Card payment" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/customcounter"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Custom counter" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/datepicker"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Date picker" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/email"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Email" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/formvalidation"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Form validation" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/imagelist"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Image List" /></ListItemButton></ListItem></NavLink>
-              <NavLink to="/customcounter"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Custom counter" /></ListItemButton></ListItem></NavLink>
-              <NavLink to="/email"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Email" /></ListItemButton></ListItem></NavLink>
-              <NavLink to="/listmanagement"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="List management" /></ListItemButton></ListItem></NavLink>
-              <NavLink to="/stepperedit"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="StepperEdit" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/languageselector"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Language selector" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/listmanagement"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="List management" /></ListItemButton></ListItem></NavLink>
               <NavLink to="/moviesearch"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Movie Search" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/progressbar"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="Progress Bar" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/stepperedit"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="StepperEdit" /></ListItemButton></ListItem></NavLink>
+              <NavLink to="/timeline"><ListItem disablePadding><ListItemButton><ListItemText className="choice" primary="TimelineChrono" /></ListItemButton></ListItem></NavLink>
             </div>
           </List>
           <Outlet />
         </div>
       </div>
       <footer className="footer">
-        <h3>Footer</h3>
+        {/* <h3>Footer</h3> */}
       </footer>
     </div >
   );
