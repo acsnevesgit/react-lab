@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CardPayment = () => {
+const DatePicker = () => {
   return (
     <div className='main'>
-      <h3>Card Payment</h3>
+      <h3>Date Picker</h3>
     </div>
   )
 };
 
-export default CardPayment;
+export default DatePicker;

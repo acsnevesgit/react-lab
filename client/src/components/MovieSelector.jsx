@@ -14,6 +14,7 @@ const MovieSelector = () => {
     <div className="container">
       <Select
         className='movieGenre'
+        isClearable
         defaultValue={selectedGenre}
         onChange={setSelectedGenre}
         placeholder='Select Genre...'
@@ -21,6 +22,7 @@ const MovieSelector = () => {
       />
       <Select
         className='movieCountry'
+        isClearable
         defaultValue={selectedCountry}
         onChange={setSelectedCountry}
         placeholder='Select Country...'

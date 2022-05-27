@@ -1,8 +1,11 @@
-<h1 align="center">F@b-L@b</h1><br/>
+<h1 align="center">React-L@b</h1><br/>
 
 <div align="center">
   
 ![React Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![MUI Badge](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
+![Canva Badge](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
+![npm Badge](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
   
 </div>
 
@@ -10,6 +13,6 @@
 
 ## ❔ About
 
-<p align="justify">F@b-L@b is a repo for experimenting around, mainly with React components that have different functions.</p>
+<p align="justify">React-L@b is a repo for experimenting around, mainly with React components that have different functions. Some are inspired in other projects and/or build with the help of npm. The idea is to both let me practice and also to create reusable custom components, which I can later use in the coming projects.</p>
 
 <p align="right">GIF credits : https://giphy.com</p>

@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CardPayment = () => {
+const Email = () => {
   return (
     <div className='main'>
-      <h3>Card Payment</h3>
+      <h3>Email</h3>
     </div>
   )
 };
 
-export default CardPayment;
+export default Email;
