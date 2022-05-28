@@ -1,4 +1,4 @@
-<h1 align="center">React-L@b</h1><br/>
+<h1 align="center">Re@ct-L@b</h1><br/>
 
 <div align="center">
   
@@ -13,6 +13,19 @@
 
 ## ❔ About
 
-<p align="justify">React-L@b is a repo for experimenting around, mainly with React components that have different functions. Some are inspired in other projects and/or build with the help of npm. The idea is to both let me practice and also to create reusable custom components, which I can later use in the coming projects.</p>
+<p align="justify"><i>Re@ct-L@b</i> is a repo for experimenting around, mainly with React components that have different functions. Some are inspired in other projects and/or build with the help of npm. The idea is to both let me practice and also to create reusable custom components, which I can later use in the coming projects.</p><br/>
 
-<p align="right">GIF credits : https://giphy.com</p>
+---
+
+## 🧪 Features
+
+- light and dark modes
+- user avatar selection
+- ...(WIP)...
+<br/>
+
+---
+
+## 📸 Screenshots
+
+<br/><p align="right">GIF credits : https://giphy.com</p>
