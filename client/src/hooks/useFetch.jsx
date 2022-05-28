@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 // Custom hook to fetch: if no method is specified, GET is the default
-const useFetch = (url: RequestInfo) => {
+const useFetch = (url) => {
   const [data, setData] = useState();
 
   useEffect(() => {

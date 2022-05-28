@@ -40,3 +40,8 @@ export const optionsCountry = [
   { value: 'Canada', label: 'Canada' },
   { value: 'Mexico', label: 'Mexico' },
 ];
+
+const numbers = Array.from(Array(60).keys());
+const yearsArray = numbers.map((i) => i = 2022 - i);
+
+export const optionsYear = yearsArray.map((i) => ({ value: `${i}`, label: `${i}`, }));

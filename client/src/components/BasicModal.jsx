@@ -3,6 +3,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 
+// Components
 import codecat from '../assets/avatars/codecat.png';
 import constructorcat from '../assets/avatars/constructorcat.jpg';
 import dodgecat from '../assets/avatars/dodgecat.png';

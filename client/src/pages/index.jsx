@@ -1,5 +1,4 @@
 import Layout from './Layout';
-import Homepage from './Homepage';
 import CardPayment from './CardPayment';
 import CustomCounter from './CustomCounter';
 import DatePicker from './DatePicker';
@@ -13,4 +12,4 @@ import ProgressBar from './ProgressBar';
 import StepperEdit from './StepperEdit';
 import TimelineGraph from './TimelineGraph';
 
-export { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph };
+export { Layout, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph };

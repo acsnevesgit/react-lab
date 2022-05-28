@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
+import { Layout, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
 
 const App = () => {
   // ----- Render -----
@@ -15,12 +15,6 @@ const App = () => {
           path='/'
           element={<Layout />}
         >
-          <Route
-            path='/homepage'
-            element={
-              <Homepage />
-            }
-          />
           <Route
             path='cardpayment'
             element={
