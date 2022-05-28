@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineChrono } from './pages/index';
+import { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
 
 const App = () => {
   // ----- Render -----
@@ -88,9 +88,9 @@ const App = () => {
             }
           />
           <Route
-            path='timeline'
+            path='timelinegraph'
             element={
-              <TimelineChrono />
+              <TimelineGraph />
             }
           />
           <Route

@@ -11,6 +11,6 @@ import ListManagement from './ListManagement';
 import MovieSearch from './MovieSearch';
 import ProgressBar from './ProgressBar';
 import StepperEdit from './StepperEdit';
-import TimelineChrono from './TimelineChrono';
+import TimelineGraph from './TimelineGraph';
 
-export { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineChrono };
+export { Layout, Homepage, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph };

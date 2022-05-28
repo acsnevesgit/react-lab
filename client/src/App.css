@@ -56,10 +56,6 @@ footer {
 
 /* ------ dark-mode ------ */
 
-.dark-mode code {
-  color: var(--light);
-}
-
 .dark-mode, .dark-mode a {
   background-color: var(--dark);
   color: var(--light);
@@ -85,6 +81,56 @@ footer {
   margin: 1em 1em;
 }
 
+.avatar {
+  margin: 0 1em 0 2em;
+  outline: 1px solid var(--secondary);
+  background-color: none;
+}
+
+.avatar:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.avatar-pics {
+  display: flex;
+  justify-content: center;
+}
+
+.avatar-pic {
+  margin: 2em 0.5em 0 0.5em;
+  outline: 1px solid var(--secondary);
+}
+
+.avatar-pic:hover {
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.light-basic-modal, .dark-basic-modal {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid var(--secondary);
+  padding: 2em;
+  width: 80%;
+}
+
+.light-basic-modal  h3, .dark-basic-modal h3 {
+  position: sticky;
+  left: 0;
+}
+
+.light-basic-modal {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.dark-basic-modal{
+  background-color: var(--dark);
+  color: var(--light);
+}
+
 .button-container {
   display: flex;
   margin: 0 auto;
@@ -107,7 +153,6 @@ footer {
   margin: 1em 1em;
   font-size: 1.2rem;
   line-height: 1.1;
-  /* height: 90vh; */
 }
 
 .logo {
@@ -136,39 +181,18 @@ footer {
   font-size: 1em;
 }
 
-.sun {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(to top, #fb6753 0%,#fc8b53 50%,#fdd55a 100%);
-  background-size: 200% 200%;
-  border-radius: 100%;
-  animation: 10s rise infinite;
-}
-
-.avatar {
-  margin: 0 1em 0 2em;
-  background-color: var(--secondary) !important;
-}
-
 .main {
   margin: 1em 2em;
-  border: 1px solid var(--secondary);
+  border: 2px solid var(--secondary);
+}
+
+/* --------------------- media queries --------------------- */
+
+@media only screen and (max-width: 1380px) {
+  .light-basic-modal, .dark-basic-modal {
+    overflow-x: scroll;
+    display: inline-grid;
+  }
 }
 
 /* --------------------- keyframes --------------------- */
-
-@keyframes rise {
-  0% {
-    top: -100px;
-    background-position: 50% 0%;
-  }
-  50% {
-    top: 0;
-    background-position: 50% 100%;
-  }
-  100% {
-    top: -100px;
-    background-position: 50% 0%;
-  }
-}
