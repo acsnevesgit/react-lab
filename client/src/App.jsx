@@ -3,9 +3,10 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import { Layout, CardPayment, CustomCounter, DatePicker, Email, FormValidation, ImageList, LanguageSelector, ListManagement, MovieSearch, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
+import { Layout, CardPayment, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
 
 const App = () => {
+
   // ----- Render -----
 
   return (
@@ -34,9 +35,9 @@ const App = () => {
             }
           />
           <Route
-            path='email'
+            path='emailhandler'
             element={
-              <Email />
+              <EmailHandler />
             }
           />
           <Route
@@ -64,9 +65,9 @@ const App = () => {
             }
           />
           <Route
-            path='moviesearch'
+            path='searchfilter'
             element={
-              <MovieSearch />
+              <SearchFilter />
             }
           />
           <Route

@@ -4,42 +4,44 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 
 // Components
-import codecat from '../assets/avatars/codecat.png';
-import constructorcat from '../assets/avatars/constructorcat.jpg';
-import dodgecat from '../assets/avatars/dodgecat.png';
-import dojocat from '../assets/avatars/dojocat.jpg';
-import foundingfathercat from '../assets/avatars/foundingfathercat.jpg';
-import jedicat from '../assets/avatars/jedicat.jpg';
-import jenkcat from '../assets/avatars/jenkcat.jpg';
-import kimonotocat from '../assets/avatars/kimonotocat.png';
-import mariocat from '../assets/avatars/mariocat.jpg';
-import muertocat from '../assets/avatars/muertocat.jpg';
-import oktoberfestcat from '../assets/avatars/oktoberfestcat.png';
-import rockcat from '../assets/avatars/rockcat.png';
-import scarlettcat from '../assets/avatars/scarlettcat.jpg';
-import steroidcat from '../assets/avatars/steroidcat.png';
+import { avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, avatar10, avatar11, avatar12, avatar13, avatar14, avatar15, avatar16, avatar17, avatar18, avatar19, avatar20, avatar21, avatar22, avatar23, avatar24, avatar25, avatar26 } from '../assets/avatars/index';
 
-const avatarPics = [
-  {id:1, img: codecat},
-  {id:2, img: constructorcat},
-  {id:3, img: dodgecat},
-  {id:4, img: dojocat},
-  {id:5, img: foundingfathercat},
-  {id:6, img: jedicat},
-  {id:7, img: jenkcat},
-  {id:8, img: kimonotocat},
-  {id:9, img: mariocat},
-  {id:10, img: muertocat},
-  {id:11, img: oktoberfestcat},
-  {id:12, img: rockcat},
-  {id:13, img: scarlettcat},
-  {id:14, img: steroidcat}
- ];
+const avatarsRow1 = [
+  { id: 1, img: avatar1 },
+  { id: 2, img: avatar2 },
+  { id: 3, img: avatar3 },
+  { id: 4, img: avatar4 },
+  { id: 5, img: avatar5 },
+  { id: 6, img: avatar6 },
+  { id: 7, img: avatar7 },
+  { id: 8, img: avatar8 },
+  { id: 9, img: avatar9 },
+  { id: 10, img: avatar10 },
+  { id: 11, img: avatar11 },
+  { id: 12, img: avatar12 },
+  { id: 13, img: avatar13 }
+];
+
+const avatarsRow2 = [
+  { id: 14, img: avatar14 },
+  { id: 15, img: avatar15 },
+  { id: 16, img: avatar16 },
+  { id: 17, img: avatar17 },
+  { id: 18, img: avatar18 },
+  { id: 19, img: avatar19 },
+  { id: 20, img: avatar20 },
+  { id: 21, img: avatar21 },
+  { id: 22, img: avatar22 },
+  { id: 23, img: avatar23 },
+  { id: 24, img: avatar24 },
+  { id: 25, img: avatar25 },
+  { id: 26, img: avatar26 }
+];
 
 const BasicModal = () => {
   const [open, setOpen] = useState(false);
   const [avatar, setAvatar] = useState(
-    () => JSON.parse(localStorage.getItem('currentAvatar')) ?? `${avatarPics[0]}`);
+    () => JSON.parse(localStorage.getItem('currentAvatar')) ?? `${avatarsRow1[0]}`);
   const selectedMode = JSON.parse(localStorage.getItem('darkMode'));
 
   const handleOpen = () => setOpen(true);
@@ -47,7 +49,6 @@ const BasicModal = () => {
 
   const getAvatar = async (event) => {
     const selectedAvatar = localStorage.setItem('currentAvatar', JSON.stringify(event.target.alt));
-    console.log(`${selectedAvatar}`);
     setAvatar(selectedAvatar);
     handleClose();
     reloadPage();
@@ -70,11 +71,18 @@ const BasicModal = () => {
       >
         <div className={selectedMode ? 'dark-basic-modal' : 'light-basic-modal'}>
           <h3>Choose an avatar</h3>
-            <div className='avatar-pics'>
-              {avatarPics.map((pic) => (
+          <div className='avatar-pics'>
+            <div className='row1'>
+              {avatarsRow1.map((pic) => (
                 <Avatar className='avatar-pic' key={pic.id} src={`${pic.img}`} alt={`${pic.img}`} onClick={getAvatar} sx={{ width: 60, height: 60 }} />
               ))}
             </div>
+            <div className='row2'>
+              {avatarsRow2.map((pic) => (
+                <Avatar className='avatar-pic' key={pic.id} src={`${pic.img}`} alt={`${pic.img}`} onClick={getAvatar} sx={{ width: 60, height: 60 }} />
+              ))}
+            </div>
+          </div>
         </div>
       </Modal>
     </div>

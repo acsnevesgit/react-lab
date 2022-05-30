@@ -45,7 +45,7 @@ footer {
 .light-mode nav {
   background-color: var(--dark);
   color: var(--light);
-  background-image: url('./assets/images/light.png');
+  background-image: url('./assets/images/light.gif');
   background-size: cover;
   transition: all 1s ease;
 }
@@ -85,6 +85,10 @@ footer {
   background-color: none !important;
 }
 
+button.arrow-left-dark, button.arrow-right-dark {
+  color: var(--light) !important;
+}
+
 /* ---------------------------------------------------------- */
 
 .all-container {
@@ -94,6 +98,21 @@ footer {
 .logo {
   width: 1em;
   height: auto;
+}
+
+.arrows {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+button.arrow-left-light, button.arrow-right-light, button.arrow-left-dark, button.arrow-right-dark {
+  font-size: 1.2em;
+  border: none !important;
+  background: none !important;
+  cursor: pointer;
+  margin: 0 0.5em !important;
+  font-weight: bolder;
+  font-size: 2em;
 }
 
 .avatar {
@@ -108,7 +127,7 @@ footer {
 
 .avatar-pics {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .avatar-pic {
@@ -119,6 +138,11 @@ footer {
 .avatar-pic:hover {
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.row1, .row2 {
+  display: flex;
+  justify-content: center;
 }
 
 .border-up-down {
@@ -192,7 +216,7 @@ img.logo:hover {
 }
 
 .link-logo {
-  align-self: center;
+  margin-left: 1em;
 }
 
 .movieGenre,
