@@ -20,13 +20,22 @@
 
 ## 🧪 Features
 
-- light and dark modes
-- user avatar selection
+- Light and dark modes
+- User avatar selection
 - ...(WIP)...
 <br/>
 
 ---
 
 ## 📸 Screenshots
+
+<br/><div align="center">
+  
+|Pages and features|Re@ct-L@b|
+| :----------------: | :---------------------------------------------------: |
+|`Light Mode`|<img src="https://user-images.githubusercontent.com/94974740/171030226-65320c56-be7a-4721-a354-c08d0b005d2e.png"  width="400" height="auto" />|
+|`Dark Mode` |<img src="https://user-images.githubusercontent.com/94974740/171030224-7b9f7019-520e-4cc3-b13b-d107731393e2.png"  width="400" height="auto">|
+  
+</div><br/>
 
 <br/><p align="right">GIF credits : https://giphy.com</p>
