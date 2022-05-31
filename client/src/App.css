@@ -1,11 +1,19 @@
 /* themes */
 :root {
   --primary: #000000;
+  /* (0, 0, 0) */
   --secondary: #8f8f8f;
+  /* (143,143,143) */
   --dark: #222222;
+  /* (34,34,34) */
   --light: #f7f7f7;
+  /* (247, 247, 247) */
   --warning: #f39c12;
+  /* (243, 156, 18) */
   --danger: #ff1900;
+  /* (255, 25, 0) */
+  --react: #61DAFB;
+  /* (97, 218, 251) */
 }
 
 * {
@@ -85,8 +93,21 @@ footer {
   background-color: none !important;
 }
 
-button.arrow-left-dark, button.arrow-right-dark {
+.dark-mode button {
+  background-color: none;
+  color: var(--light);
+  transition: all 1s ease;
+}
+
+.search-dark label, .search-dark input {
   color: var(--light) !important;
+  transition: all 1s ease;
+}
+
+button.arrow-left-dark,
+button.arrow-right-dark {
+  color: var(--light) !important;
+  transition: all 1s ease;
 }
 
 /* ---------------------------------------------------------- */
@@ -105,7 +126,10 @@ button.arrow-left-dark, button.arrow-right-dark {
   margin-bottom: 1em;
 }
 
-button.arrow-left-light, button.arrow-right-light, button.arrow-left-dark, button.arrow-right-dark {
+button.arrow-left-light,
+button.arrow-right-light,
+button.arrow-left-dark,
+button.arrow-right-dark {
   font-size: 1.2em;
   border: none !important;
   background: none !important;
@@ -118,7 +142,12 @@ button.arrow-left-light, button.arrow-right-light, button.arrow-left-dark, butto
 .avatar {
   margin: 0 1em 0 2em;
   outline: 1px solid var(--secondary);
-  background-color: none;
+  background-color: none !important;
+}
+
+.avatar button {
+  background-color: none !important;
+  background: none !important;
 }
 
 .avatar:hover {
@@ -140,13 +169,10 @@ button.arrow-left-light, button.arrow-right-light, button.arrow-left-dark, butto
   transform: scale(1.05);
 }
 
-.row1, .row2 {
+.row1,
+.row2 {
   display: flex;
   justify-content: center;
-}
-
-.border-up-down {
-  margin: 2em 0;
 }
 
 .icon {
@@ -198,12 +224,28 @@ button.arrow-left-light, button.arrow-right-light, button.arrow-left-dark, butto
   font-size: 1.2em;
 }
 
+.choice span {
+  font-size: 1em;
+}
+
 .content {
   display: inline-flex;
   padding: 0.5em;
   margin: 1em 1em;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.1;
+}
+
+.first-line {
+  margin-top: 2em !important;
+}
+
+.last-line {
+  margin-bottom: 2em !important;
+}
+
+.paragraph {
+  padding: 0.5em 0;
 }
 
 img.logo {
@@ -219,17 +261,48 @@ img.logo:hover {
   margin-left: 1em;
 }
 
-.movieGenre,
-.movieCountry,
-.movieYear {
+.main {
+  margin: 1em 1em 1em 3em;
+  padding: 2em;
+  border: 2px solid var(--secondary);
+  width: 80vw;
+}
+
+.movie-genre,
+.movie-country,
+.movie-year {
   background-color: var(--light);
   color: var(--dark);
-  width: 15em;
-  margin-right: 2em;
+  width: 16em;
+  margin: 1em 2em 0 0;
 }
 
 .movie-container {
   display: flex;
+}
+
+.movie-search {
+  margin: 4em 0 2em 0;
+}
+
+.movie-search div {
+  background-color: white !important;
+}
+
+.text-search, .text-search input, .text-search::before, .text-search::after {
+  font-size: 1.1rem;
+  color: var(--dark) !important;
+  width: 25em;
+  border: 1px solid hsl(0, 0%, 80%);
+  border-radius: 4px;
+}
+
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
+  border-bottom: none !important;
+}
+
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid #1976d2 !important;
 }
 
 .sidebar {
@@ -242,15 +315,52 @@ img.logo:hover {
   text-decoration: none;
 }
 
-.choice span {
-  font-size: 1em;
+/* --------------------- table --------------------- */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4em 0 2em 0;
 }
 
-.main {
-  margin: 1em 1em 1em 3em;
-  padding: 2em;
-  border: 2px solid var(--secondary);
-  width: 75vw;
+thead tr th {
+  text-align: left;
+  border-bottom: 2px solid var(--secondary);
+}
+
+thead button {
+  border: 0;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0.5em;
+  margin-bottom: 1px;
+  background: none !important;
+}
+
+thead button:hover {
+  cursor: pointer;
+}
+
+thead button.ascending::after {
+  content: '👇';
+  display: inline-block;
+  margin-left: .5em;
+}
+
+thead button.descending::after {
+  content: '☝️';
+  display: inline-block;
+  margin-left: .5em;
+}
+
+tbody td {
+  padding: 0.6em;
+  border-bottom: 1px solid var(--secondary);
+  font-size: 16px;
+}
+
+tbody tr:hover {
+  background-color: rgba(143, 143, 143, 0.2);
 }
 
 /* --------------------- media queries --------------------- */
@@ -261,6 +371,11 @@ img.logo:hover {
   .dark-basic-modal {
     overflow-x: scroll;
     display: inline-grid;
+  }
+
+  .movie-container {
+    display: flex;
+    flex-direction: column;
   }
 }
 

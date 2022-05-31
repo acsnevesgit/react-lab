@@ -38,7 +38,7 @@ const avatarsRow2 = [
   { id: 26, img: avatar26 }
 ];
 
-const BasicModal = () => {
+const AvatarModal = () => {
   const [open, setOpen] = useState(false);
   const [avatar, setAvatar] = useState(
     () => JSON.parse(localStorage.getItem('currentAvatar')) ?? `${avatarsRow1[0]}`);
@@ -89,4 +89,4 @@ const BasicModal = () => {
   );
 };
 
-export default BasicModal;
+export default AvatarModal;

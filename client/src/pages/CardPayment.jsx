@@ -8,6 +8,7 @@ const CardPayment = () => {
   return (
     <div className='main'>
       <h3>Card Payment</h3>
+      <p className="first-line paragraph">🚧</p>
     </div>
   )
 };
