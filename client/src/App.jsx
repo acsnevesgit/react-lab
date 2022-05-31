@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Pages
-import { Layout, CardPayment, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
+import { Layout, CardPayment, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
 
 const App = () => {
 
@@ -62,6 +62,12 @@ const App = () => {
             path='listmanagement'
             element={
               <ListManagement />
+            }
+          />
+          <Route
+            path='reportanalytics'
+            element={
+              <ReportAnalytics />
             }
           />
           <Route

@@ -4,6 +4,8 @@
   /* (0, 0, 0) */
   --secondary: #8f8f8f;
   /* (143,143,143) */
+  --tertiary: #1976d2;
+  /* (25, 118, 210) */
   --dark: #222222;
   /* (34,34,34) */
   --light: #f7f7f7;
@@ -24,7 +26,6 @@
 }
 
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -236,6 +237,11 @@ button.arrow-right-dark {
   line-height: 1.1;
 }
 
+canvas.donut-chart {
+  width: 30em !important;
+  height: auto !important;
+}
+
 .first-line {
   margin-top: 2em !important;
 }
@@ -265,7 +271,7 @@ img.logo:hover {
   margin: 1em 1em 1em 3em;
   padding: 2em;
   border: 2px solid var(--secondary);
-  width: 80vw;
+  width: 75vw;
 }
 
 .movie-genre,
@@ -290,7 +296,6 @@ img.logo:hover {
 }
 
 .text-search, .text-search input, .text-search::before, .text-search::after {
-  font-size: 1.1rem;
   color: var(--dark) !important;
   width: 25em;
   border: 1px solid hsl(0, 0%, 80%);
@@ -302,7 +307,7 @@ img.logo:hover {
 }
 
 .css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
-  border-bottom: 2px solid #1976d2 !important;
+  border-bottom: 2px solid var(--tertiary) !important;
 }
 
 .sidebar {

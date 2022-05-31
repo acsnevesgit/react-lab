@@ -25,7 +25,7 @@ const Layout = () => {
   });
 
   const optionsSelect = [{ id: 1, to: '/cardpayment' }, { id: 2, to: '/customcounter' }, { id: 3, to: '/datepicker' }, { id: 4, to: '/emailhandler' }, { id: 5, to: '/formvalidation' }, { id: 6, to: '/imagelist' },
-  { id: 7, to: '/languageselector' }, { id: 8, to: '/listmanagement' }, { id: 9, to: '/progressbar' }, { id: 10, to: '/searchfilter' }, { id: 11, to: '/stepperedit' }, { id: 12, to: '/timelinegraph' }];
+  { id: 7, to: '/languageselector' }, { id: 8, to: '/listmanagement' }, { id: 9, to: '/progressbar' }, { id: 10, to: '/reportandanalytics' }, { id: 11, to: '/searchfilter' }, { id: 12, to: '/stepperedit' }, { id: 13, to: '/timelinegraph' }];
 
   // ----- Setters and getters -----
 
@@ -135,27 +135,33 @@ const Layout = () => {
                   <ListItemText className='choice' primary='📝 List management' />
                 </ListItemButton>
               </NavLink>
-              <NavLink to='/searchfilter'>
+              <NavLink to='/reportanalytics'>
                 <ListItemButton selected={selectedIndex === 8}
                   onClick={(event) => handleListItemClick(event, 8)}>
+                  <ListItemText className='choice' primary='📊 Report and analytics' />
+                </ListItemButton>
+              </NavLink>
+              <NavLink to='/searchfilter'>
+                <ListItemButton selected={selectedIndex === 9}
+                  onClick={(event) => handleListItemClick(event, 9)}>
                   <ListItemText className='choice' primary='🔍 Search and filter' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/progressbar'>
-                <ListItemButton selected={selectedIndex === 9}
-                  onClick={(event) => handleListItemClick(event, 9)}>
+                <ListItemButton selected={selectedIndex === 10}
+                  onClick={(event) => handleListItemClick(event, 10)}>
                   <ListItemText className='choice' primary='⌛ Progress bar' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/stepperedit'>
-                <ListItemButton selected={selectedIndex === 10}
-                  onClick={(event) => handleListItemClick(event, 10)}>
+                <ListItemButton selected={selectedIndex === 11}
+                  onClick={(event) => handleListItemClick(event, 11)}>
                   <ListItemText className='choice' primary='🦶 Stepper edit' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/timelinegraph'>
-                <ListItemButton selected={selectedIndex === 11}
-                  onClick={(event) => handleListItemClick(event, 11)}>
+                <ListItemButton selected={selectedIndex === 12}
+                  onClick={(event) => handleListItemClick(event, 12)}>
                   <ListItemText className='choice' primary='🕒 Timeline graph' />
                 </ListItemButton>
               </NavLink>

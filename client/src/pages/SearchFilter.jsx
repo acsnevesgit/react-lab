@@ -5,7 +5,6 @@ import { Outlet } from 'react-router-dom';
 import MovieSelector from '../components/MovieSelector';
 
 const SearchFilter = () => {
-  console.log('movie page');
 
   // ----- Render -----
 
