@@ -16,15 +16,16 @@ const MovieSelector = () => {
   const [movieData, setMovieData] = useState(mockData);
 
   // ----- Setters and getters -----
-  //TODO : search function
+  //TODO : search function and filter functions
 
   // ----- Render -----
 
   return (
     <div>
       <div>
-        <p className="first-line paragraph">Which movie are you looking for?</p>
-        <p className="last-line paragraph">You can search movies by keywords, select muiltiple options from the selection dropdowns or sort the table columns by ascending/descending order.</p>
+        <p className="first-line paragraph last-line paragraph">
+          You can search throught the movie database (partially made-up data) by typing keywords, by selecting multiple options from the selection dropdowns or by sorting the table columns by ascending/descending order, by clicking on the respective header.
+        </p>
       </div>
       <div className="movie-search">
         <TextField className="text-search" label="Search Keyword 🚧" variant="filled" />
@@ -37,7 +38,7 @@ const MovieSelector = () => {
             isClearable
             defaultValue={selectedGenre}
             onChange={setSelectedGenre}
-            placeholder='Select Genre...'
+            placeholder='Select Genre... 🚧'
             options={optionsGenre}
             isMulti
           />
@@ -48,7 +49,7 @@ const MovieSelector = () => {
             isClearable
             defaultValue={selectedCountry}
             onChange={setSelectedCountry}
-            placeholder='Select Country...'
+            placeholder='Select Country... 🚧'
             options={optionsCountry}
           />
         </div>
@@ -58,7 +59,7 @@ const MovieSelector = () => {
             isClearable
             defaultValue={selectedYear}
             onChange={setSelectedYear}
-            placeholder='Select Year...'
+            placeholder='Select Year... 🚧'
             options={optionsYear}
           />
         </div>

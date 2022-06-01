@@ -225,6 +225,12 @@ button.arrow-right-dark {
   font-size: 1.2em;
 }
 
+.charts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .choice span {
   font-size: 1em;
 }
@@ -237,9 +243,14 @@ button.arrow-right-dark {
   line-height: 1.1;
 }
 
-canvas.donut-chart {
-  width: 30em !important;
-  height: auto !important;
+.pie-chart {
+  min-width: 30em !important;
+  margin: 2em 0 2em 0;
+}
+
+.doughnut-chart {
+  min-width: 42em !important;
+  margin: 2em 0 2em 0;
 }
 
 .first-line {
@@ -295,9 +306,12 @@ img.logo:hover {
   background-color: white !important;
 }
 
-.text-search, .text-search input, .text-search::before, .text-search::after {
+.text-search, .text-search::before, .text-search::after {
   color: var(--dark) !important;
   width: 25em;
+}
+
+.text-search input {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 4px;
 }

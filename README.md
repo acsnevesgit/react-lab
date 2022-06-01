@@ -3,10 +3,12 @@
 <div align="center">
   
 ![React Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
+![React Router Badge](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)
 ![MUI Badge](https://img.shields.io/badge/MUI-007FFF?style=for-the-badge&logo=mui&logoColor=white)
 ![Canva Badge](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
-![npm Badge](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
+![Chart.js Badge](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&logo=Chart.js&logoColor=white)
 ![GIPHY Badge](https://img.shields.io/badge/giphy-FF6666?style=for-the-badge&logo=giphy&logoColor=white)
+![npm Badge](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white)
   
 </div>
 
@@ -22,6 +24,8 @@
 
 - Light and dark modes
 - User avatar selection
+- Pie and Doughnut Charts
+- Search, Select and Filter
 - ...(WIP)...
 <br/>
 
@@ -33,9 +37,9 @@
   
 |Pages and features|Re@ct-L@b|
 | :----------------: | :---------------------------------------------------: |
-|`Light Mode`|<img src="https://user-images.githubusercontent.com/94974740/171030226-65320c56-be7a-4721-a354-c08d0b005d2e.png"  width="400" height="auto" />|
-|`Dark Mode` |<img src="https://user-images.githubusercontent.com/94974740/171030224-7b9f7019-520e-4cc3-b13b-d107731393e2.png"  width="400" height="auto">|
-|`Avatar Selection` |<img src="https://user-images.githubusercontent.com/94974740/171030838-b5646865-01e7-441f-870f-393895167db4.png"  width="400" height="auto">|
+|`Light Mode Charts`|<img src="https://user-images.githubusercontent.com/94974740/171412711-c2d5b16c-0cb3-477e-95e8-af60e752d94f.png"  width="500" height="auto" />|
+|`Dark Mode Search/Filter` |<img src="https://user-images.githubusercontent.com/94974740/171412708-4cdf0bdf-3f92-4152-b134-63d3e3cbf126.png"  width="500" height="auto">|
+|`Avatar Selection` |<img src="https://user-images.githubusercontent.com/94974740/171030838-b5646865-01e7-441f-870f-393895167db4.png"  width="500" height="auto">|
   
 </div><br/>
 
