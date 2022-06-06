@@ -1,9 +1,8 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-// Pages
-import { Layout, CardPayment, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
+import './App.css';
+import { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
 
 const App = () => {
 
@@ -20,6 +19,12 @@ const App = () => {
             path='cardpayment'
             element={
               <CardPayment />
+            }
+          />
+          <Route
+            path='chatbot'
+            element={
+              <ChatBot />
             }
           />
           <Route
@@ -65,7 +70,7 @@ const App = () => {
             }
           />
           <Route
-            path='reportanalytics'
+            path='reportandanalytics'
             element={
               <ReportAnalytics />
             }

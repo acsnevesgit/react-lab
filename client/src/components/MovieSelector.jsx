@@ -22,11 +22,6 @@ const MovieSelector = () => {
 
   return (
     <div>
-      <div>
-        <p className="first-line paragraph last-line paragraph">
-          You can search throught the movie database (partially made-up data) by typing keywords, by selecting multiple options from the selection dropdowns or by sorting the table columns by ascending/descending order, by clicking on the respective header.
-        </p>
-      </div>
       <div className="movie-search">
         <TextField className="text-search" label="Search Keyword 🚧" variant="filled" />
       </div>

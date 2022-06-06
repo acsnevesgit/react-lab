@@ -170,6 +170,10 @@ button.arrow-right-dark {
   transform: scale(1.05);
 }
 
+.counter-value {
+  margin: 0 1em;
+}
+
 .row1,
 .row2 {
   display: flex;
@@ -332,6 +336,11 @@ img.logo:hover {
 
 .sidebar a {
   text-decoration: none;
+}
+
+.under-construction{
+  font-size: .6em;
+  font-weight: normal;
 }
 
 /* --------------------- table --------------------- */

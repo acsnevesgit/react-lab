@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
-const LanguageSelector = () => {
+const ChatBot = () => {
 
   // ----- Render -----
-
   return (
     <div className='main'>
-      <h3>Language Selector</h3>
+      <h3>Chat Bot</h3>
       <p className="first-line paragraph">🚧</p>
     </div>
   )
 };
 
-export default LanguageSelector;
+export default ChatBot;

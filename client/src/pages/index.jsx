@@ -1,5 +1,6 @@
 import Layout from './Layout';
 import CardPayment from './CardPayment';
+import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
 import DatePicker from './DatePicker';
 import EmailHandler from './EmailHandler';
@@ -13,4 +14,4 @@ import ProgressBar from './ProgressBar';
 import StepperEdit from './StepperEdit';
 import TimelineGraph from './TimelineGraph';
 
-export { Layout, CardPayment, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph };
+export { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph };

@@ -6,7 +6,7 @@ const ProgressBar = () => {
 
   return (
     <div className='main'>
-      <h3>ProgressBar</h3>
+      <h3>Progress Bar</h3>
       <p className="first-line paragraph">🚧</p>
     </div>
   )

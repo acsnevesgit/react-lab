@@ -1,6 +1,9 @@
 import React from 'react';
 
 const TimelineGraph = () => {
+
+  // ----- Render -----
+
   return (
     <div className='main'>
       <h3>Timeline Graph</h3>

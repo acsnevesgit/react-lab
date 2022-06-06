@@ -26,6 +26,7 @@
 - User avatar selection
 - Pie and Doughnut Charts
 - Search, Select and Filter
+- Chat
 - ...(WIP)...
 <br/>
 

@@ -102,7 +102,7 @@ const ReportAnalytics = () => {
         Here you can view graphs that present interesting statistics about the movie database (partially made-up data). These graphs make part-to-whole relationships easy to grasp at a glance.
       </p>
       <p className="last-line paragraph">
-        You can mousehover over the pie and doughnut charts to check out info about each slice. You can also click on the legend labels in order to filter what you want to see.
+        These graphs were created with the help of <i><b>chart.js</b></i> and <i><b>react-chartjs-2</b></i> packages. You can mousehover over the pie and doughnut charts to check out info about each slice. You can also click on the legend labels in order to filter what you want to see.
       </p>
       <div className="charts">
         <div className='pie-chart' >

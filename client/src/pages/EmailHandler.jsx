@@ -1,6 +1,9 @@
 import React from 'react';
 
 const EmailHandler = () => {
+
+  // ----- Render -----
+  
   return (
     <div className='main'>
       <h3>Email Handler</h3>

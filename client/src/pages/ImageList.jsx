@@ -1,6 +1,9 @@
 import React from 'react';
 
 const ImageList = () => {
+
+  // ----- Render -----
+
   return (
     <div className='main'>
       <h3>Image List</h3>
