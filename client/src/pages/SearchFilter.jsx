@@ -10,7 +10,7 @@ const SearchFilter = () => {
 
   return (
     <div className='main'>
-      <h3>Search and Filter <span className='under-construction'>(* under-construction 🚧)</span></h3>
+      <h3>Search and Filter<span className='under-construction'> (* under-construction 🚧)</span></h3>
       <p className="first-line paragraph">
         Here you can navigate through a movie database (of partially made-up data) with the help of <i><b>react-select</b></i> package.
       </p>

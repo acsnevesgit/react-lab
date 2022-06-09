@@ -24,8 +24,10 @@ const Layout = () => {
     bottom: false
   });
 
-  const optionsSelect = [{ id: 1, to: '/cardpayment' }, { id: 2, to: '/chatbot' }, { id: 3, to: '/customcounter' }, { id: 4, to: '/datepicker' }, { id: 5, to: '/emailhandler' }, { id: 6, to: '/formvalidation' }, { id: 7, to: '/imagelist' },
-  { id: 8, to: '/languageselector' }, { id: 9, to: '/listmanagement' }, { id: 10, to: '/progressbar' }, { id: 11, to: '/reportandanalytics' }, { id: 12, to: '/searchfilter' }, { id: 13, to: '/stepperedit' }, { id: 14, to: '/timelinegraph' }];
+  const optionsSelect = [{ id: 1, to: '/cardpayment' }, { id: 2, to: '/chatbot' }, { id: 3, to: '/customcounter' }, { id: 4, to: '/datepicker' },
+  { id: 5, to: '/emailhandler' }, { id: 6, to: '/formvalidation' }, { id: 7, to: '/imagelist' }, { id: 8, to: '/languageselector' },
+  { id: 9, to: '/listmanagement' }, { id: 10, to: '/progressbar' }, { id: 11, to: '/reportandanalytics' }, { id: 12, to: '/searchfilter' },
+  { id: 13, to: '/stepperedit' }, { id: 14, to: '/timelinegraph' }, { id: 15, to: '/weatherforecast' }];
 
   // ----- Setters and getters -----
 
@@ -46,7 +48,7 @@ const Layout = () => {
   };
 
   const nextListItemClick = (event) => {
-    if (selectedIndex <= 12) {
+    if (selectedIndex <= 13) {
       navigate(`${optionsSelect[selectedIndex + 1].to}`);
       setSelectedIndex(selectedIndex + 1);
     };
@@ -169,6 +171,12 @@ const Layout = () => {
                 <ListItemButton selected={selectedIndex === 13}
                   onClick={(event) => handleListItemClick(event, 13)}>
                   <ListItemText className='choice' primary='🕒 Timeline graph' />
+                </ListItemButton>
+              </NavLink>
+              <NavLink to='/weatherforecast'>
+                <ListItemButton selected={selectedIndex === 14}
+                  onClick={(event) => handleListItemClick(event, 14)}>
+                  <ListItemText className='choice' primary='🌤️ Weather Forecast' />
                 </ListItemButton>
               </NavLink>
             </div>

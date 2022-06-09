@@ -100,7 +100,8 @@ footer {
   transition: all 1s ease;
 }
 
-.search-dark label, .search-dark input {
+.search-dark label,
+.search-dark input {
   color: var(--light) !important;
   transition: all 1s ease;
 }
@@ -302,20 +303,29 @@ img.logo:hover {
   display: flex;
 }
 
-.movie-search {
+.movie-search,
+.city-search {
   margin: 4em 0 2em 0;
 }
 
-.movie-search div {
+.movie-search div,
+.city-search div {
   background-color: white !important;
+  margin-right: 1em;
 }
 
-.text-search, .text-search::before, .text-search::after {
+.movie-search,
+.city-search,
+.movie-search::before,
+.city-search::before,
+.movie-search::after,
+.city-search::after {
   color: var(--dark) !important;
   width: 25em;
 }
 
-.text-search input {
+.movie-search input,
+.city-search input {
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 4px;
 }
@@ -338,7 +348,25 @@ img.logo:hover {
   text-decoration: none;
 }
 
-.under-construction{
+.weather {
+  display: flex;
+  align-items: center;
+}
+
+.weather-info {
+  margin: 1em 2em 1em 0;
+}
+
+.weather-info p {
+  margin: 0.5em 0;
+}
+
+.weather-summary{
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.under-construction {
   font-size: .6em;
   font-weight: normal;
 }

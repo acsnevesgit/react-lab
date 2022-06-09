@@ -22,8 +22,8 @@ const MovieSelector = () => {
 
   return (
     <div>
-      <div className="movie-search">
-        <TextField className="text-search" label="Search Keyword 🚧" variant="filled" />
+      <div className="">
+        <TextField className="movie-search" label="Search Keyword 🚧" variant="filled" />
       </div>
       <div className="movie-container">
         <div className="movie-choice">

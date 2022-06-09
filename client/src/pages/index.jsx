@@ -13,5 +13,6 @@ import SearchFilter from './SearchFilter';
 import ProgressBar from './ProgressBar';
 import StepperEdit from './StepperEdit';
 import TimelineGraph from './TimelineGraph';
+import WeatherForecast from './WeatherForecast';
 
-export { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph };
+export { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph, WeatherForecast };

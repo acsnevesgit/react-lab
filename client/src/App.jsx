@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './App.css';
-import { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph } from './pages/index';
+import { Layout, CardPayment, ChatBot, CustomCounter, DatePicker, EmailHandler, FormValidation, ImageList, LanguageSelector, ListManagement, ReportAnalytics, SearchFilter, ProgressBar, StepperEdit, TimelineGraph, WeatherForecast } from './pages/index';
 
 const App = () => {
 
@@ -97,6 +97,12 @@ const App = () => {
             path='timelinegraph'
             element={
               <TimelineGraph />
+            }
+          />
+          <Route
+            path='weatherforecast'
+            element={
+              <WeatherForecast />
             }
           />
           <Route

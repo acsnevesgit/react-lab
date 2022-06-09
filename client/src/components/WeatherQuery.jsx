@@ -1,0 +1,85 @@
+import React, { useState } from 'react';
+import { useLazyQuery } from '@apollo/client';
+import { GET_WEATHER_QUERY } from '../graphql/Queries';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import { capitalize } from '@mui/material';
+
+const WeatherQuery = () => {
+  // City searched for the query
+  const [citySearched, setCitySearched] = useState('');
+
+  // Function for the query using Apollo Client
+  const [getWeather, { loading, data, error }] = useLazyQuery(
+    GET_WEATHER_QUERY, {
+    variables: { name: citySearched },
+  });
+
+  if (error) {
+    return <p>Error found</p>
+  };
+
+  if (data) {
+    console.log(data);
+  };
+
+  // const searchedCityHandler = (event) => {
+  //   event.preventDefault();
+  //   setCitySearched('');
+  //   setNewCitySearched(event.target.value)
+  // };
+
+  // const resetSearch = (event) => {
+  //   event.preventDefault();
+  //   setCitySearched('');
+  // };
+
+  //Funtions for conversion from API default
+  const convertTemp = (temp) => {
+    // Kelvin to celsius
+    return (temp - 273.15).toFixed(2);
+  };
+
+  //Function to get flag emoji
+  const getFlagEmoji = (countryCode) => {
+    const codePoints = countryCode
+      .toUpperCase()
+      .split('')
+      .map(char => 127397 + char.charCodeAt());
+    return String.fromCodePoint(...codePoints);
+  };
+
+  // ----- Render -----
+
+  return (
+    <div>
+      <div className="weather">
+        <TextField
+          className="city-search"
+          onChange={(event) => { setCitySearched(event.target.value); }}
+          type='text'
+          variant="outlined"
+          placeholder='City name...' />
+        <Button
+          onClick={() => getWeather()}
+          variant="contained">Search</Button>
+      </div>
+      <div className='weather-info last-line paragraph'>
+        {loading && <p>Loading...</p>}
+        {error && <p>Oops there is an error! Try entering a new City.</p>}
+        {data && data.getCityByName !== null && (
+          <>
+            <p className='weather-summary paragraph'>{capitalize(data.getCityByName.weather.summary.description)}</p>
+            <p>City : {data.getCityByName.name}</p>
+            <p>Country : {getFlagEmoji(data.getCityByName.country)}</p>
+            <p>Current temperature : {convertTemp(data.getCityByName.weather.temperature.actual)}°C</p>
+            <p>Humidity : {data.getCityByName.weather.clouds.humidity}%</p>
+            <p>Wind Speed : {data.getCityByName.weather.wind.speed}m/s</p>
+          </>
+        )}
+      </div>
+    </div>
+  )
+};
+
+export default WeatherQuery;
