@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import Select from 'react-select';
 import TextField from '@mui/material/TextField';
 
-import mockData from "../databases/MockMovies.json";
+import mockData from '../databases/MockMovies.json';
 
 // Components
 import TableSorter from './TableSorter';
-import { optionsGenre, optionsCountry, optionsYear } from "../constants/MovieOptions";
+import {
+  optionsGenre,
+  optionsCountry,
+  optionsYear,
+} from '../constants/MovieOptions';
 
 const MovieSelector = () => {
   const [selectedGenre, setSelectedGenre] = useState(null);
@@ -22,11 +26,15 @@ const MovieSelector = () => {
 
   return (
     <div>
-      <div className="">
-        <TextField className="movie-search" label="Search Keyword 🚧" variant="filled" />
+      <div className=''>
+        <TextField
+          className='movie-search'
+          label='Search Keyword 🚧'
+          variant='filled'
+        />
       </div>
-      <div className="movie-container">
-        <div className="movie-choice">
+      <div className='movie-container'>
+        <div className='movie-choice'>
           <Select
             className='movie-genre'
             closeMenuOnSelect={false}
@@ -38,7 +46,7 @@ const MovieSelector = () => {
             isMulti
           />
         </div>
-        <div className="movie-choice">
+        <div className='movie-choice'>
           <Select
             className='movie-country'
             isClearable
@@ -48,7 +56,7 @@ const MovieSelector = () => {
             options={optionsCountry}
           />
         </div>
-        <div className="movie-choice">
+        <div className='movie-choice'>
           <Select
             className='movie-year'
             isClearable

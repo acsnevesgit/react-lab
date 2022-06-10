@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useReducer } from 'react';
-import { AuthContext } from "../App";
+import { AuthContext } from '../App';
 import Card from '../components/Card';
-import mockData from "../databases/MockPeople.json";
+import mockData from '../databases/MockPeople.json';
 
 const initialState = {
   contacts: [], // If using API
@@ -11,23 +11,23 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "FETCH_DATA_REQUEST":
+    case 'FETCH_DATA_REQUEST':
       return {
         ...state,
         isFetching: true,
-        hasError: false
+        hasError: false,
       };
-    case "FETCH_DATA_SUCCESS":
+    case 'FETCH_DATA_SUCCESS':
       return {
         ...state,
         isFetching: false,
-        contacts: action.payload
+        contacts: action.payload,
       };
-    case "FETCH_DATA_FAILURE":
+    case 'FETCH_DATA_FAILURE':
       return {
         ...state,
         hasError: true,
-        isFetching: false
+        isFetching: false,
       };
     default:
       return state;
@@ -43,31 +43,31 @@ const UserInfo = () => {
   // Handle network calls and dispatch necessary ACTION based on server response
   useEffect(() => {
     dispatch({
-      type: "FETCH_DATA_REQUEST"
+      type: 'FETCH_DATA_REQUEST',
     });
-    fetch("https://website.com/api/contacts", {
+    fetch('https://website.com/api/contacts', {
       headers: {
-        Authorization: `Bearer ${authState.token}`
-      }
+        Authorization: `Bearer ${authState.token}`,
+      },
     })
-      .then(res => {
+      .then((res) => {
         if (res.ok) {
           return res.json();
         } else {
           throw res;
         }
       })
-      .then(resJson => {
+      .then((resJson) => {
         console.log(resJson);
         dispatch({
-          type: "FETCH_DATA_SUCCESS",
-          payload: resJson
+          type: 'FETCH_DATA_SUCCESS',
+          payload: resJson,
         });
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
         dispatch({
-          type: "FETCH_DATA_FAILURE"
+          type: 'FETCH_DATA_FAILURE',
         });
       });
   }, [authState.token]); // Hook will only be called when token changes (e.g token expires )
@@ -77,17 +77,17 @@ const UserInfo = () => {
   return (
     <div className='main'>
       <h3>User Info</h3>
-      <p className="first-line paragraph">🚧</p>
+      <p className='first-line paragraph'>🚧</p>
       <React.Fragment>
-        <div className="home">
+        <div className='home'>
           {state.isFetching ? (
-            <p className="loader">Loading...</p>
+            <p className='loader'>Loading...</p>
           ) : state.hasError ? (
-            <p className="error">Oops! An error has occurred.</p>
+            <p className='error'>Oops! An error has occurred.</p>
           ) : (
             <>
               {state.contacts.length > 0 &&
-                state.contacts.map(contact => (
+                state.contacts.map((contact) => (
                   <Card key={contact.id.toString()} contact={contact} />
                 ))}
             </>
@@ -95,7 +95,7 @@ const UserInfo = () => {
         </div>
       </React.Fragment>
     </div>
-  )
+  );
 };
 
 export default UserInfo;

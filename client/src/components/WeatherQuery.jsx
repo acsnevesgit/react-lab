@@ -11,17 +11,19 @@ const WeatherQuery = () => {
 
   // Function for the query using Apollo Client
   const [getWeather, { loading, data, error }] = useLazyQuery(
-    GET_WEATHER_QUERY, {
-    variables: { name: citySearched },
-  });
+    GET_WEATHER_QUERY,
+    {
+      variables: { name: citySearched },
+    }
+  );
 
   if (error) {
-    return <p>Error found</p>
-  };
+    return <p>Error found</p>;
+  }
 
   if (data) {
     console.log(data);
-  };
+  }
 
   //Funtions for conversion from API default
   const convertTemp = (temp) => {
@@ -33,7 +35,7 @@ const WeatherQuery = () => {
     const codePoints = countryCode
       .toUpperCase()
       .split('')
-      .map(char => 127397 + char.charCodeAt());
+      .map((char) => 127397 + char.charCodeAt());
     return String.fromCodePoint(...codePoints);
   };
 
@@ -41,33 +43,45 @@ const WeatherQuery = () => {
 
   return (
     <div>
-      <div className="weather">
+      <div className='weather'>
         <TextField
-          className="city-search"
-          onChange={(event) => { setCitySearched(event.target.value); }}
+          className='city-search'
+          onChange={(event) => {
+            setCitySearched(event.target.value);
+          }}
           type='text'
-          variant="outlined"
-          placeholder='City name...' />
-        <Button
-          onClick={() => getWeather()}
-          variant="contained">Search</Button>
+          variant='outlined'
+          placeholder='City name...'
+        />
+        <Button onClick={() => getWeather()} variant='contained'>
+          Search
+        </Button>
       </div>
       <div className='weather-info last-line paragraph'>
         {loading && <p>Loading...</p>}
         {error && <p>Oops! An error has occurred. Try entering a new City.</p>}
         {data && data.getCityByName !== null && (
           <>
-            <p className='weather-summary paragraph'>{capitalize(data.getCityByName.weather.summary.description)}</p>
+            <p className='weather-summary paragraph'>
+              {capitalize(data.getCityByName.weather.summary.description)}
+            </p>
             <p>City : {data.getCityByName.name}</p>
             <p>Country : {getFlagEmoji(data.getCityByName.country)}</p>
-            <p>Current temperature : {convertTemp(data.getCityByName.weather.temperature.actual)}°C</p>
+            <p>
+              Current temperature :{' '}
+              {convertTemp(data.getCityByName.weather.temperature.actual)}
+              °C
+            </p>
             <p>Humidity : {data.getCityByName.weather.clouds.humidity}%</p>
-            <p>Wind Speed : {data.getCityByName.weather.wind.speed}m/s</p>
+            <p>
+              Wind Speed : {data.getCityByName.weather.wind.speed}
+              m/s
+            </p>
           </>
         )}
       </div>
     </div>
-  )
+  );
 };
 
 export default WeatherQuery;

@@ -13,28 +13,28 @@ const Counter = () => {
 
   return (
     <div>
-      <p className="last-line paragraph">
+      <p className='last-line paragraph'>
         How much would you like to increment/decrement at a time? 🚧
       </p>
       <div>
         <Button
-          className="decrement-value"
-          variant="contained"
+          className='decrement-value'
+          variant='contained'
           onClick={() => dispatch(decrement())}
         >
           Decrement
         </Button>
-        <span className="counter-value">{count}</span>
+        <span className='counter-value'>{count}</span>
         <Button
-          className="increment-value"
-          variant="contained"
+          className='increment-value'
+          variant='contained'
           onClick={() => dispatch(increment())}
         >
           Increment
         </Button>
       </div>
     </div>
-  )
+  );
 };
 
 export default Counter;

@@ -1,5 +1,5 @@
-const path = require("path");
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -22,14 +22,14 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, './public'),
     port: 3000,
-    devMiddleware:{
-       publicPath: "https://localhost:3000/dist/",
+    devMiddleware: {
+      publicPath: 'https://localhost:3000/dist/',
     },
-    hot: "only",
+    hot: 'only',
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: './src/index.html',
     }),
   ],
 };

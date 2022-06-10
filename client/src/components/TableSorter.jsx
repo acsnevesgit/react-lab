@@ -48,17 +48,37 @@ const TableSorter = (props) => {
     <table>
       <thead className='table-header'>
         <tr>
-          <th style={{width:'35em'}} >
-            <button onClick={() => requestSort('title')} className={getClassNamesFor('title')}>Title</button>
+          <th style={{ width: '35em' }}>
+            <button
+              onClick={() => requestSort('title')}
+              className={getClassNamesFor('title')}
+            >
+              Title
+            </button>
           </th>
-          <th style={{width:'10em'}} >
-            <button onClick={() => requestSort('genre')} className={getClassNamesFor('genre')}>Genre</button>
+          <th style={{ width: '10em' }}>
+            <button
+              onClick={() => requestSort('genre')}
+              className={getClassNamesFor('genre')}
+            >
+              Genre
+            </button>
           </th>
-          <th style={{width:'8em'}}>
-            <button onClick={() => requestSort('country')} className={getClassNamesFor('country')}>Country</button>
+          <th style={{ width: '8em' }}>
+            <button
+              onClick={() => requestSort('country')}
+              className={getClassNamesFor('country')}
+            >
+              Country
+            </button>
           </th>
-          <th style={{width:'6em'}}>
-            <button onClick={() => requestSort('year')} className={getClassNamesFor('year')}>Year</button>
+          <th style={{ width: '6em' }}>
+            <button
+              onClick={() => requestSort('year')}
+              className={getClassNamesFor('year')}
+            >
+              Year
+            </button>
           </th>
         </tr>
       </thead>
@@ -73,7 +93,7 @@ const TableSorter = (props) => {
         ))}
       </tbody>
     </table>
-  )
+  );
 };
 
 export default TableSorter;
