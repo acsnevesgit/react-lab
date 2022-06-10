@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
-import { GET_WEATHER_QUERY } from '../graphql/Queries';
+import { GET_WEATHER_QUERY } from '../graphql/WeatherQueries';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { capitalize } from '@mui/material';
@@ -23,21 +23,9 @@ const WeatherQuery = () => {
     console.log(data);
   };
 
-  // const searchedCityHandler = (event) => {
-  //   event.preventDefault();
-  //   setCitySearched('');
-  //   setNewCitySearched(event.target.value)
-  // };
-
-  // const resetSearch = (event) => {
-  //   event.preventDefault();
-  //   setCitySearched('');
-  // };
-
   //Funtions for conversion from API default
   const convertTemp = (temp) => {
-    // Kelvin to celsius
-    return (temp - 273.15).toFixed(2);
+    return (temp - 273.15).toFixed(1); // Kelvin to Celsius
   };
 
   //Function to get flag emoji
@@ -66,7 +54,7 @@ const WeatherQuery = () => {
       </div>
       <div className='weather-info last-line paragraph'>
         {loading && <p>Loading...</p>}
-        {error && <p>Oops there is an error! Try entering a new City.</p>}
+        {error && <p>Oops! An error has occurred. Try entering a new City.</p>}
         {data && data.getCityByName !== null && (
           <>
             <p className='weather-summary paragraph'>{capitalize(data.getCityByName.weather.summary.description)}</p>
