@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Card = ({ contact }) => {
+export const ContactCard = ({ contact }) => {
   // ----- Render ----- (Presentational Component == no logic)
 
   return (
@@ -22,4 +22,4 @@ export const Card = ({ contact }) => {
   );
 };
 
-export default Card;
+export default ContactCard;

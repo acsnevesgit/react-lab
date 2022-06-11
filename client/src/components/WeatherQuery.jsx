@@ -53,7 +53,7 @@ const WeatherQuery = () => {
           variant='outlined'
           placeholder='City name...'
         />
-        <Button onClick={() => getWeather()} variant='contained'>
+        <Button className='search-button' onClick={() => getWeather()} variant='contained'>
           Search
         </Button>
       </div>

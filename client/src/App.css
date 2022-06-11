@@ -231,6 +231,112 @@ button.arrow-right-dark {
   font-size: 1.2em;
 }
 
+#card-form {
+  background: #fff;
+  max-width: 30em;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.card-holder,
+.card-number {
+  padding: 1em 1em;
+  border-radius: 0.4em;
+  width: 100%;
+}
+
+.payment-container {
+  margin-top: 8em;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+#payment-card {
+  height: 12em;
+  width: 20em;
+  position: absolute;
+  top: -6em;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url("https://images.unsplash.com/photo-1484820986637-7ec3e85b394f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1182&q=80");
+  background-size: cover;
+  color: var(--light);
+  text-shadow:
+  -1px -1px 1px #000, 
+   -1px 1px 1px #000,
+    1px 1px 1px #000,
+    1px 1px 1px #000;
+  filter: drop-shadow(1px 3px 10px var(--dark));
+  animation: fadeIn 0.5s linear;
+}
+
+.sticker {
+  width: 2.6em;
+  height: 2.4em;
+  background: rgb(92, 92, 92);
+  background: linear-gradient(145deg, rgba(92, 92, 92, 1) 0%, rgba(161, 161, 161, 1) 35%, rgba(223, 222, 222, 1) 100%);
+  border-radius: 0.4em;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  text-shadow:
+   -1px -1px 1px #000, 
+    -1px 1px 1px #000,
+     1px 1px 1px #000,
+     1px 1px 1px #000;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+
+.card-number {
+  padding: 1em 1em;
+  border-radius: 0.2em;
+  width: 100%;
+  font: message-box;
+  height: 2.5em;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+}
+
+.card-number::placeholder {
+  color: rgba(0, 0, 0, 0.35);
+}
+
+.card-number:hover {
+  border: 1px solid var(--dark) !important;
+}
+
+input.card-number:focus {
+  outline: none;
+  border: 2px solid var(--tertiary) !important;
+}
+
 .charts {
   display: flex;
   flex-direction: column;
@@ -331,12 +437,30 @@ img.logo:hover {
   border-radius: 4px;
 }
 
+.card-form {
+  margin: 1em 0;
+}
+
+.card-type {
+  display: flex;
+}
+
+.card-type-logo {
+  width: 5em;
+  height: auto;
+  margin: 2em 1em 8em 1em;
+}
+
 .css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
   border-bottom: none !important;
 }
 
 .css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
   border-bottom: 2px solid var(--tertiary) !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: .5em !important;
 }
 
 .sidebar {
@@ -347,6 +471,22 @@ img.logo:hover {
 
 .sidebar a {
   text-decoration: none;
+}
+
+.search-button,
+.submit-button {
+  width: 8em;
+  height: auto;
+  font-weight: bold !important;
+}
+
+.submit-button {
+  margin: 2em 0 0 0 !important;
+  align-self: center;
+}
+
+.title-input {
+  margin: 0.6em 0;
 }
 
 .weather {
@@ -423,6 +563,7 @@ tbody tr:hover {
 /* --------------------- media queries --------------------- */
 
 @media only screen and (max-width: 1380px) {
+
   .light-basic-modal,
   .dark-basic-modal {
     overflow-x: scroll;
@@ -436,3 +577,14 @@ tbody tr:hover {
 }
 
 /* --------------------- keyframes --------------------- */
+
+@keyframes fadeIn {
+  from {
+    top: -4em;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

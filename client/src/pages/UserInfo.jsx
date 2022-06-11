@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useReducer } from 'react';
 import { AuthContext } from '../App';
-import Card from '../components/Card';
+import ContactCard from '../components/ContactCard';
 import mockData from '../databases/MockPeople.json';
 
 const initialState = {
@@ -88,7 +88,7 @@ const UserInfo = () => {
             <>
               {state.contacts.length > 0 &&
                 state.contacts.map((contact) => (
-                  <Card key={contact.id.toString()} contact={contact} />
+                  <ContactCard key={contact.id.toString()} contact={contact} />
                 ))}
             </>
           )}

@@ -53,7 +53,7 @@ const Layout = () => {
     { id: 16, to: '/weatherforecast' },
   ];
 
-  // ----- Setters and getters -----
+  // ------------------------ Setters and getters ------------------------
 
   function getDefaultMode() {
     const selectedMode = JSON.parse(localStorage.getItem('darkMode'));
