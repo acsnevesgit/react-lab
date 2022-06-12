@@ -72,7 +72,7 @@ const UserInfo = () => {
       });
   }, [authState.token]); // Hook will only be called when token changes (e.g token expires )
 
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

@@ -16,7 +16,7 @@ const WeatherForecast = () => {
     uri: 'https://graphql-weather-api.herokuapp.com/',
   });
 
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <ApolloProvider client={client}>

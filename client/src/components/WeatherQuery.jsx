@@ -39,7 +39,7 @@ const WeatherQuery = () => {
     return String.fromCodePoint(...codePoints);
   };
 
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div>
@@ -53,7 +53,11 @@ const WeatherQuery = () => {
           variant='outlined'
           placeholder='City name...'
         />
-        <Button className='search-button' onClick={() => getWeather()} variant='contained'>
+        <Button
+          className='search-button'
+          onClick={() => getWeather()}
+          variant='contained'
+        >
           Search
         </Button>
       </div>

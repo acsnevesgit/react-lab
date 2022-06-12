@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const steps = ['Contact Details', 'Shipping Information', 'Payment and Review'];
 
 const StepperEdit = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LanguageSelector = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

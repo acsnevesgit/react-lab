@@ -5,7 +5,7 @@ const useLocalStorage = (key, initialState) => {
   const [value, setValue] = useState(localStorage.getItem(key) ?? initialState);
 
   const updatedSetValue = useCallback(
-    newValue => {
+    (newValue) => {
       if (newValue === initialState || typeof newValue === 'undefined') {
         localStorage.removeItem(key);
       } else {
@@ -20,7 +20,7 @@ const useLocalStorage = (key, initialState) => {
 
 // e.g.
 // const Component = () => {
-//   const [value, setValue] = useLocalStorage('key', 'initial'); 
+//   const [value, setValue] = useLocalStorage('key', 'initial');
 //   return (
 //     <input
 //       onChange={e => setValue(e.target.value)}

@@ -9,9 +9,9 @@ const ModeSwitch = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);
   const handleClick = () => {
     toggleDarkMode();
-  }
+  };
 
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='button-container'>
@@ -25,7 +25,7 @@ const ModeSwitch = () => {
       <p>☀️</p>
       <AvatarModal />
     </div>
-  )
+  );
 };
 
 export default ModeSwitch;

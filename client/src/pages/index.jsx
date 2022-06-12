@@ -2,7 +2,7 @@ import Layout from './Layout';
 import CardPayment from './CardPayment';
 import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
-import DatePicker from './DatePicker';
+import DateSelector from './DateSelector';
 import EmailHandler from './EmailHandler';
 import FormValidation from './FormValidation';
 import ImageList from './ImageList';
@@ -21,7 +21,7 @@ export {
   CardPayment,
   ChatBot,
   CustomCounter,
-  DatePicker,
+  DateSelector,
   EmailHandler,
   FormValidation,
   ImageList,

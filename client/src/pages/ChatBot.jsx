@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 const ChatBot = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
   return (
     <div className='main'>
       <h3>Chat Bot</h3>

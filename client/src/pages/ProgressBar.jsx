@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ProgressBar = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

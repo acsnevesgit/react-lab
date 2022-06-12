@@ -4,7 +4,7 @@ import React from 'react';
 import Counter from '../components/Counter';
 
 const CustomCounter = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

@@ -119,76 +119,18 @@ button.arrow-right-dark {
   transition: all 1s ease;
 }
 
-/* --------------------------------------------------------------------------------------------------------------------- */
-
-.all-container {
-  margin: 1em 1em;
-}
-
-.logo {
-  width: 1em;
-  height: auto;
-}
-
-.arrows {
-  display: flex;
-  margin-bottom: 1em;
-}
+/* --------------------------------------- both modes --------------------------------------- */
 
 button.arrow-left-light,
 button.arrow-right-light,
 button.arrow-left-dark,
 button.arrow-right-dark {
-  font-size: 1.2em;
   border: none !important;
   background: none !important;
-  cursor: pointer;
   margin: 0 0.5em !important;
   font-weight: bolder;
   font-size: 2em;
-}
-
-.avatar {
-  margin: 0 1em 0 2em;
-  outline: 1px solid var(--secondary);
-  background-color: none !important;
-  button {
-    background-color: none !important;
-    background: none !important;
-  }
-  :hover {
-    transform: scale(1.05);
-  }
-}
-
-.avatar-pics {
-  display: flex;
-  flex-direction: column;
-}
-
-.avatar-pic {
-  margin: 2em 0.5em 0 0.5em;
-  outline: 1px solid var(--secondary);
-  :hover {
-    cursor: pointer;
-    transform: scale(1.05);
-  }
-}
-
-.counter-value {
-  margin: 0 1em;
-}
-
-.row1,
-.row2 {
-  display: flex;
-  justify-content: center;
-}
-
-.icon {
-  width: 2.5em;
-  height: auto;
-  margin: 0 0 0 0.5em;
+  cursor: pointer;
 }
 
 .light-basic-modal,
@@ -216,6 +158,44 @@ button.arrow-right-dark {
 .dark-basic-modal {
   background-color: var(--dark);
   color: var(--light);
+}
+
+/* --------------------------------------- all together --------------------------------------- */
+
+.all-container {
+  margin: 1em 1em;
+}
+
+.arrows {
+  display: flex;
+  margin-bottom: 1em;
+}
+
+.avatar {
+  margin: 0 1em 0 2em;
+  outline: 1px solid var(--secondary);
+  background-color: none !important;
+  button {
+    background-color: none !important;
+    background: none !important;
+  }
+  :hover {
+    transform: scale(1.05);
+  }
+}
+
+.avatar-pics {
+  display: flex;
+  flex-direction: column;
+}
+
+.avatar-pic {
+  margin: 2em 0.5em 0 0.5em;
+  outline: 1px solid var(--secondary);
+  :hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
 }
 
 .button-container {
@@ -264,83 +244,35 @@ button.arrow-right-dark {
   background-color: white;
 }
 
-.payment-container {
-  margin-top: 8em;
+.card-form {
+  margin: 1em 0;
 }
 
-.input-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1em;
-}
-
-#payment-card-light, #payment-card-dark {
-  height: 12em;
-  width: 20em;
-  position: absolute;
-  top: -5em;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 1em;
-  padding: 1em;
+.card-type {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url("https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  background-size: cover;
-  transition: all 1s ease;
-  color: var(--light);
-  text-shadow:
-    1px 2px rgba(0, 0, 0, 0.3),
-    1px 2px rgba(0, 0, 0, 0.3),
-    1px 2px rgba(0, 0, 0, 0.3),
-    1px 2px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(1px 3px 10px var(--light));
-  animation: fadeIn 0.5s linear;
 }
 
-#payment-card-light {
-  background-image: url("https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
-  background-size: cover;
-  transition: all 1s ease;
-  color: var(--dark);
-  text-shadow:
-  1px 1px var(--light),
-  1px 1px var(--light),
-  1px 1px var(--light),
-  1px 1px var(--light);
-  filter: drop-shadow(1px 3px 10px var(--dark));
+.card-type-logo {
+  width: 5em;
+  height: auto;
+  margin: 2em 1em 8em 1em;
 }
 
-.sticker {
-  width: 2.6em;
-  height: 2.4em;
-  background: rgb(92, 92, 92);
-  background: linear-gradient(145deg, rgba(92, 92, 92, 1) 0%, rgba(161, 161, 161, 1) 35%, rgba(223, 222, 222, 1) 100%);
-  border-radius: 0.4em;
-  border: 1px solid var(--secondary);
-}
-
-.card-body-dark, .card-body-light {
+.card-body-dark,
+.card-body-light {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 60%;
-  text-shadow:
-  1px 2px rgba(0, 0, 0, 0.3),
-  1px 2px rgba(0, 0, 0, 0.3),
-  1px 2px rgba(0, 0, 0, 0.3),
-  1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3),
+    1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card-body-light {
   color: var(--dark);
-  text-shadow:
-  1px 1px var(--light),
-  1px 1px var(--light),
-  1px 1px var(--light),
-  1px 1px var(--light);
+  text-shadow: 1px 1px var(--light), 1px 1px var(--light), 1px 1px var(--light),
+    1px 1px var(--light);
 }
 
 .card-footer {
@@ -366,11 +298,6 @@ button.arrow-right-dark {
   }
 }
 
-input.card-number:focus {
-  outline: none;
-  border: 2px solid var(--tertiary) !important;
-}
-
 .charts {
   display: flex;
   flex-direction: column;
@@ -389,9 +316,8 @@ input.card-number:focus {
   line-height: 1.1;
 }
 
-.pie-chart {
-  min-width: 30em !important;
-  margin: 2em 0 2em 0;
+.counter-value {
+  margin: 0 1em;
 }
 
 .doughnut-chart {
@@ -399,16 +325,20 @@ input.card-number:focus {
   margin: 2em 0 2em 0;
 }
 
+.exp-month,
+.exp-year {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
 .first-line {
   margin-top: 2em !important;
 }
 
-.last-line {
-  margin-bottom: 2em !important;
-}
-
-.paragraph {
-  padding: 0.5em 0;
+.icon {
+  width: 2.5em;
+  height: auto;
+  margin: 0 0 0 0.5em;
 }
 
 img.logo {
@@ -419,8 +349,32 @@ img.logo {
   }
 }
 
+input.card-number:focus {
+  outline: none;
+  border: 2px solid var(--tertiary) !important;
+}
+
+.input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+li.react-datepicker__time-list-item--selected, .react-datepicker__day--selected {
+  background-color: var(--tertiary) !important;
+}
+
+.last-line {
+  margin-bottom: 2em !important;
+}
+
 .link-logo {
   margin-left: 1em;
+}
+
+.logo {
+  width: 1em;
+  height: auto;
 }
 
 .main {
@@ -437,12 +391,6 @@ img.logo {
   color: var(--dark);
   width: 16em;
   margin: 1em 2em 0 0;
-}
-
-.exp-month,
-.exp-year {
-  background-color: var(--light);
-  color: var(--dark);
 }
 
 .movie-container {
@@ -464,30 +412,63 @@ img.logo {
   }
 }
 
-.card-form {
-  margin: 1em 0;
+.paragraph {
+  padding: 0.5em 0;
 }
 
-.card-type {
+.payment-container {
+  margin-top: 8em;
+}
+
+#payment-card-light,
+#payment-card-dark {
+  height: 12em;
+  width: 20em;
+  position: absolute;
+  top: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1em;
+  padding: 1em;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  transition: all 1s ease;
+  color: var(--light);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3),
+    1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(1px 3px 10px var(--light));
+  animation: fadeIn 0.5s linear;
 }
 
-.card-type-logo {
-  width: 5em;
+#payment-card-light {
+  background-image: url('https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  transition: all 1s ease;
+  color: var(--dark);
+  text-shadow: 1px 1px var(--light), 1px 1px var(--light), 1px 1px var(--light),
+    1px 1px var(--light);
+  filter: drop-shadow(1px 3px 10px var(--dark));
+}
+
+.pie-chart {
+  min-width: 30em !important;
+  margin: 2em 0 2em 0;
+}
+
+.row1,
+.row2 {
+  display: flex;
+  justify-content: center;
+}
+
+.search-button,
+.submit-button {
+  width: 8em;
   height: auto;
-  margin: 2em 1em 8em 1em;
-}
-
-.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
-  border-bottom: none !important;
-}
-
-.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
-  border-bottom: 2px solid var(--tertiary) !important;
-}
-
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  height: .5em !important;
+  font-weight: bold !important;
 }
 
 .sidebar {
@@ -499,11 +480,18 @@ img.logo {
   }
 }
 
-.search-button,
-.submit-button {
-  width: 8em;
-  height: auto;
-  font-weight: bold !important;
+.sticker {
+  width: 2.6em;
+  height: 2.4em;
+  background: rgb(92, 92, 92);
+  background: linear-gradient(
+    145deg,
+    rgba(92, 92, 92, 1) 0%,
+    rgba(161, 161, 161, 1) 35%,
+    rgba(223, 222, 222, 1) 100%
+  );
+  border-radius: 0.4em;
+  border: 1px solid var(--secondary);
 }
 
 .submit-button {
@@ -536,6 +524,56 @@ img.logo {
 .under-construction {
   font-size: 0.6em;
   font-weight: normal;
+}
+
+/* --------------------------------------- custom from packages --------------------------------------- */
+
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
+  border-bottom: none !important;
+}
+
+.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid var(--tertiary) !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+  height: 0.5em !important;
+}
+
+.react-datepicker {
+  font-size: 1em !important;
+  height: 16.5em;
+}
+
+.react-datepicker__month-container {
+  width: 20em;
+  height: 16.5em;
+}
+
+.react-datepicker__header {
+  padding: 1em 0 0.5em 0 !important;
+  height: 4.5em;
+}
+
+.react-datepicker__time-container {
+  display: inline-table;
+  width: 8em !important;
+}
+
+.react-datepicker__time-box {
+  width: 8em !important;
+}
+
+.react-datepicker__time-list {
+  height: 11.9em !important;
+}
+
+.react-datepicker__navigation--next {
+  left: 24em;
+}
+
+.react-datepicker__day-names {
+  font-size: 0.9em;
 }
 
 /* --------------------------------------- table --------------------------------------- */
@@ -588,7 +626,6 @@ tbody {
 /* --------------------------------------- media queries --------------------------------------- */
 
 @media only screen and (max-width: 1380px) {
-
   .light-basic-modal,
   .dark-basic-modal {
     overflow-x: scroll;

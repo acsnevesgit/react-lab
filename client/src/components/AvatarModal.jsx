@@ -90,7 +90,7 @@ const AvatarModal = () => {
     window.location.reload();
   };
 
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div>

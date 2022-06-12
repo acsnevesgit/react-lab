@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const ContactCard = ({ contact }) => {
-  // ----- Render ----- (Presentational Component == no logic)
+  // ------------------------------------------ Render ------------------------------------------ (Presentational Component == no logic)
 
   return (
     <div className='contact-card'>

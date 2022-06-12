@@ -7,7 +7,7 @@ import {
   CardPayment,
   ChatBot,
   CustomCounter,
-  DatePicker,
+  DateSelector,
   EmailHandler,
   FormValidation,
   ImageList,
@@ -61,7 +61,7 @@ const reducer = (state, action) => {
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState); // If no action is dispatched, return the initial state
 
-  // ------------------ Render ------------------
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <>
@@ -73,13 +73,16 @@ const App = () => {
                 <Route path='cardpayment' element={<CardPayment />} />
                 <Route path='chatbot' element={<ChatBot />} />
                 <Route path='customcounter' element={<CustomCounter />} />
-                <Route path='datepicker' element={<DatePicker />} />
+                <Route path='dateselector' element={<DateSelector />} />
                 <Route path='emailhandler' element={<EmailHandler />} />
                 <Route path='formvalidation' element={<FormValidation />} />
                 <Route path='imagelist' element={<ImageList />} />
                 <Route path='languageselector' element={<LanguageSelector />} />
                 <Route path='listmanagement' element={<ListManagement />} />
-                <Route path='reportandanalytics' element={<ReportAnalytics />} />
+                <Route
+                  path='reportandanalytics'
+                  element={<ReportAnalytics />}
+                />
                 <Route path='searchfilter' element={<SearchFilter />} />
                 <Route path='progressbar' element={<ProgressBar />} />
                 <Route path='stepperedit' element={<StepperEdit />} />

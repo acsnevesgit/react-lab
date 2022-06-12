@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import MovieSelector from '../components/MovieSelector';
 
 const SearchFilter = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>

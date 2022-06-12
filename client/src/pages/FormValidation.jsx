@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FormValidation = () => {
-  // ----- Render -----
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>
