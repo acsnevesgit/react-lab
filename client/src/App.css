@@ -46,7 +46,8 @@ footer {
 /* ------ light-mode ------ */
 
 .light-mode,
-.light-mode a {
+.light-mode a,
+.darkmode p {
   background-color: var(--light);
   color: var(--dark);
   transition: all 1s ease;
@@ -70,7 +71,8 @@ footer {
 /* ------ dark-mode ------ */
 
 .dark-mode,
-.dark-mode a {
+.dark-mode a,
+.darkmode p {
   background-color: var(--dark);
   color: var(--light);
   transition: all 1s ease;
@@ -231,24 +233,31 @@ button.arrow-right-dark {
   font-size: 1.2em;
 }
 
-#card-form {
-  background: #fff;
+#card-form-light,
+#card-form-dark {
+  background: var(--light);
   max-width: 30em;
   max-height: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1rem;
+  padding: 1em 2em 2em;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
+#card-form-light {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .card-holder,
-.card-number {
+.card-number,
+.cvv-number {
   padding: 1em 1em;
   border-radius: 0.4em;
   width: 100%;
+  background-color: white;
 }
 
 .payment-container {
@@ -277,10 +286,10 @@ button.arrow-right-dark {
   background-size: cover;
   color: var(--light);
   text-shadow:
-  -1px -1px 1px #000, 
-   -1px 1px 1px #000,
-    1px 1px 1px #000,
-    1px 1px 1px #000;
+    -1px -1px rgba(0, 0, 0, 0.3),
+    -1px 1px rgba(0, 0, 0, 0.3),
+    1px 1px rgba(0, 0, 0, 0.3),
+    1px 1px rgba(0, 0, 0, 0.3);
   filter: drop-shadow(1px 3px 10px var(--dark));
   animation: fadeIn 0.5s linear;
 }
@@ -291,6 +300,7 @@ button.arrow-right-dark {
   background: rgb(92, 92, 92);
   background: linear-gradient(145deg, rgba(92, 92, 92, 1) 0%, rgba(161, 161, 161, 1) 35%, rgba(223, 222, 222, 1) 100%);
   border-radius: 0.4em;
+  border: 1px solid var(--secondary);
 }
 
 .card-body {
@@ -300,10 +310,10 @@ button.arrow-right-dark {
   align-items: center;
   height: 60%;
   text-shadow:
-   -1px -1px 1px #000, 
-    -1px 1px 1px #000,
-     1px 1px 1px #000,
-     1px 1px 1px #000;
+    -1px -1px rgba(0, 0, 0, 0.3),
+    -1px 1px rgba(0, 0, 0, 0.3),
+    1px 1px rgba(0, 0, 0, 0.3),
+    1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .card-footer {
@@ -313,7 +323,6 @@ button.arrow-right-dark {
   align-items: center;
   height: 75px;
 }
-
 
 .card-number {
   padding: 1em 1em;
@@ -406,6 +415,12 @@ img.logo:hover {
   margin: 1em 2em 0 0;
 }
 
+.exp-month,
+.exp-year {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
 .movie-container {
   display: flex;
 }
@@ -487,6 +502,7 @@ img.logo:hover {
 
 .title-input {
   margin: 0.6em 0;
+  color: var(--primary);
 }
 
 .weather {

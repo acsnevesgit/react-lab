@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import Cleave from 'cleave.js/react';
 import Button from '@mui/material/Button';
 import Select from 'react-select';
@@ -10,6 +10,14 @@ import {
   optionsYear
 } from '../constants/DateOptions';
 
+import { DarkModeContext } from '../contexts/DarkModeContext';
+
+// Dark and light themes
+import amex from '../assets/svg/amex.svg';
+import maestro from '../assets/svg/maestro.svg';
+import mastercard from '../assets/svg/mastercard.svg';
+import visa from '../assets/svg/visa.svg';
+
 import amexW from '../assets/svg/amex-white.svg';
 import maestroW from '../assets/svg/maestro-white.svg';
 import mastercardW from '../assets/svg/mastercard-white.svg';
@@ -20,6 +28,7 @@ import maestroB from '../assets/svg/maestro-black.svg';
 import mastercardB from '../assets/svg/mastercard-black.svg';
 import visaB from '../assets/svg/visa-black.svg';
 
+const paymentCards = [amex, maestro, mastercard, visa];
 const paymentCardsBlack = [amexB, maestroB, mastercardB, visaB];
 const paymentCardsWhite = [amexW, maestroW, mastercardW, visaW];
 
@@ -38,12 +47,11 @@ const Payment = () => {
   const [expireYear, setExpireYear] = useState('YY');
   const [cardTypeUrl, setCardTypeUrl] = useState('https://images.unsplash.com/photo-1524168948265-8f79ad8d4e33?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
 
-  const selectedMode = JSON.parse(localStorage.getItem('darkMode'));
-  console.log(selectedMode);
+  const { darkMode } = useContext(DarkModeContext);
 
   // ------------------------ Setters and getters ------------------------
 
-  const handleNum = (event) => {
+  const handleNumber = (event) => {
     setCreditCardNum(event.target.rawValue);
   }
 
@@ -80,19 +88,12 @@ const Payment = () => {
     <div className='payment'>
       <p>We support the following types of payment:</p>
       <div className='card-type'>
-        {paymentCardsBlack.map(card => {
-          return <img key={card.index} className='card-type-logo dark' src={card} alt='card logos' />
+        {paymentCards.map(card => {
+          return <img key={card.index} className='card-type-logo' src={card} alt='card logos' />
         })}
       </div>
-      {/* {selectedMode === false &&
-        <div className='card-type'>
-          {paymentCardsBlack.map(card => {
-            return <img key={card.index} className='card-type-logo light' src={card} alt='card logos' />
-          })}
-        </div>
-      } */}
       <div className="card-form">
-        <form id="card-form">
+        <form id={darkMode ? "card-form-dark" : "card-form-light"}>
           <div id="payment-card">
             <div className="sticker"></div>
             <div className="card-body">
@@ -118,7 +119,7 @@ const Payment = () => {
                 creditCard: true,
                 onCreditCardTypeChanged: handleType
               }}
-              onChange={handleNum}
+              onChange={handleNumber}
               placeholder="Please enter your card number"
             />
           </div>
@@ -130,6 +131,7 @@ const Payment = () => {
             <div className="">
               <h4 className="title-input">Exp. Month</h4>
               <Select
+                className="exp-month"
                 value={expireMonth}
                 onChange={handleExpMonth}
                 placeholder='Select...'
@@ -139,6 +141,7 @@ const Payment = () => {
             <div className="input-container">
               <h4 className="title-input">Exp. Year</h4>
               <Select
+                className="exp-year"
                 value={expireYear}
                 onChange={handleExpYear}
                 placeholder='Select...'
@@ -150,7 +153,7 @@ const Payment = () => {
               <TextField className='cvv-number' type="password" placeholder="CVV" required />
             </div>
           </div>
-          <Button className='submit-button' variant='contained'>Submit</Button>
+          <Button className='submit-button' variant='contained'>Submit 🚧</Button>
         </form>
       </div>
     </div>

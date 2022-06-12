@@ -21,6 +21,7 @@ import {
   UserInfo,
   WeatherForecast,
 } from './pages/index';
+import { DarkModeProvider } from './contexts/DarkModeContext';
 
 // TODO:
 // ------------------ User Authentication ------------------
@@ -63,42 +64,46 @@ const App = () => {
   // ------------------ Render ------------------
 
   return (
-    <AuthContext.Provider value={{ state, dispatch }}>
-      <Router>
-        <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route path='cardpayment' element={<CardPayment />} />
-            <Route path='chatbot' element={<ChatBot />} />
-            <Route path='customcounter' element={<CustomCounter />} />
-            <Route path='datepicker' element={<DatePicker />} />
-            <Route path='emailhandler' element={<EmailHandler />} />
-            <Route path='formvalidation' element={<FormValidation />} />
-            <Route path='imagelist' element={<ImageList />} />
-            <Route path='languageselector' element={<LanguageSelector />} />
-            <Route path='listmanagement' element={<ListManagement />} />
-            <Route path='reportandanalytics' element={<ReportAnalytics />} />
-            <Route path='searchfilter' element={<SearchFilter />} />
-            <Route path='progressbar' element={<ProgressBar />} />
-            <Route path='stepperedit' element={<StepperEdit />} />
-            <Route path='timelinegraph' element={<TimelineGraph />} />
-            {!state.isAuthenticated ? (
-              <Route path='userinfo' element={<UserInfo />} />
-            ) : (
-              <Route path='/' element={<Layout />} />
-            )}
-            <Route path='weatherforecast' element={<WeatherForecast />} />
-            <Route
-              path='*'
-              element={
-                <main>
-                  <p>Sorry! This page does not exist.</p>
-                </main>
-              }
-            />
-          </Route>
-        </Routes>
-      </Router>
-    </AuthContext.Provider>
+    <>
+      <DarkModeProvider>
+        <AuthContext.Provider value={{ state, dispatch }}>
+          <Router>
+            <Routes>
+              <Route path='/' element={<Layout />}>
+                <Route path='cardpayment' element={<CardPayment />} />
+                <Route path='chatbot' element={<ChatBot />} />
+                <Route path='customcounter' element={<CustomCounter />} />
+                <Route path='datepicker' element={<DatePicker />} />
+                <Route path='emailhandler' element={<EmailHandler />} />
+                <Route path='formvalidation' element={<FormValidation />} />
+                <Route path='imagelist' element={<ImageList />} />
+                <Route path='languageselector' element={<LanguageSelector />} />
+                <Route path='listmanagement' element={<ListManagement />} />
+                <Route path='reportandanalytics' element={<ReportAnalytics />} />
+                <Route path='searchfilter' element={<SearchFilter />} />
+                <Route path='progressbar' element={<ProgressBar />} />
+                <Route path='stepperedit' element={<StepperEdit />} />
+                <Route path='timelinegraph' element={<TimelineGraph />} />
+                {!state.isAuthenticated ? (
+                  <Route path='userinfo' element={<UserInfo />} />
+                ) : (
+                  <Route path='/' element={<Layout />} />
+                )}
+                <Route path='weatherforecast' element={<WeatherForecast />} />
+                <Route
+                  path='*'
+                  element={
+                    <main>
+                      <p>Sorry! This page does not exist.</p>
+                    </main>
+                  }
+                />
+              </Route>
+            </Routes>
+          </Router>
+        </AuthContext.Provider>
+      </DarkModeProvider>
+    </>
   );
 };
 
