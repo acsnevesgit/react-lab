@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  HttpLink,
 } from '@apollo/client';
 
 // Components

@@ -10,7 +10,7 @@ import {
   DateSelector,
   EmailHandler,
   FormValidation,
-  ImageList,
+  ImageAlbum,
   LanguageSelector,
   ListManagement,
   ReportAnalytics,
@@ -76,7 +76,7 @@ const App = () => {
                 <Route path='dateselector' element={<DateSelector />} />
                 <Route path='emailhandler' element={<EmailHandler />} />
                 <Route path='formvalidation' element={<FormValidation />} />
-                <Route path='imagelist' element={<ImageList />} />
+                <Route path='imagealbum' element={<ImageAlbum />} />
                 <Route path='languageselector' element={<LanguageSelector />} />
                 <Route path='listmanagement' element={<ListManagement />} />
                 <Route

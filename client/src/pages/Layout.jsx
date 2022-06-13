@@ -41,7 +41,7 @@ const Layout = () => {
     { id: 4, to: '/dateselector' },
     { id: 5, to: '/emailhandler' },
     { id: 6, to: '/formvalidation' },
-    { id: 7, to: '/imagelist' },
+    { id: 7, to: '/imagealbum' },
     { id: 8, to: '/languageselector' },
     { id: 9, to: '/listmanagement' },
     { id: 10, to: '/progressbar' },
@@ -165,12 +165,12 @@ const Layout = () => {
                   />
                 </ListItemButton>
               </NavLink>
-              <NavLink to='/imagelist'>
+              <NavLink to='/imagealbum'>
                 <ListItemButton
                   selected={selectedIndex === 6}
                   onClick={(event) => handleListItemClick(event, 6)}
                 >
-                  <ListItemText className='choice' primary='🖼️ Image List' />
+                  <ListItemText className='choice' primary='🖼️ Image Album' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/languageselector'>

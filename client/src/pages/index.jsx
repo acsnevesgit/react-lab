@@ -5,7 +5,7 @@ import CustomCounter from './CustomCounter';
 import DateSelector from './DateSelector';
 import EmailHandler from './EmailHandler';
 import FormValidation from './FormValidation';
-import ImageList from './ImageList';
+import ImageAlbum from './ImageAlbum';
 import LanguageSelector from './LanguageSelector';
 import ListManagement from './ListManagement';
 import ReportAnalytics from './ReportAnalytics';
@@ -24,7 +24,7 @@ export {
   DateSelector,
   EmailHandler,
   FormValidation,
-  ImageList,
+  ImageAlbum,
   LanguageSelector,
   ListManagement,
   ReportAnalytics,
