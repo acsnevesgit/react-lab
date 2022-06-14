@@ -54,7 +54,7 @@ export const planetsCollection = [
   {
     imgBack: planetBack3,
     imgFront: planetFront3,
-    title: 'Banana Yellow',
+    title: 'Bronze Orange',
   },
   {
     imgBack: planetBack4,
@@ -139,6 +139,6 @@ export const planetsCollection = [
   {
     imgBack: planetBack20,
     imgFront: planetFront20,
-    title: 'Salt White',
+    title: 'Olive Green',
   }
 ];

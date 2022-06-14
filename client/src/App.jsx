@@ -4,13 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import {
   Layout,
+  ArtCreator,
   CardPayment,
   ChatBot,
   CustomCounter,
   DateSelector,
   EmailHandler,
   FormValidation,
-  ImageAlbum,
+  ImageGallery,
   LanguageSelector,
   ListManagement,
   ReportAnalytics,
@@ -24,7 +25,7 @@ import {
 import { DarkModeProvider } from './contexts/DarkModeContext';
 
 // TODO:
-// ------------------ User Authentication ------------------
+// ------------------------------------------ User Authentication ------------------------------------------
 export const AuthContext = createContext(); // Pass the auth state to any other component that requires it
 
 const initialState = {
@@ -70,13 +71,14 @@ const App = () => {
           <Router>
             <Routes>
               <Route path='/' element={<Layout />}>
+                <Route path='artcreator' element={<ArtCreator />} />
                 <Route path='cardpayment' element={<CardPayment />} />
                 <Route path='chatbot' element={<ChatBot />} />
                 <Route path='customcounter' element={<CustomCounter />} />
                 <Route path='dateselector' element={<DateSelector />} />
                 <Route path='emailhandler' element={<EmailHandler />} />
                 <Route path='formvalidation' element={<FormValidation />} />
-                <Route path='imagealbum' element={<ImageAlbum />} />
+                <Route path='imagegallery' element={<ImageGallery />} />
                 <Route path='languageselector' element={<LanguageSelector />} />
                 <Route path='listmanagement' element={<ListManagement />} />
                 <Route

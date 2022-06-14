@@ -16,6 +16,8 @@
   /* (255, 25, 0) */
   --react: #61dafb;
   /* (97, 218, 251) */
+  --day: #aad4e6;
+  --night: #163681;
 }
 
 * {
@@ -169,6 +171,12 @@ button.arrow-right-dark {
 .arrows {
   display: flex;
   margin-bottom: 1em;
+}
+
+.author {
+  margin-right: 1em;
+  align-self: center;
+  font-size: 1.1em;
 }
 
 .avatar {
@@ -335,6 +343,11 @@ button.arrow-right-dark {
   margin-top: 2em !important;
 }
 
+.footer {
+  display: flex;
+  justify-content: right;
+}
+
 .icon {
   width: 2.5em;
   height: auto;
@@ -470,18 +483,59 @@ li.react-datepicker__time-list-item--selected,
 
 .planet-container {
   overflow:hidden;
-  animation: spin 15s linear 0s infinite reverse;
-  animation-play-state: running;
+  animation: spin 12s linear 0s infinite reverse;
+  animation-play-state: paused;
 }
 
 .planet-container:hover{
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 .row1,
 .row2 {
   display: flex;
   justify-content: center;
+}
+
+.sea {
+  width: 1100px;
+  height: 1450px;
+}
+
+.sea div{
+  width: 50%;
+  height: 50%;
+  float: left;
+  border:0.5em solid var(--secondary);
+  transition: all 0.2s;
+  background-size: 200% auto;
+}
+
+.sea-light div {
+  background-image: url('./assets/images/sea-light.png');
+}
+
+.sea-dark div {
+  background-image: url('./assets/images/sea-dark.png');
+}
+
+.sea div:nth-child(1){
+  background-position: left top;
+}
+.sea div:nth-child(2){
+  height: 100%;
+  background-position: right;
+  float: right;
+  background-size: 200% 100%;
+}
+.sea div:nth-child(3){
+  background-position: left bottom;
+}
+.sea:hover div{
+  border:0 solid var(--secondary);
+}
+.sea:hover {
+  border:0 solid var(--secondary);
 }
 
 .search-button,

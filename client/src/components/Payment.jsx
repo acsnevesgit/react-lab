@@ -6,7 +6,6 @@ import TextField from '@mui/material/TextField';
 
 // Components
 import { optionsMonth, optionsYear } from '../constants/DateOptions';
-
 import { DarkModeContext } from '../contexts/DarkModeContext';
 
 import amex from '../assets/svg/amex.svg';

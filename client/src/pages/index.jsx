@@ -1,11 +1,12 @@
 import Layout from './Layout';
+import ArtCreator from './ArtCreator';
 import CardPayment from './CardPayment';
 import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
 import DateSelector from './DateSelector';
 import EmailHandler from './EmailHandler';
 import FormValidation from './FormValidation';
-import ImageAlbum from './ImageAlbum';
+import ImageGallery from './ImageGallery';
 import LanguageSelector from './LanguageSelector';
 import ListManagement from './ListManagement';
 import ReportAnalytics from './ReportAnalytics';
@@ -18,13 +19,14 @@ import WeatherForecast from './WeatherForecast';
 
 export {
   Layout,
+  ArtCreator,
   CardPayment,
   ChatBot,
   CustomCounter,
   DateSelector,
   EmailHandler,
   FormValidation,
-  ImageAlbum,
+  ImageGallery,
   LanguageSelector,
   ListManagement,
   ReportAnalytics,
