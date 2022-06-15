@@ -40,15 +40,22 @@
 ---
 
 ## 📸 Screenshots
+<p align="justify">Note: These screenshots may have been captured at different times of development and, thus, they do not necessarily show the actual status of the repo.</p>
 
 <br/><div align="center">
 
 |    Pages and features     |                                                                   Re@ct-L@b                                                                    |
 | :-----------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------: |
-|    `Light Mode Charts`    | <img src="https://user-images.githubusercontent.com/94974740/171412711-c2d5b16c-0cb3-477e-95e8-af60e752d94f.png"  width="500" height="auto" /> |
-| `Dark Mode Search/Filter` |  <img src="https://user-images.githubusercontent.com/94974740/171412708-4cdf0bdf-3f92-4152-b134-63d3e3cbf126.png"  width="500" height="auto">  |
-|    `Avatar Selection`     |  <img src="https://user-images.githubusercontent.com/94974740/171030838-b5646865-01e7-441f-870f-393895167db4.png"  width="500" height="auto">  |
+| `Light Mode Art` | <img src="https://user-images.githubusercontent.com/94974740/173847151-d83e3a7f-5f20-47d3-b5df-1812b5046a6d.png"  width="500" height="auto" /> |
+| `Dark Mode Art` | <img src="https://user-images.githubusercontent.com/94974740/173847131-69605d43-6d54-48d9-97df-836130e8a6d4.png"  width="500" height="auto" /> |
+| `Light Mode Card Payment` |  <img src="https://user-images.githubusercontent.com/94974740/173847472-0ef29c9c-5551-4fc3-947d-887f2fd9af01.png"  width="500" height="auto">  |
+| `Dark Mode Avatar Selection` |  <img src="https://user-images.githubusercontent.com/94974740/173847720-81dc4b3e-e47f-4630-966e-6d2054bef36b.png"  width="500" height="auto">  |
+| `Image Gallery` |  <img src="https://user-images.githubusercontent.com/94974740/173851509-6eca2ee6-0c4e-42e0-9b63-554ed86b3d94.gif"  width="500" height="auto">  |
 
 </div><br/>
+
+
+
+
 
 <br/><p align="right">GIF credits : https://giphy.com</p>
