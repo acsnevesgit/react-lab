@@ -34,7 +34,7 @@ const ImageGallery = () => {
       <p className='last-line paragraph'>You can flip the card between the front and back sides, altering the view to an image and to the related information, respectively.
         You can can also choose among different visual effects. 🚧</p>
       <ImageList className='image-gallery' variant='masonry' cols={4} gap={48}>
-        {planetsCollection.map((image, index) => (
+        {planetsCollection?.map((image, index) => (
           <ImageListItem key={image.title} id="image-card">
             <img
               className={isFlip[index] ? 'planet-card planet-container card-back' : 'planet-card planet-container card-front'}

@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import {
   Layout,
-  ArtCreator,
+  ArtDisplayer,
   CardPayment,
   ChatBot,
   CustomCounter,
@@ -71,7 +71,7 @@ const App = () => {
           <Router>
             <Routes>
               <Route path='/' element={<Layout />}>
-                <Route path='artcreator' element={<ArtCreator />} />
+                <Route path='artdisplayer' element={<ArtDisplayer />} />
                 <Route path='cardpayment' element={<CardPayment />} />
                 <Route path='chatbot' element={<ChatBot />} />
                 <Route path='customcounter' element={<CustomCounter />} />

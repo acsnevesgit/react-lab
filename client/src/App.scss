@@ -293,7 +293,7 @@ button.arrow-right-dark {
 
 .card-number {
   padding: 1em 1em;
-  border-radius: 0.2em;
+  border-radius: 0.4em;
   width: 100%;
   font: message-box;
   height: 2.5em;
@@ -335,7 +335,6 @@ button.arrow-right-dark {
 
 .exp-month,
 .exp-year {
-  background-color: var(--light);
   color: var(--dark);
 }
 
@@ -401,7 +400,6 @@ li.react-datepicker__time-list-item--selected,
 .movie-genre,
 .movie-country,
 .movie-year {
-  background-color: var(--light);
   color: var(--dark);
   width: 16em;
   margin: 1em 2em 0 0;
@@ -418,11 +416,13 @@ li.react-datepicker__time-list-item--selected,
   margin: 4em 0 2em 0;
   input {
     border: 1px solid hsl(0, 0%, 80%);
-    border-radius: 4px;
+    border-radius: 5px;
+    padding-bottom: 1em !important;
   }
   div {
     background-color: white !important;
-    margin-right: 1em;
+  border-radius: 5px;
+
   }
 }
 
@@ -489,6 +489,11 @@ li.react-datepicker__time-list-item--selected,
 
 .planet-container:hover{
   animation-play-state: running;
+}
+
+.react-lab{
+  display: flex;
+  margin: 0 16px 16px 16px;
 }
 
 .row1,
@@ -573,6 +578,11 @@ li.react-datepicker__time-list-item--selected,
   align-self: center;
 }
 
+.timeline-limit {
+  text-align: center;
+  margin: 1em 0;
+}
+
 .title-input {
   margin: 0.6em 0;
   color: var(--primary);
@@ -602,31 +612,68 @@ li.react-datepicker__time-list-item--selected,
 
 /* --------------------------------------- custom from packages --------------------------------------- */
 
-.css-ztrqiq-MuiImageListItemBar-root {
+.MuiImageListItemBar-root {
   border-radius: 1em;
   text-align-last: center;
   bottom: 5.5em !important;
   width: fit-content !important;
 }
 
-.css-10riir9-MuiImageList-root {
+.MuiImageList-root {
   overflow: hidden !important;
 }
 
-.css-dasnyc-MuiImageListItemBar-title {
+.MuiImageListItemBar-title {
   font-size: 1em !important;
 }
 
-.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:before {
+.MuiInputBase-root-MuiFilledInput-root:before {
   border-bottom: none !important;
 }
 
-.css-19mk8g1-MuiInputBase-root-MuiFilledInput-root:after {
-  border-bottom: 2px solid var(--tertiary) !important;
+.MuiInputBase-root-MuiFilledInput-root:after {
+  border-bottom: 2px solid var(--secondary) !important;
 }
 
-.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
-  height: 0.5em !important;
+.MuiInputBase-input {
+  height: 0.4em !important;
+}
+
+.MuiTimelineContent-root {
+  align-self: center !important;
+}
+
+.MuiTimelineDot-root {
+  background-color: var(--night) !important;
+  padding: 0.8em !important;
+  margin: 0 !important;
+  border: none !important;
+  width: 3em !important;
+  height: 3em !important;
+  align-items: center !important;
+}
+
+.MuiTimelineDot-root.timeline-dot-light {
+  background-color: var(--day) !important;
+}
+
+.MuiTimelineConnector-root {
+  background-color: var(--light) !important;
+  width: 3px !important;
+}
+
+.MuiTimelineConnector-root.timeline-connector-light {
+  background-color: var(--dark) !important;
+}
+
+.MuiTimelineOppositeContent-root {
+  font-size: 0.9em !important;
+  font-weight: bold !important;
+  color: var(--day);
+}
+
+.MuiTimelineOppositeContent-root.timeline-content-light {
+  color: var(--night);
 }
 
 .react-datepicker {

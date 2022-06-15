@@ -35,7 +35,7 @@ const Layout = () => {
   });
 
   const optionsSelect = [
-    { id: 1, to: '/artcreator' },
+    { id: 1, to: '/artdisplayer' },
     { id: 2, to: '/cardpayment' },
     { id: 3, to: '/chatbot' },
     { id: 4, to: '/customcounter' },
@@ -112,12 +112,15 @@ const Layout = () => {
                   &rsaquo;
                 </button>
               </div>
-              <NavLink to='/artcreator'>
+              <div>
+                <h2 className='react-lab'>Re@ct L@b</h2>
+              </div>
+              <NavLink to='/artdisplayer'>
                 <ListItemButton
                   selected={selectedIndex === 0}
                   onClick={(event) => handleListItemClick(event, 0)}
                 >
-                  <ListItemText className='choice' primary='🎨 Art Creator' />
+                  <ListItemText className='choice' primary='🎨 Art Displayer' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/cardpayment'>

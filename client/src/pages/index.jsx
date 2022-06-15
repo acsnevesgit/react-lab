@@ -1,5 +1,5 @@
 import Layout from './Layout';
-import ArtCreator from './ArtCreator';
+import ArtDisplayer from './ArtDisplayer';
 import CardPayment from './CardPayment';
 import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
@@ -19,7 +19,7 @@ import WeatherForecast from './WeatherForecast';
 
 export {
   Layout,
-  ArtCreator,
+  ArtDisplayer,
   CardPayment,
   ChatBot,
   CustomCounter,

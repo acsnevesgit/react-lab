@@ -1,0 +1,80 @@
+[
+	{
+		"text": "Wake up",
+		"icon": "🛏️",
+		"time": "07:30",
+		"tag": "no-brainer"
+	},
+	{
+		"text": "20-minute jog and walk the dog",
+		"icon": "👟",
+		"time": "07:45",
+		"tag": "sports"
+	},
+	{
+		"text": "Shower and get dressed",
+		"icon": "🚿",
+		"time": "08:10",
+		"tag": "no-brainer"
+	},
+	{
+		"text": "Breakfast and read the news",
+		"icon": "🥐",
+		"time": "08:30",
+		"tag": "food"
+	},
+	{
+		"text": "Start work (include 10-minute Fika)",
+		"icon": "🖥️",
+		"time": "09:00",
+		"tag": "work"
+	},
+	{
+		"text": "30-minute Lunch with colleagues",
+		"icon": "🥪",
+		"time": "13:00",
+		"tag": "food, social"
+	},
+	{
+		"text": "Continue work (include 10-minute Fika)",
+		"icon": "🖥️",
+		"time": "13:30",
+		"tag": "work"
+	},
+	{
+		"text": "Finish work and plan next day",
+		"icon": "📓",
+		"time": "17:00",
+		"tag": "work"
+	},
+	{
+		"text": "Run errands (grocery shopping, cleaning, etc)",
+		"icon": "🛒",
+		"time": "17:30",
+		"tag": "no-brainer"
+	},
+	{
+		"text": "Cook and dinner with family",
+		"icon": "👪",
+		"time": "18:45",
+		"tag": "food, social"
+	},
+	{
+		"text": "Clean or walk the dog",
+		"icon": "🐕",
+		"time": "19:45",
+		"tag": "no-brainer"
+	},
+	{
+		"text": "Play games or watch series or read a book",
+		"icon": "🎲",
+		"time": "20:30",
+		"tag": "leisure, social"
+	},
+	{
+		"text": "Prepare to sleep",
+		"icon": "🛏️",
+		"time": "23:30",
+		"tag": "no-brainer"
+	}
+]
