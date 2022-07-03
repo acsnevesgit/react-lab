@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '../styles/Colors.scss';
+
+.wrapper {
+  transition: all 1s ease;
+  margin-top: 1em;
+  width: 18em;
+  height: 24em;
+  padding: 1.3em;
+  border-radius: 10px;
+}
+
+.dark-wrapper {
+  background-color: var(--primary);
+  box-shadow: 1px 1px 10px 2px var(--secondary);
+}
+
+.light-wrapper {
+  background-color: var(--secondary);
+  box-shadow: 1px 1px 10px 2px var(--dark);
+}
+
+.screen {
+  height: 3em;
+  width: 100%;
+  margin-bottom: 2.5em;
+  padding: 0 1em;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+
+.dark-screen {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.light-screen {
+  background-color: white;
+  color: var(--primary);
+}
+
+.button-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 0.6em;
+
+  button {
+    border: none;
+    background-color: var(--tertiary);
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    outline: 1px solid var(--light);
+    height: 1.8em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(20, 96, 172)
+  }
+
+  .equals {
+    grid-column: 3 / 5;
+    background-color: var(--react);
+    color: var(--dark);
+  }
+  
+  .equals:hover {
+    background-color: rgb(80, 180, 207);
+  }
+}
+
+.calculator-list {
+  margin: 1em 0 1em 1em;
+
+  li {
+    padding: 0.3em 0;
+  }
+}

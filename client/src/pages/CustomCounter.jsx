@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import Counter from '../components/Counter';
+import Calculator from '../components/Calculator';
 
 const CustomCounter = () => {
   // ------------------------------------------ Render ------------------------------------------
@@ -21,6 +22,19 @@ const CustomCounter = () => {
         package.
       </p>
       <Counter />
+      <p className=' first-line paragraph'>
+        And here is a Calculator inspired in <b><a href='https://www.sitepoint.com/react-tutorial-build-calculator-app/'>this</a></b> (very well explained!) tutorial, which supports the following features:
+        <ul className='calculator-list'>
+          <li>add, subtract, multiply, divide;</li>
+          <li>support decimal values;</li>
+          <li>calculate percentages;</li>
+          <li>invert values;</li>
+          <li>reset functionality;</li>
+          <li>format larger numbers;</li>
+          <li>output resize based on length.</li>
+        </ul>
+      </p>
+      <Calculator />
     </div>
   );
 };

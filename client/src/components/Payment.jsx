@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react';
 import Cleave from 'cleave.js/react';
-import Button from '@mui/material/Button';
+import { Button, TextField } from '@mui/material';
 import Select from 'react-select';
-import TextField from '@mui/material/TextField';
 
 // Components
 import { optionsMonth, optionsYear } from '../constants/DateOptions';

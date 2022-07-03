@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useStickyBox } from 'react-sticky-box';
 import { NavLink, Outlet, Link, useNavigate } from 'react-router-dom';
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
+import { useTranslation } from 'react-i18next';
+import { List, ListItemButton, ListItemText } from '@mui/material';
+
 import {
   AiFillInstagram,
   AiOutlineInstagram,
@@ -17,12 +17,14 @@ import {
 
 // Components
 import { DarkModeContext } from '../contexts/DarkModeContext';
+// import LanguageSelector from '../components/LanguageSelector';
 import ModeSwitch from '../components/ModeSwitch';
 import reactLogoDark from '../assets/images/react-logo-dark.png';
 import reactLogoLight from '../assets/images/react-logo-light.png';
 
 const Layout = () => {
   const navigate = useNavigate();
+  // const { t } = useTranslation();
   const { darkMode } = useContext(DarkModeContext);
   const [selectedIndex, setSelectedIndex] = useState(
     () => JSON.parse(localStorage.getItem('selectedIndex')) ?? null
@@ -82,9 +84,9 @@ const Layout = () => {
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      <nav>
-        <ModeSwitch />
-      </nav>
+        <nav>
+          <ModeSwitch />
+        </nav>
       <div className='all-container'>
         <div className='content'>
           <List>
@@ -282,7 +284,7 @@ const Layout = () => {
       </div>
       <footer className='footer'>
         <div className='author'>
-          <p>With ❤️ by <i>acnevesgit</i></p>
+          <p>With 💙 by <i>acnevesgit</i></p>
         </div>
         <div className='social-media-logos'>
           {darkMode ? (

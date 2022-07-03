@@ -3,7 +3,7 @@ import Switch from '@mui/material/Switch';
 
 // Components
 import { DarkModeContext } from '../contexts/DarkModeContext';
-import AvatarModal from '../components/AvatarModal';
+import AvatarModal from './AvatarModal';
 
 const ModeSwitch = () => {
   const { darkMode, toggleDarkMode } = useContext(DarkModeContext);

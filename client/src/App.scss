@@ -1,21 +1,15 @@
-/* themes */
+@import './styles/Calculator.scss';
+
+/* colors */
 :root {
-  --primary: #000000;
-  /* (0, 0, 0) */
-  --secondary: #8f8f8f;
-  /* (143,143,143) */
-  --tertiary: #1976d2;
-  /* (25, 118, 210) */
-  --dark: #222222;
-  /* (34,34,34) */
-  --light: #f7f7f7;
-  /* (247, 247, 247) */
-  --warning: #f39c12;
-  /* (243, 156, 18) */
-  --danger: #ff1900;
-  /* (255, 25, 0) */
-  --react: #61dafb;
-  /* (97, 218, 251) */
+  --primary: #000000; /* (0, 0, 0) */
+  --secondary: #8f8f8f; /* (143,143,143) */
+  --tertiary: #1976d2; /* (25, 118, 210) */
+  --dark: #222222; /* (34,34,34) */
+  --light: #f7f7f7; /* (247, 247, 247) */
+  --warning: #f39c12; /* (243, 156, 18) */
+  --danger: #ff1900; /* (255, 25, 0) */
+  --react: #61dafb; /* (97, 218, 251) */
   --day: #aad4e6;
   --night: #163681;
 }
@@ -33,6 +27,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--light);
 }
 
 code {
@@ -65,11 +60,14 @@ footer {
     background-image: url('./assets/images/light.gif');
     background-size: cover;
     transition: all 1s ease;
+    // position: sticky;
+    // top: 0;
+    // z-index: 100;
   }
   footer {
     background-image: url('./assets/images/light-bottom.png');
     background-size: cover;
-    text-align: end;
+    text-align: flex-end;
     font-weight: bold;
   }
 }
@@ -96,11 +94,14 @@ footer {
     background-image: url('./assets/images/dark.gif');
     background-size: cover;
     transition: all 1s ease;
+    // position: sticky;
+    // top: 0;
+    // z-index: 100;
   }
   footer {
     background-image: url('./assets/images/dark-bottom.png');
     background-size: cover;
-    text-align: end;
+    text-align: flex-end;
     font-weight: bold;
   }
 }
@@ -165,7 +166,6 @@ button.arrow-right-dark {
 /* --------------------------------------- all together --------------------------------------- */
 
 .all-container {
-  margin: 1em 1em;
 }
 
 .arrows {

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Modal from '@mui/material/Modal';
+import {Avatar, Button, Modal} from '@mui/material';
 
 // Components
 import {

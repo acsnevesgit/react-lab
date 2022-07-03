@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { useLazyQuery } from '@apollo/client';
 import { GET_WEATHER_QUERY } from '../graphql/WeatherQueries';
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import { capitalize } from '@mui/material';
+import { Button, capitalize, TextField } from '@mui/material';
 
 const WeatherQuery = () => {
   // City searched for the query
