@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '../styles/Colors.scss';
+
+.dark-custom-list {
+  background-color: rgba(0,0,0, 0.8) !important;
+  color: white !important;
+}
+
+.dark-checkbox-list {
+  color: var(--light) !important;
+}
+
+.light-custom-list {
+  background-color: rgba(143,143,143, 0.1) !important;
+  color: var(--dark) !important;
+}

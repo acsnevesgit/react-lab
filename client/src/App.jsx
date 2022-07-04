@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ScrollToTop } from './components/Scroller';
 
 import './App.scss';
 import {
@@ -14,6 +15,7 @@ import {
   ImageGallery,
   LanguageSelector,
   ListManagement,
+  MapInteractor,
   ReportAnalytics,
   SearchFilter,
   ProgressBar,
@@ -69,6 +71,7 @@ const App = () => {
       <DarkModeProvider>
         <AuthContext.Provider value={{ state, dispatch }}>
           <Router>
+            {/* <ScrollToTop className='scroller' /> */}
             <Routes>
               <Route path='/' element={<Layout />}>
                 <Route path='artdisplayer' element={<ArtDisplayer />} />
@@ -81,10 +84,8 @@ const App = () => {
                 <Route path='imagegallery' element={<ImageGallery />} />
                 <Route path='languageselector' element={<LanguageSelector />} />
                 <Route path='listmanagement' element={<ListManagement />} />
-                <Route
-                  path='reportandanalytics'
-                  element={<ReportAnalytics />}
-                />
+                <Route path='mapinteractor' element={<MapInteractor />} />
+                <Route path='reportandanalytics' element={<ReportAnalytics />} />
                 <Route path='searchfilter' element={<SearchFilter />} />
                 <Route path='progressbar' element={<ProgressBar />} />
                 <Route path='stepperedit' element={<StepperEdit />} />

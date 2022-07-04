@@ -9,6 +9,7 @@ import FormValidation from './FormValidation';
 import ImageGallery from './ImageGallery';
 import LanguageSelector from './LanguageSelector';
 import ListManagement from './ListManagement';
+import MapInteractor from './MapInteractor';
 import ReportAnalytics from './ReportAnalytics';
 import SearchFilter from './SearchFilter';
 import ProgressBar from './ProgressBar';
@@ -29,6 +30,7 @@ export {
   ImageGallery,
   LanguageSelector,
   ListManagement,
+  MapInteractor,
   ReportAnalytics,
   SearchFilter,
   ProgressBar,

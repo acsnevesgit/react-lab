@@ -12,12 +12,12 @@
 
 .dark-wrapper {
   background-color: var(--primary);
-  box-shadow: 1px 1px 10px 2px var(--secondary);
+  box-shadow: 1px 1px 10px 2px var(--primary);
 }
 
 .light-wrapper {
   background-color: var(--secondary);
-  box-shadow: 1px 1px 10px 2px var(--dark);
+  box-shadow: 1px 1px 10px 2px var(--secondary);
 }
 
 .screen {

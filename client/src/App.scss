@@ -1,4 +1,5 @@
 @import './styles/Calculator.scss';
+@import './styles/List.scss';
 
 /* colors */
 :root {
@@ -28,6 +29,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light);
+  transition: all 1s ease;
 }
 
 code {
@@ -328,6 +330,12 @@ button.arrow-right-dark {
   margin: 0 1em;
 }
 
+.custom-list {
+  width: 20em;
+  height: 30em;
+  overflow: auto;
+}
+
 .doughnut-chart {
   min-width: 42em !important;
   margin: 2em 0 2em 0;
@@ -383,6 +391,16 @@ li.react-datepicker__time-list-item--selected,
 
 .link-logo {
   margin-left: 1em;
+}
+
+.list-btn {
+  font-size: 1em !important;
+  font-weight: bold !important;
+}
+
+.list-title {
+  text-align: center;
+  padding: 1em 0;
 }
 
 .logo {
@@ -507,7 +525,7 @@ li.react-datepicker__time-list-item--selected,
   height: 1450px;
 }
 
-.sea div{
+.sea div {
   width: 50%;
   height: 50%;
   float: left;
@@ -641,6 +659,10 @@ li.react-datepicker__time-list-item--selected,
 
 .MuiTimelineContent-root {
   align-self: center !important;
+}
+
+.css-1jthpxr-MuiButtonBase-root-MuiButton-root.Mui-disabled {
+  background-color: var(--secondary) !important;
 }
 
 .MuiTimelineDot-root {
