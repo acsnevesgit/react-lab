@@ -1,6 +1,9 @@
 import React, { useContext, useState } from 'react';
 import { DarkModeContext } from '../contexts/DarkModeContext';
 
+// Components
+import calculator from '../assets/collections/3D/calculator.png';
+
 // !Inspired in: https://www.sitepoint.com/react-tutorial-build-calculator-app/
 
 const Calculator = () => {
@@ -140,37 +143,46 @@ const Calculator = () => {
   // ------------------------------------------ Render ------------------------------------------
 
   return (
-    <div className={darkMode ? 'wrapper dark-wrapper' : 'wrapper light-wrapper'}>
-      <div className={darkMode ? 'screen dark-screen' : 'screen light-screen'} mode='single' max={70}>
-        {calc.num ? calc.num : calc.res}
+    <div className='side-by-side'>
+      <div className={darkMode ? 'wrapper dark-wrapper' : 'wrapper light-wrapper'}>
+        <div className={darkMode ? 'screen dark-screen' : 'screen light-screen'} mode='single' max={70}>
+          {calc.num ? calc.num : calc.res}
+        </div>
+        <div className='button-box'>
+          {
+            btnValues.flat().map((btn, i) => {
+              return (
+                <button
+                  key={i}
+                  className={btn === '=' ? 'equals' : ''}
+                  onClick={
+                    btn === 'C'
+                      ? resetClickHandler
+                      : btn === '+-'
+                        ? invertClickHandler
+                        : btn === '%'
+                          ? percentClickHandler
+                          : btn === '='
+                            ? equalsClickHandler
+                            : btn === '/' || btn === 'X' || btn === '-' || btn === '+'
+                              ? signClickHandler
+                              : btn === '.'
+                                ? commaClickHandler
+                                : numClickHandler
+                  }>
+                  {btn}
+                </button>
+              );
+            })
+          }
+        </div>
       </div>
-      <div className='button-box'>
-        {
-          btnValues.flat().map((btn, i) => {
-            return (
-              <button
-                key={i}
-                className={btn === '=' ? 'equals' : ''}
-                onClick={
-                  btn === 'C'
-                    ? resetClickHandler
-                    : btn === '+-'
-                      ? invertClickHandler
-                      : btn === '%'
-                        ? percentClickHandler
-                        : btn === '='
-                          ? equalsClickHandler
-                          : btn === '/' || btn === 'X' || btn === '-' || btn === '+'
-                            ? signClickHandler
-                            : btn === '.'
-                              ? commaClickHandler
-                              : numClickHandler
-                }>
-                {btn}
-              </button>
-            );
-          })
-        }
+      <div>
+        <img
+          className='activity-img'
+          src={calculator}
+          alt='person with calculator'
+        />
       </div>
     </div>
   );

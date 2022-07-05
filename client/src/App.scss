@@ -167,9 +167,6 @@ button.arrow-right-dark {
 
 /* --------------------------------------- all together --------------------------------------- */
 
-.all-container {
-}
-
 .arrows {
   display: flex;
   margin-bottom: 1em;
@@ -255,7 +252,13 @@ button.arrow-right-dark {
 }
 
 .card-form {
-  margin: 1em 0;
+  margin: 1em 1em 1em 0;
+}
+
+.activity-img {
+  margin-left: 1em;
+  height: 25em;
+  width: auto;
 }
 
 .card-type {
@@ -275,14 +278,12 @@ button.arrow-right-dark {
   justify-content: center;
   align-items: center;
   height: 60%;
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3),
-    1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .card-body-light {
   color: var(--dark);
-  text-shadow: 1px 1px var(--light), 1px 1px var(--light), 1px 1px var(--light),
-    1px 1px var(--light);
+  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
 }
 
 .card-footer {
@@ -364,6 +365,7 @@ button.arrow-right-dark {
 img.logo {
   width: 5em;
   height: auto;
+  transition: all 1s ease;
   :hover {
     transform: scale(1.05);
   }
@@ -469,9 +471,8 @@ li.react-datepicker__time-list-item--selected,
   background-size: cover;
   transition: all 1s ease;
   color: var(--light);
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3),
-    1px 2px rgba(0, 0, 0, 0.3), 1px 2px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(1px 1px 5px var(--light));
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(1px 1px 5px var(--secondary));
   animation: fadeIn 0.5s linear;
 }
 
@@ -480,9 +481,8 @@ li.react-datepicker__time-list-item--selected,
   background-size: cover;
   transition: all 1s ease;
   color: var(--dark);
-  text-shadow: 1px 1px var(--light), 1px 1px var(--light), 1px 1px var(--light),
-    1px 1px var(--light);
-  filter: drop-shadow(1px 1px 5px var(--dark));
+  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
+  filter: drop-shadow(1px 1px 5px var(--secondary));
 }
 
 .pie-chart {
@@ -521,25 +521,28 @@ li.react-datepicker__time-list-item--selected,
 }
 
 .sea {
-  width: 1100px;
-  height: 1450px;
+  width: 0.5*1100px;
+  height: 0.5*1450px;
 }
 
 .sea div {
   width: 50%;
   height: 50%;
   float: left;
-  border:0.5em solid var(--secondary);
   transition: all 0.2s;
   background-size: 200% auto;
 }
 
 .sea-light div {
   background-image: url('./assets/images/sea-light.png');
+  border:0.5em solid var(--light);
+  transition: all 1s ease;
 }
 
 .sea-dark div {
   background-image: url('./assets/images/sea-dark.png');
+  border:0.5em solid var(--dark);
+  transition: all 1s ease;
 }
 
 .sea div:nth-child(1){
@@ -554,11 +557,13 @@ li.react-datepicker__time-list-item--selected,
 .sea div:nth-child(3){
   background-position: left bottom;
 }
-.sea:hover div{
-  border:0 solid var(--secondary);
+.sea-light:hover div{
+  border:0 solid var(--light);
+  transition: all 0.2s linear;
 }
-.sea:hover {
-  border:0 solid var(--secondary);
+.sea-dark:hover div{
+  border:0 solid var(--dark);
+  transition: all 0.2s linear;
 }
 
 .search-button,
@@ -575,6 +580,10 @@ li.react-datepicker__time-list-item--selected,
   a {
     text-decoration: none;
   }
+}
+
+.side-by-side {
+  display: flex;
 }
 
 .sticker {

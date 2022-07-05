@@ -11,6 +11,7 @@ import amex from '../assets/svg/amex.svg';
 import maestro from '../assets/svg/maestro.svg';
 import mastercard from '../assets/svg/mastercard.svg';
 import visa from '../assets/svg/visa.svg';
+import payment from '../assets/collections/3D/payment.png';
 
 const paymentCards = [amex, maestro, mastercard, visa];
 
@@ -82,85 +83,94 @@ const Payment = () => {
           );
         })}
       </div>
-      <div className='card-form'>
-        <form id={darkMode ? 'card-form-dark' : 'card-form-light'}>
-          <div id={darkMode ? 'payment-card-dark' : 'payment-card-light'}>
-            <div className='sticker'></div>
-            <div className={darkMode ? 'card-body-dark' : 'card-body-light'}>
-              <h2 id='creditCardNumber'>{creditCardNum}</h2>
-            </div>
-            <div className='card-footer'>
-              <div>
-                <h5>Card Holder</h5>
-                <h3>{cardHolder}</h3>
+      <div className='side-by-side'>
+        <div className='card-form'>
+          <form id={darkMode ? 'card-form-dark' : 'card-form-light'}>
+            <div id={darkMode ? 'payment-card-dark' : 'payment-card-light'}>
+              <div className='sticker'></div>
+              <div className={darkMode ? 'card-body-dark' : 'card-body-light'}>
+                <h2 id='creditCardNumber'>{creditCardNum}</h2>
               </div>
-              <div>
-                <h5>Expires</h5>
-                <h4>
-                  {expireMonth} / {expireYear}
-                </h4>
+              <div className='card-footer'>
+                <div>
+                  <h5>Card Holder</h5>
+                  <h3>{cardHolder}</h3>
+                </div>
+                <div>
+                  <h5>Expires</h5>
+                  <h4>
+                    {expireMonth} / {expireYear}
+                  </h4>
+                </div>
               </div>
             </div>
-          </div>
-          <div className='payment-container'>
-            <p className='title-input'>Card Number</p>
-            <Cleave
-              className='card-number'
-              delimiter='-'
-              options={{
-                creditCard: true,
-                onCreditCardTypeChanged: handleType,
-              }}
-              onChange={handleNumber}
-              placeholder='Please enter your card number'
-            />
-          </div>
-          <div>
-            <p className='title-input'>Card Holder</p>
-            <TextField
-              className='card-holder'
-              onChange={handleCardHolder}
-              type='text'
-              variant='outlined'
-              placeholder='Please enter your full name'
-              required
-            />
-          </div>
-          <div className='input-group'>
-            <div className=''>
-              <p className='title-input'>Exp. Month</p>
-              <Select
-                className='exp-month'
-                value={expireMonth}
-                onChange={handleExpMonth}
-                placeholder='Select...'
-                options={optionsMonth}
-              ></Select>
+            <div className='payment-container'>
+              <p className='title-input'>Card Number</p>
+              <Cleave
+                className='card-number'
+                delimiter='-'
+                options={{
+                  creditCard: true,
+                  onCreditCardTypeChanged: handleType,
+                }}
+                onChange={handleNumber}
+                placeholder='Please enter your card number'
+              />
             </div>
-            <div className='input-container'>
-              <p className='title-input'>Exp. Year</p>
-              <Select
-                className='exp-year'
-                value={expireYear}
-                onChange={handleExpYear}
-                placeholder='Select...'
-                options={optionsYear}
-              ></Select>
-            </div>
-            <div className='input-container'>
-              <p className='title-input'>CVV</p>
+            <div>
+              <p className='title-input'>Card Holder</p>
               <TextField
-                className='cvv-number'
-                type='password'
-                placeholder='CVV'
+                className='card-holder'
+                onChange={handleCardHolder}
+                type='text'
+                variant='outlined'
+                placeholder='Please enter your full name'
                 required
               />
             </div>
-          </div>
-          <Button className='submit-button' variant='contained'>
-            Submit 🚧
-          </Button>
-        </form>
+            <div className='input-group'>
+              <div className=''>
+                <p className='title-input'>Exp. Month</p>
+                <Select
+                  className='exp-month'
+                  value={expireMonth}
+                  onChange={handleExpMonth}
+                  placeholder='Select...'
+                  options={optionsMonth}
+                ></Select>
+              </div>
+              <div className='input-container'>
+                <p className='title-input'>Exp. Year</p>
+                <Select
+                  className='exp-year'
+                  value={expireYear}
+                  onChange={handleExpYear}
+                  placeholder='Select...'
+                  options={optionsYear}
+                ></Select>
+              </div>
+              <div className='input-container'>
+                <p className='title-input'>CVV</p>
+                <TextField
+                  className='cvv-number'
+                  type='password'
+                  placeholder='CVV'
+                  required
+                />
+              </div>
+            </div>
+            <Button className='submit-button' variant='contained'>
+              Submit 🚧
+            </Button>
+          </form>
+        </div>
+        <div>
+          <img
+            className='activity-img'
+            src={payment}
+            alt='card payment'
+          />
+        </div>
       </div>
     </div>
   );
