@@ -4,6 +4,9 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 import { DarkModeContext } from '../contexts/DarkModeContext';
 
+// Components
+import timemanagement from '../assets/collections/3D/timemanagement.png';
+
 const DateSelector = () => {
   const [startDate, setStartDate] = useState(new Date());
 
@@ -45,15 +48,27 @@ const DateSelector = () => {
         </i>{' '}
         packages.
       </p>
-      <DatePicker
-        className={darkMode ? 'date-picker-dark' : 'date-picker-light'}
-        inline
-        timeInputLabel='Time:'
-        showTimeSelect
-        selected={startDate}
-        filterTime={filterPassedTime}
-        onChange={(date) => setStartDate(date)}
-      />
+      <div className='side-by-side'>
+        <div className='calendar-days'>
+          <DatePicker
+            className={darkMode ? 'date-picker-dark' : 'date-picker-light'}
+            inline
+            timeInputLabel='Time:'
+            showTimeSelect
+            selected={startDate}
+            filterTime={filterPassedTime}
+            onChange={(date) => setStartDate(date)}
+          />
+        </div>
+
+        <div>
+          <img
+            className='activity-img-vert'
+            src={timemanagement}
+            alt='time scheduling'
+          />
+        </div>
+      </div>
     </div>
   );
 };

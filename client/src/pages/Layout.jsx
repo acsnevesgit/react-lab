@@ -21,6 +21,13 @@ import { DarkModeContext } from '../contexts/DarkModeContext';
 import ModeSwitch from '../components/ModeSwitch';
 import reactLogoDark from '../assets/images/react-logo-dark.png';
 import reactLogoLight from '../assets/images/react-logo-light.png';
+// import reactLogoDark from '../assets/images/react-dark.png';
+// import reactLogoLight from '../assets/images/react-light.png';
+
+import facebook from '../assets/collections/3D/facebook.png';
+import instagram from '../assets/collections/3D/instagram.png';
+import twitter from '../assets/collections/3D/twitter.png';
+import youtube from '../assets/collections/3D/youtube.png';
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -85,9 +92,9 @@ const Layout = () => {
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-        <nav>
-          <ModeSwitch />
-        </nav>
+      <nav>
+        <ModeSwitch />
+      </nav>
       <div className='all-container'>
         <div className='content'>
           <List>
@@ -299,7 +306,28 @@ const Layout = () => {
           <p>With 💙 by <i>acnevesgit</i></p>
         </div>
         <div className='social-media-logos'>
-          {darkMode ? (
+          <img
+            className='media-icon'
+            src={facebook}
+            alt='facebook-logo'
+          />
+          <img
+            className='media-icon'
+            src={instagram}
+            alt='instagram-logo'
+          />
+          <img
+            className='media-icon'
+            src={twitter}
+            alt='twitter-logo'
+          />
+          <img
+            className='media-icon'
+            src={youtube}
+            alt='youtube-logo'
+          />
+ 
+          {/* {darkMode ? (
             <div>
               <AiFillFacebook className='icon' />
               <AiFillInstagram className='icon' />
@@ -313,7 +341,7 @@ const Layout = () => {
               <AiOutlineTwitter className='icon' />
               <AiOutlineYoutube className='icon' />
             </div>
-          )}
+          )} */}
         </div>
       </footer>
     </div>

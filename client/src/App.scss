@@ -335,6 +335,10 @@ button.arrow-right-dark {
   margin: 0 1em;
 }
 
+.calendar-days {
+  margin-top: 3em;
+}
+
 .doughnut-chart {
   min-width: 42em !important;
   margin: 2em 0 2em 0;
@@ -360,8 +364,13 @@ button.arrow-right-dark {
   margin: 0 0 0 0.5em;
 }
 
+.media-icon {
+  width: 3.5em;
+  height: auto;
+}
+
 img.logo {
-  width: 5em;
+  width: 6em;
   height: auto;
   transition: all 1s ease;
   :hover {

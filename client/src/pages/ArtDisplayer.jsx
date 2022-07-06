@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 // Components
 import { DarkModeContext } from '../contexts/DarkModeContext';
-import painter from '../assets/collections/3D/painter.png';
+import coffeedrinker from '../assets/collections/3D/coffeedrinker.png';
 
 const ArtDisplayer = () => {
   const { darkMode } = useContext(DarkModeContext);
@@ -24,8 +24,8 @@ const ArtDisplayer = () => {
         <div>
           <img
             className='activity-img-vert'
-            src={painter}
-            alt='woman holding frame'
+            src={coffeedrinker}
+            alt='artist holding coffee'
           />
         </div>
       </div>
