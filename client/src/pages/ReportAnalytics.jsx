@@ -12,6 +12,7 @@ import {
 import { Bar, Doughnut, Pie } from 'react-chartjs-2';
 
 // Components
+import phoneholding from '../assets/collections/3D/phoneholding.png';
 import {
   yearData_80,
   yearData_8085,
@@ -280,70 +281,79 @@ const ReportAnalytics = () => {
         out info about each slice. You can also click on the legend labels in
         order to filter what you want to see.
       </p>
-      <div className='charts'>
-        <div className='pie-chart'>
-          <Pie
-            data={chartYears}
-            options={{
-              maintainAspectRatio: true,
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'bottom',
-                  labels: {
-                    display: true,
-                    usePointStyle: true,
-                    pointStyle: 'circle',
-                    padding: 20,
-                  },
-                  title: {
-                    display: true,
-                    text: 'Year',
-                    position: 'top',
-                    font: {
-                      weight: 'bold',
-                      size: 25,
-                    },
-                    padding: {
-                      top: 25,
-                    },
-                  },
-                },
-              },
-            }}
+      <div className='side-by-side'>
+        <div>
+          <img
+            className='activity-img-vert'
+            src={phoneholding}
+            alt='person holding phone'
           />
         </div>
-        <div className='doughnut-chart'>
-          <Doughnut
-            data={chartGenre}
-            options={{
-              maintainAspectRatio: true,
-              responsive: true,
-              plugins: {
-                legend: {
-                  position: 'bottom',
-                  labels: {
-                    display: true,
-                    usePointStyle: true,
-                    pointStyle: 'circle',
-                    padding: 20,
-                  },
-                  title: {
-                    display: true,
-                    text: 'Genre',
-                    position: 'top',
-                    font: {
-                      weight: 'bold',
-                      size: 25,
+        <div className='charts'>
+          <div className='pie-chart'>
+            <Pie
+              data={chartYears}
+              options={{
+                maintainAspectRatio: true,
+                responsive: true,
+                plugins: {
+                  legend: {
+                    position: 'bottom',
+                    labels: {
+                      display: true,
+                      usePointStyle: true,
+                      pointStyle: 'circle',
+                      padding: 20,
                     },
-                    padding: {
-                      top: 25,
+                    title: {
+                      display: true,
+                      text: 'Year',
+                      position: 'top',
+                      font: {
+                        weight: 'bold',
+                        size: 25,
+                      },
+                      padding: {
+                        top: 25,
+                      },
                     },
                   },
                 },
-              },
-            }}
-          />
+              }}
+            />
+          </div>
+          <div className='doughnut-chart'>
+            <Doughnut
+              data={chartGenre}
+              options={{
+                maintainAspectRatio: true,
+                responsive: true,
+                plugins: {
+                  legend: {
+                    position: 'bottom',
+                    labels: {
+                      display: true,
+                      usePointStyle: true,
+                      pointStyle: 'circle',
+                      padding: 20,
+                    },
+                    title: {
+                      display: true,
+                      text: 'Genre',
+                      position: 'top',
+                      font: {
+                        weight: 'bold',
+                        size: 25,
+                      },
+                      padding: {
+                        top: 25,
+                      },
+                    },
+                  },
+                },
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

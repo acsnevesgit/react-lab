@@ -179,7 +179,7 @@ const Calculator = () => {
       </div>
       <div>
         <img
-          className='activity-img'
+          className='activity-img-vert'
           src={calculator}
           alt='person with calculator'
         />

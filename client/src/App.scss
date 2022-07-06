@@ -252,13 +252,17 @@ button.arrow-right-dark {
 }
 
 .card-form {
-  margin: 1em 1em 1em 0;
+  margin: 1em 3em 1em 0;
 }
 
-.activity-img {
-  margin-left: 1em;
+.activity-img-vert {
   height: 25em;
   width: auto;
+}
+
+.activity-img-horiz {
+  width: 24em;
+  height: auto;
 }
 
 .card-type {
@@ -331,12 +335,6 @@ button.arrow-right-dark {
   margin: 0 1em;
 }
 
-.custom-list {
-  width: 20em;
-  height: 30em;
-  overflow: auto;
-}
-
 .doughnut-chart {
   min-width: 42em !important;
   margin: 2em 0 2em 0;
@@ -347,7 +345,7 @@ button.arrow-right-dark {
   color: var(--dark);
 }
 
-.first-line {
+.first-line, .to-do-list {
   margin-top: 2em !important;
 }
 
@@ -412,9 +410,10 @@ li.react-datepicker__time-list-item--selected,
 
 .main {
   margin: 1em 1em 1em 3em;
-  padding: 2em;
-  border: 2px solid var(--secondary);
-  width: 75vw;
+  padding: 3em;
+  border: 3px solid var(--secondary);
+  border-radius: 2em;
+  width: 80vw;
 }
 
 .movie-genre,
@@ -444,6 +443,10 @@ li.react-datepicker__time-list-item--selected,
   border-radius: 5px;
 
   }
+}
+
+.city-search {
+  margin-right: 1em !important;
 }
 
 .paragraph {
@@ -672,6 +675,10 @@ li.react-datepicker__time-list-item--selected,
 
 .css-1jthpxr-MuiButtonBase-root-MuiButton-root.Mui-disabled {
   background-color: var(--secondary) !important;
+}
+
+.css-1ps6pg7-MuiPaper-root {
+  border: 2px solid var(--secondary) !important;
 }
 
 .MuiTimelineDot-root {

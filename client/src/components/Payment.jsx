@@ -166,7 +166,7 @@ const Payment = () => {
         </div>
         <div>
           <img
-            className='activity-img'
+            className='activity-img-vert'
             src={payment}
             alt='card payment'
           />

@@ -4,6 +4,9 @@ import { DarkModeContext } from '../contexts/DarkModeContext';
 
 // !Inspired in: https://mui.com/material-ui/react-transfer-list/
 
+// Components
+import checklist from '../assets/collections/3D/checklist.png';
+
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
 }
@@ -100,58 +103,69 @@ const ListManagement = () => {
       <h3>List Management</h3>
       <p className='first-line paragraph'>Here you can see an interactive transfer list, where one or more list items can be transferred between left and right columns.</p>
       <p className='last-line paragraph'>By default all items can be transferred at once using <b>&gt;&gt;</b> or <b>&lt;&lt;</b> buttons from one column to another. If no item is selected <b>&gt;</b> and <b>&lt;</b> buttons are disabled. But if at least one item is specifically checked, it is possible to only trasfer that(those) checked item(s).</p>
-      <Grid container spacing={4} justifyContent='center' alignItems='center'>
-        <Grid item>{customList(left)}</Grid>
-        <Grid item>
-          <Grid container direction='column' alignItems='center'>
-            <Button
-              sx={{ mx: 1, my: 1 }}
-              className='list-btn'
-              variant='contained'
-              size='medium'
-              onClick={handleAllRight}
-              disabled={left.length === 0}
-              aria-label='move all right'
-            >
-              ≫
-            </Button>
-            <Button
-              sx={{ mx: 1, my: 1 }}
-              className='list-btn'
-              variant='contained'
-              size='medium'
-              onClick={handleCheckedRight}
-              disabled={leftChecked.length === 0}
-              aria-label='move selected right'
-            >
-              &gt;
-            </Button>
-            <Button
-              sx={{ mx: 1, my: 1 }}
-              className='list-btn'
-              variant='contained'
-              size='medium'
-              onClick={handleCheckedLeft}
-              disabled={rightChecked.length === 0}
-              aria-label='move selected left'
-            >
-              &lt;
-            </Button>
-            <Button
-              sx={{ mx: 1, my: 1 }}
-              className='list-btn'
-              variant='contained'
-              size='medium'
-              onClick={handleAllLeft}
-              disabled={right.length === 0}
-              aria-label='move all left'
-            >
-              ≪
-            </Button>
+      <div className='side-by-side'>
+        <div>
+          <img
+            className='activity-img-vert'
+            src={checklist}
+            alt='woman with pencil'
+          />
+        </div>
+        <div className='to-do-list'>
+          <Grid container spacing={4} justifyContent='center' alignItems='center'>
+            <Grid item>{customList(left)}</Grid>
+            <Grid item>
+              <Grid container direction='column' alignItems='center'>
+                <Button
+                  sx={{ mx: 1, my: 1 }}
+                  className='list-btn'
+                  variant='contained'
+                  size='medium'
+                  onClick={handleAllRight}
+                  disabled={left.length === 0}
+                  aria-label='move all right'
+                >
+                  ≫
+                </Button>
+                <Button
+                  sx={{ mx: 1, my: 1 }}
+                  className='list-btn'
+                  variant='contained'
+                  size='medium'
+                  onClick={handleCheckedRight}
+                  disabled={leftChecked.length === 0}
+                  aria-label='move selected right'
+                >
+                  &gt;
+                </Button>
+                <Button
+                  sx={{ mx: 1, my: 1 }}
+                  className='list-btn'
+                  variant='contained'
+                  size='medium'
+                  onClick={handleCheckedLeft}
+                  disabled={rightChecked.length === 0}
+                  aria-label='move selected left'
+                >
+                  &lt;
+                </Button>
+                <Button
+                  sx={{ mx: 1, my: 1 }}
+                  className='list-btn'
+                  variant='contained'
+                  size='medium'
+                  onClick={handleAllLeft}
+                  disabled={right.length === 0}
+                  aria-label='move all left'
+                >
+                  ≪
+                </Button>
+              </Grid>
+            </Grid>
+            <Grid className='done-list' item>{customList(right)}</Grid>
           </Grid>
-        </Grid>
-        <Grid item>{customList(right)}</Grid>
-      </Grid>
+        </div>
+      </div>
     </div>
   );
 };

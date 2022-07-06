@@ -10,12 +10,12 @@ const ChatBot = () => {
       <h3>Chat Bot</h3>
       <p className='first-line paragraph'>🚧</p>
       <div>
-          <img
-            className='activity-img'
-            src={constructor}
-            alt='under construction'
-          />
-        </div>
+        <img
+          className='activity-img-vert'
+          src={constructor}
+          alt='under construction'
+        />
+      </div>
     </div>
   );
 };

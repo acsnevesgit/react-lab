@@ -3,6 +3,9 @@ import { useLazyQuery } from '@apollo/client';
 import { GET_WEATHER_QUERY } from '../graphql/WeatherQueries';
 import { Button, capitalize, TextField } from '@mui/material';
 
+// Components
+import laptopfloor from '../assets/collections/3D/laptopfloor.png';
+
 const WeatherQuery = () => {
   // City searched for the query
   const [citySearched, setCitySearched] = useState('');
@@ -40,7 +43,7 @@ const WeatherQuery = () => {
   // ------------------------------------------ Render ------------------------------------------
 
   return (
-    <div>
+    <div className='side-by-side'>
       <div className='weather'>
         <TextField
           className='city-search'
@@ -81,6 +84,13 @@ const WeatherQuery = () => {
             </p>
           </>
         )}
+      </div>
+      <div>
+        <img
+          className='activity-img-horiz'
+          src={laptopfloor}
+          alt='woman on laptop'
+        />
       </div>
     </div>
   );

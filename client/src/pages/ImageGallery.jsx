@@ -33,7 +33,7 @@ const ImageGallery = () => {
         You can can also choose among different visual effects. 🚧</p>
       <ImageList className='image-gallery' variant='masonry' cols={4} gap={48}>
         {planetsCollection?.map((image, index) => (
-          <ImageListItem key={image.title} id="image-card">
+          <ImageListItem key={image.title} id='image-card'>
             <img
               className={isFlip[index] ? 'planet-card planet-container card-back' : 'planet-card planet-container card-front'}
               src={isFlip[index] ? `${image.imgBack}` : `${image.imgFront}`}
