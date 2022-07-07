@@ -11,7 +11,7 @@ import {
   CustomCounter,
   DateSelector,
   EmailHandler,
-  FormValidation,
+  QuizGame,
   ImageGallery,
   LanguageSelector,
   ListManagement,
@@ -80,7 +80,7 @@ const App = () => {
                 <Route path='customcounter' element={<CustomCounter />} />
                 <Route path='dateselector' element={<DateSelector />} />
                 <Route path='emailhandler' element={<EmailHandler />} />
-                <Route path='formvalidation' element={<FormValidation />} />
+                <Route path='quizgame' element={<QuizGame />} />
                 <Route path='imagegallery' element={<ImageGallery />} />
                 <Route path='languageselector' element={<LanguageSelector />} />
                 <Route path='listmanagement' element={<ListManagement />} />

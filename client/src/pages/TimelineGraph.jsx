@@ -2,7 +2,8 @@ import React, { useContext } from 'react';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from '@mui/lab';
 
 // Components
-import bookreading from '../assets/collections/3D/bookreading.png';
+import ladylaptop from '../assets/collections/3D/ladylaptop.png';
+import ladypointing from '../assets/collections/3D/ladypointing.png';
 import MilestoneData from '../databases/MilestoneData.json';
 import ScheduleData from '../databases/ScheduleData.json';
 import { DarkModeContext } from '../contexts/DarkModeContext';
@@ -19,12 +20,12 @@ const TimelineGraph = () => {
       <p className='last-line paragraph'>The graphic below can either provide general information about lifetime milestones or provide a more detailed
         description of an ordinary weekday schedule. 🚧</p>
       <div>
-        <div className='side-by-side'>
+        <div className='side-by-side centered'>
           <div>
             <img
-              className='activity-img-vert'
-              src={bookreading}
-              alt='girl reading book'
+              className='activity-img-vert img-smaller'
+              src={ladylaptop}
+              alt='lady holding laptop'
             />
           </div>
           <div className='timeline-schedule'>
@@ -59,6 +60,13 @@ const TimelineGraph = () => {
                 )}
               </div>
             </Timeline>
+          </div>
+          <div className='bottomed'>
+            <img
+              className='activity-img-vert img-smaller'
+              src={ladypointing}
+              alt='lady pointing'
+            />
           </div>
         </div>
       </div>

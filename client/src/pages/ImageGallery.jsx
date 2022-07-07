@@ -11,6 +11,7 @@ const ImageGallery = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   // ------------------------------------------ Functions ---------------------------------------
+  
   const handleFlip = async (event) => {
     const cardToFlip = event.target.id; //index of clicked card
     const newIsFlip = [...isFlip];

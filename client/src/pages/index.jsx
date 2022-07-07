@@ -5,7 +5,7 @@ import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
 import DateSelector from './DateSelector';
 import EmailHandler from './EmailHandler';
-import FormValidation from './FormValidation';
+import QuizGame from './QuizGame';
 import ImageGallery from './ImageGallery';
 import LanguageSelector from './LanguageSelector';
 import ListManagement from './ListManagement';
@@ -26,7 +26,7 @@ export {
   CustomCounter,
   DateSelector,
   EmailHandler,
-  FormValidation,
+  QuizGame,
   ImageGallery,
   LanguageSelector,
   ListManagement,

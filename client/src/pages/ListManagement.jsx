@@ -25,6 +25,7 @@ const ListManagement = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   // ------------------------------------------ Functions ---------------------------------------
+  
   const leftChecked = intersection(checked, left);
   const rightChecked = intersection(checked, right);
 

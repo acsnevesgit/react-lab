@@ -50,12 +50,12 @@ const Layout = () => {
     { id: 4, to: '/customcounter' },
     { id: 5, to: '/dateselector' },
     { id: 6, to: '/emailhandler' },
-    { id: 7, to: '/formvalidation' },
-    { id: 8, to: '/imagegallery' },
-    { id: 9, to: '/languageselector' },
-    { id: 10, to: '/listmanagement' },
-    { id: 11, to: '/mapinteractor' },
-    { id: 12, to: '/progressbar' },
+    { id: 7, to: '/imagegallery' },
+    { id: 8, to: '/languageselector' },
+    { id: 9, to: '/listmanagement' },
+    { id: 10, to: '/mapinteractor' },
+    { id: 11, to: '/progressbar' },
+    { id: 12, to: '/quizgame' },
     { id: 13, to: '/reportandanalytics' },
     { id: 14, to: '/searchfilter' },
     { id: 15, to: '/stepperedit' },
@@ -176,29 +176,18 @@ const Layout = () => {
                   <ListItemText className='choice' primary='📧 Email Handler' />
                 </ListItemButton>
               </NavLink>
-              <NavLink to='/formvalidation'>
+              <NavLink to='/imagegallery'>
                 <ListItemButton
                   selected={selectedIndex === 6}
                   onClick={(event) => handleListItemClick(event, 6)}
-                >
-                  <ListItemText
-                    className='choice'
-                    primary='✍️ Form Validation'
-                  />
-                </ListItemButton>
-              </NavLink>
-              <NavLink to='/imagegallery'>
-                <ListItemButton
-                  selected={selectedIndex === 7}
-                  onClick={(event) => handleListItemClick(event, 7)}
                 >
                   <ListItemText className='choice' primary='🖼️ Image Gallery' />
                 </ListItemButton>
               </NavLink>
               <NavLink to='/languageselector'>
                 <ListItemButton
-                  selected={selectedIndex === 8}
-                  onClick={(event) => handleListItemClick(event, 8)}
+                  selected={selectedIndex === 7}
+                  onClick={(event) => handleListItemClick(event, 7)}
                 >
                   <ListItemText
                     className='choice'
@@ -208,8 +197,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/listmanagement'>
                 <ListItemButton
-                  selected={selectedIndex === 9}
-                  onClick={(event) => handleListItemClick(event, 9)}
+                  selected={selectedIndex === 8}
+                  onClick={(event) => handleListItemClick(event, 8)}
                 >
                   <ListItemText
                     className='choice'
@@ -219,8 +208,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/mapinteractor'>
                 <ListItemButton
-                  selected={selectedIndex === 10}
-                  onClick={(event) => handleListItemClick(event, 10)}
+                  selected={selectedIndex === 9}
+                  onClick={(event) => handleListItemClick(event, 9)}
                 >
                   <ListItemText
                     className='choice'
@@ -230,8 +219,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/reportandanalytics'>
                 <ListItemButton
-                  selected={selectedIndex === 11}
-                  onClick={(event) => handleListItemClick(event, 11)}
+                  selected={selectedIndex === 10}
+                  onClick={(event) => handleListItemClick(event, 10)}
                 >
                   <ListItemText
                     className='choice'
@@ -241,8 +230,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/searchfilter'>
                 <ListItemButton
-                  selected={selectedIndex === 12}
-                  onClick={(event) => handleListItemClick(event, 12)}
+                  selected={selectedIndex === 11}
+                  onClick={(event) => handleListItemClick(event, 11)}
                 >
                   <ListItemText
                     className='choice'
@@ -252,12 +241,25 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/progressbar'>
                 <ListItemButton
-                  selected={selectedIndex === 13}
-                  onClick={(event) => handleListItemClick(event, 13)}
+                  selected={selectedIndex === 12}
+                  onClick={(event) => handleListItemClick(event, 12)}
                 >
                   <ListItemText className='choice' primary='⌛ Progress Bar' />
                 </ListItemButton>
               </NavLink>
+
+              <NavLink to='/quizgame'>
+                <ListItemButton
+                  selected={selectedIndex === 13}
+                  onClick={(event) => handleListItemClick(event, 13)}
+                >
+                  <ListItemText
+                    className='choice'
+                    primary='✅ Quiz Game'
+                  />
+                </ListItemButton>
+              </NavLink>
+
               <NavLink to='/stepperedit'>
                 <ListItemButton
                   selected={selectedIndex === 14}
@@ -326,7 +328,7 @@ const Layout = () => {
             src={youtube}
             alt='youtube-logo'
           />
- 
+
           {/* {darkMode ? (
             <div>
               <AiFillFacebook className='icon' />

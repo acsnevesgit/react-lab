@@ -1,5 +1,6 @@
 @import './styles/Calculator.scss';
 @import './styles/List.scss';
+@import './styles/Quiz.scss';
 
 /* colors */
 :root {
@@ -29,7 +30,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--light);
-  transition: all 1s ease;
 }
 
 code {
@@ -265,6 +265,10 @@ button.arrow-right-dark {
   height: auto;
 }
 
+.bottomed {
+  align-self: self-end;
+}
+
 .card-type {
   display: flex;
 }
@@ -311,6 +315,10 @@ button.arrow-right-dark {
   :hover {
     border: 1px solid var(--dark) !important;
   }
+}
+
+.centered {
+  justify-content: center;
 }
 
 .charts {
@@ -362,6 +370,11 @@ button.arrow-right-dark {
   width: 2.5em;
   height: auto;
   margin: 0 0 0 0.5em;
+}
+
+.img-smaller {
+  height: 20em;
+  width: auto;
 }
 
 .media-icon {

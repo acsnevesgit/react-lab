@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '../styles/Colors.scss';
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  max-width: 400px;
+}
+
+.questions-list li:hover {
+  background-color: #772139;
+  color: white;
+}
+
+.questions-list li.correct {
+  background-color: rgb(53, 212, 53);
+}
+
+.questions-list li.selected:not(correct) {
+  background-color: rgb(206, 58, 58);
+}

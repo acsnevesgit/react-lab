@@ -19,6 +19,7 @@ const MovieSelector = () => {
   const [movieData, setMovieData] = useState(mockData);
 
   // ------------------------------------------ Functions ---------------------------------------
+  
   //TODO : search function and filter functions
 
   // ------------------------------------------ Render ------------------------------------------
