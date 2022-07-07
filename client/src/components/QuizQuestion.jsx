@@ -17,11 +17,8 @@ const QuizQuestion = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [options, setOptions] = useState([]);
 
-  const score = useSelector((state) => state.score);
-  const encodedQuestions = useSelector((state) => state.questions);
-  const questionIndex = useSelector((state) => state.index);
-
-  const dispatch = useDispatch();
+  const score = useSelector((state) => state.quiz.score);
+  const encodedQuestions = useSelector((state) => state.quiz.questions);
 
   useEffect(() => {
     const decodedQuestions = encodedQuestions.map(q => {
@@ -35,11 +32,15 @@ const QuizQuestion = () => {
     setQuestions(decodedQuestions);
   }, [encodedQuestions]);
 
+  const questionIndex = useSelector((state) => state.quiz.index);
+
+  const dispatch = useDispatch();
+
   const question = questions[questionIndex];
   const answer = question && question.correct_answer;
 
   const getRandomInt = (max) => {
-    return Math.floor(Math.random() * Math.floor(max))
+    return Math.floor(Math.random() * Math.floor(max));
   };
 
   useEffect(() => {
@@ -48,7 +49,7 @@ const QuizQuestion = () => {
     }
     let answers = [...question.incorrect_answers]
     answers.splice(getRandomInt(question.incorrect_answers.length), 0, question.correct_answer)
-    setOptions(answers)
+    setOptions(answers);
   }, [question]);
 
   const handleListItemClick = (event) => {
@@ -68,13 +69,13 @@ const QuizQuestion = () => {
 
   const getClass = option => {
     if (!answerSelected) {
-      return ``;
+      return '';
     }
     if (option === answer) {
-      return `correct`;
+      return 'correct';
     }
     if (option === selectedAnswer) {
-      return `selected`;
+      return 'selected';
     }
   };
 

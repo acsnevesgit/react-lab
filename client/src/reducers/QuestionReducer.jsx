@@ -1,84 +1,45 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initState = {
+  questions: [],
+  index: 0,
+  score: 0,
   options: {
     loading: false,
     question_category: ``,
     question_difficulty: ``,
     question_type: ``,
-    number_of_questions: 12
+    number_of_questions: 30,
   },
-  questions: [],
-  index: 0,
-  score: 0
 };
 
 const QuestionReducer = createSlice({
-  name: 'questions',
+  name: 'quiz',
   initialState: initState,
   reducers: {
     changeLoading: (state, action) => {
-      return {
-        ...state,
-        options: {
-          ...state.options,
-          loading: action.loading
-        }
-      }
+      state.options.loading = action.payload;
     },
     changeCategory: (state, action) => {
-      return {
-        ...state,
-        options: {
-          ...state.options,
-          question_category: action.question_category
-        }
-      }
+      state.options.question_category = action.payload;
     },
     changeDifficulty: (state, action) => {
-      return {
-        ...state,
-        options: {
-          ...state.options,
-          question_difficulty: action.question_difficulty
-        }
-      }
+      state.options.question_difficulty = action.payload;
     },
     changeType: (state, action) => {
-      return {
-        ...state,
-        options: {
-          ...state.options,
-          question_type: action.question_type
-        }
-      }
+      state.options.question_type = action.payload;
     },
     changeNumber: (state, action) => {
-      return {
-        ...state,
-        options: {
-          ...state.options,
-          number_of_questions: action.number_of_questions
-        }
-      }
+      state.options.number_of_questions = action.payload;
     },
     setQuestions: (state, action) => {
-      return {
-        ...state,
-        questions: action.questions
-      }
+      state.questions = action.payload;
     },
     setIndex: (state, action) => {
-      return {
-        ...state,
-        index: action.index
-      }
+      state.index += action.payload;
     },
     setScore: (state, action) => {
-      return {
-        ...state,
-        score: action.score
-      }
+      state.score += action.payload;
     },
   },
 });

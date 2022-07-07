@@ -13,11 +13,11 @@ const QuizSettings = () => {
   const [options, setOptions] = useState(null);
 
   // Read data from the store with hook useSelector and dispatch actions with hook useDispatch
-  const loading = useSelector(state => state.options.loading);
-  const questionCategory = useSelector(state => state.options.question_category);
-  const questionDifficulty = useSelector(state => state.options.question_difficulty);
-  const questionType = useSelector(state => state.options.question_type);
-  const numberOfQuestions = useSelector(state => state.options.number_of_questions);
+  const loading = useSelector(state => state.quiz.options.loading);
+  const questionCategory = useSelector(state => state.quiz.options.question_category);
+  const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
+  const questionType = useSelector(state => state.quiz.options.question_type);
+  const numberOfQuestions = useSelector(state => state.quiz.options.number_of_questions);
 
   const dispatch = useDispatch();
 

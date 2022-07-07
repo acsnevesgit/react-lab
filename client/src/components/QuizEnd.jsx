@@ -8,7 +8,7 @@ import { setQuestions, setIndex, setScore } from '../reducers/QuestionReducer';
 import FetchButton from './FetchButton';
 
 const QuizEnd = () => {
-  const score = useSelector((state) => state.score);
+  const score = useSelector((state) => state.quiz.score);
 
   const dispatch = useDispatch();
 

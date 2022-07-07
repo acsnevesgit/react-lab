@@ -2,23 +2,23 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 // Reducers
-import { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber, setQuestions, setIndex, setScore } from '../reducers/QuestionReducer';
+import { changeLoading, setIndex, setScore } from '../reducers/QuestionReducer';
 
 const FetchButton = (props) => {
   // Access the settings that will be used to construct the API query
-  const questionCategory = useSelector(state => state.options.question_category);
-  const questionDifficulty = useSelector(state => state.options.question_difficulty);
-  const questionType = useSelector(state => state.options.question_type);
-  const questionNumber = useSelector(state => state.options.number_of_questions);
-  const questionIndex = useSelector(state => state.index);
+  const questionCategory = useSelector(state => state.quiz.options.question_category);
+  const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
+  const questionType = useSelector(state => state.options.quiz.question_type);
+  const questionNumber = useSelector(state => state.options.quiz.number_of_questions);
+  const questionIndex = useSelector(state => state.quiz.index);
 
   const dispatch = useDispatch();
 
   const setLoading = value => {
-    dispatch(changeLoading(value))
+    dispatch(changeLoading(value));
   };
   const setQuestions = value => {
-    dispatch(setQuestions(value))
+    dispatch(setQuestions(value));
   };
 
   // ------------------------------------------ Functions ------------------------------------------
@@ -27,13 +27,13 @@ const FetchButton = (props) => {
     let apiUrl = `https://opentdb.com/api.php?amount=${questionNumber}`;
 
     if (questionCategory.length) {
-      apiUrl = apiUrl.concat(`&category=${questionCategory}`)
+      apiUrl = apiUrl.concat(`&category=${questionCategory}`);
     }
     if (questionDifficulty.length) {
-      apiUrl = apiUrl.concat(`&difficulty=${questionDifficulty}`)
+      apiUrl = apiUrl.concat(`&difficulty=${questionDifficulty}`);
     }
     if (questionType.length) {
-      apiUrl = apiUrl.concat(`&type=${questionType}`)
+      apiUrl = apiUrl.concat(`&type=${questionType}`);
     }
     setLoading(true);
 

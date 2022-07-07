@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 
 // Reducers
-
 import { decrement, increment } from '../reducers/CounterReducer';
 
 const Counter = () => {
