@@ -43,7 +43,7 @@ const WeatherQuery = () => {
   // ------------------------------------------ Render ------------------------------------------
 
   return (
-    <div className='side-by-side'>
+    <div className='side-by-side-weather'>
       <div className='weather'>
         <TextField
           className='city-search'
@@ -61,6 +61,13 @@ const WeatherQuery = () => {
         >
           Search
         </Button>
+      </div>
+      <div>
+        <img
+          className='activity-img-horiz'
+          src={laptopfloor}
+          alt='woman on laptop'
+        />
       </div>
       <div className='weather-info last-line paragraph'>
         {loading && <p>Loading...</p>}
@@ -84,13 +91,6 @@ const WeatherQuery = () => {
             </p>
           </>
         )}
-      </div>
-      <div>
-        <img
-          className='activity-img-horiz'
-          src={laptopfloor}
-          alt='woman on laptop'
-        />
       </div>
     </div>
   );

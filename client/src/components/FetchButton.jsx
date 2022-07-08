@@ -20,15 +20,16 @@ const FetchButton = (props) => {
   const handleQuery = async () => {
     let apiUrl = `https://opentdb.com/api.php?amount=${questionNumber}`;
 
-    if (questionCategory) {
+    if (questionCategory.length) {
       apiUrl = apiUrl.concat(`&category=${questionCategory}`);
     }
-    if (questionDifficulty) {
+    if (questionDifficulty.length) {
       apiUrl = apiUrl.concat(`&difficulty=${questionDifficulty}`);
     }
-    if (questionType) {
+    if (questionType.length) {
       apiUrl = apiUrl.concat(`&type=${questionType}`);
     }
+
     dispatch(changeLoading(true));
 
     await fetch(apiUrl)
@@ -36,7 +37,6 @@ const FetchButton = (props) => {
       .then((response) => {
         // Set questions in the state using an action
         dispatch(setQuestions(response.results));
-        console.log(response);
         dispatch(changeLoading(false));
       });
 
@@ -51,6 +51,7 @@ const FetchButton = (props) => {
   return (
     <div>
       <Button
+        className='fetch-btn'
         variant='contained'
         onClick={handleQuery}>
         {props.text}

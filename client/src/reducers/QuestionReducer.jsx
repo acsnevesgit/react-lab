@@ -6,7 +6,7 @@ const initState = {
     question_category: '',
     question_difficulty: '',
     question_type: '',
-    number_of_questions: 16,
+    number_of_questions: 5,
   },
   questions: [],
   index: 0,
@@ -33,13 +33,13 @@ const questionReducer = createSlice({
       state.options.number_of_questions = action.payload;
     },
     setQuestions: (state, action) => {
-      state.questions = action.questions;
+      state.questions = action.payload;
     },
     setIndex: (state, action) => {
-      state.index += action.payload;
+      state.index = action.payload;
     },
     setScore: (state, action) => {
-      state.score += action.payload;
+      state.score = action.payload;
     },
   },
 });

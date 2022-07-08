@@ -12,8 +12,8 @@
   --warning: #f39c12; /* (243, 156, 18) */
   --danger: #ff1900; /* (255, 25, 0) */
   --react: #61dafb; /* (97, 218, 251) */
-  --day: #aad4e6;
-  --night: #163681;
+  --day: #aad4e6; /* (170, 212, 230) */
+  --night: #163681; /* (97, 218, 251) */
 }
 
 * {
@@ -263,6 +263,7 @@ button.arrow-right-dark {
 .activity-img-horiz {
   width: 24em;
   height: auto;
+  margin-top: 2em;
 }
 
 .bottomed {
@@ -431,7 +432,7 @@ li.react-datepicker__time-list-item--selected,
 }
 
 .main {
-  margin: 1em 1em 1em 3em;
+  margin: 1em 0;
   padding: 3em;
   border: 3px solid var(--secondary);
   border-radius: 2em;
@@ -600,6 +601,7 @@ li.react-datepicker__time-list-item--selected,
 
 .sidebar {
   line-height: 3em;
+  width: 14em;
   display: flex;
   flex-direction: column;
   a {

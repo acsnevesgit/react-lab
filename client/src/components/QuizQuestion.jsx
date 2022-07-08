@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 //Reducers
 import { setIndex, setScore } from '../reducers/QuestionReducer';
+
+// Components
+import { DarkModeContext } from '../contexts/DarkModeContext';
+import coffeedrinker from '../assets/collections/3D/coffeedrinker.png';
 
 // Function to decode the text sent from the API
 const decodeHTML = function (html) {
@@ -12,6 +16,8 @@ const decodeHTML = function (html) {
 };
 
 const QuizQuestion = () => {
+  const { darkMode } = useContext(DarkModeContext);
+
   const [questions, setQuestions] = useState([]);
   const [answerSelected, setAnswerSelected] = useState(false);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -47,17 +53,20 @@ const QuizQuestion = () => {
     if (!question) {
       return;
     }
-    let answers = [...question.incorrect_answers]
-    answers.splice(getRandomInt(question.incorrect_answers.length), 0, question.correct_answer)
+
+    let answers = [...question.incorrect_answers];
+    answers.splice(getRandomInt(question.incorrect_answers.length), 0, question.correct_answer);
     setOptions(answers);
   }, [question]);
 
   const handleListItemClick = (event) => {
     setAnswerSelected(true);
     setSelectedAnswer(event.target.textContent);
+
     if (event.target.textContent === answer) {
       dispatch(setScore(score + 1))
     }
+
     if (questionIndex + 1 <= questions.length) {
       setTimeout(() => {
         setAnswerSelected(false);
@@ -80,23 +89,25 @@ const QuizQuestion = () => {
   };
 
   if (!question) {
-    return <div>Loading</div>
+    return <div>Loading...</div>
   };
 
   // ------------------------------------------ Render ------------------------------------------
 
   return (
-    <div>
-      <p>Question {questionIndex + 1}</p>
-      <h3>{question.question}</h3>
-      <ul className='questions-list'>
-        {options.map((option, i) => (
-          <li key={i} onClick={handleListItemClick} className={getClass(option)}>
-            {option}
-          </li>
-        ))}
-      </ul>
-      <div>
+    <div className='questions-box'>
+      <h4>QUESTION {questionIndex + 1}</h4>
+      <div className='question-answer'>
+        <p className='question-ask'>{question.question}</p>
+        <ul className='questions-list'>
+          {options.map((option, i) => (
+            <li key={i} onClick={handleListItemClick} className={getClass(option)}>
+              👉{' '}{option}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className={darkMode ? 'current-score current-score-dark' : 'current-score current-score-light'}>
         Score: {score} / {questions.length}
       </div>
     </div>
