@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const CounterReducer = createSlice({
+const counterReducer = createSlice({
   name: 'counter',
   initialState: {
     value: 0,
   },
   reducers: {
-    increment: (state, amount) => {
+    increment: (state) => {
       state.value += 1;
     },
-    decrement: (state, amount) => {
+    decrement: (state) => {
       state.value -= 1;
     },
     incrementByAmount: (state, action) => {
@@ -19,5 +19,5 @@ const CounterReducer = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = CounterReducer.actions;
-export default CounterReducer.reducer;
+export const { increment, decrement, incrementByAmount } = counterReducer.actions;
+export default counterReducer.reducer;

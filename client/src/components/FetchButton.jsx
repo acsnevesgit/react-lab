@@ -1,48 +1,43 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Button from '@mui/material/Button';
 
 // Reducers
-import { changeLoading, setIndex, setScore } from '../reducers/QuestionReducer';
+import { changeLoading, setIndex, setScore, setQuestions } from '../reducers/QuestionReducer';
 
 const FetchButton = (props) => {
   // Access the settings that will be used to construct the API query
   const questionCategory = useSelector(state => state.quiz.options.question_category);
   const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
-  const questionType = useSelector(state => state.options.quiz.question_type);
-  const questionNumber = useSelector(state => state.options.quiz.number_of_questions);
+  const questionType = useSelector(state => state.quiz.options.question_type);
+  const questionNumber = useSelector(state => state.quiz.options.number_of_questions);
   const questionIndex = useSelector(state => state.quiz.index);
 
   const dispatch = useDispatch();
-
-  const setLoading = value => {
-    dispatch(changeLoading(value));
-  };
-  const setQuestions = value => {
-    dispatch(setQuestions(value));
-  };
 
   // ------------------------------------------ Functions ------------------------------------------
 
   const handleQuery = async () => {
     let apiUrl = `https://opentdb.com/api.php?amount=${questionNumber}`;
 
-    if (questionCategory.length) {
+    if (questionCategory) {
       apiUrl = apiUrl.concat(`&category=${questionCategory}`);
     }
-    if (questionDifficulty.length) {
+    if (questionDifficulty) {
       apiUrl = apiUrl.concat(`&difficulty=${questionDifficulty}`);
     }
-    if (questionType.length) {
+    if (questionType) {
       apiUrl = apiUrl.concat(`&type=${questionType}`);
     }
-    setLoading(true);
+    dispatch(changeLoading(true));
 
     await fetch(apiUrl)
       .then((res) => res.json())
       .then((response) => {
         // Set questions in the state using an action
-        setQuestions(response.results);
-        setLoading(false);
+        dispatch(setQuestions(response.results));
+        console.log(response);
+        dispatch(changeLoading(false));
       });
 
     if (questionIndex > 0) {
@@ -53,7 +48,15 @@ const FetchButton = (props) => {
 
   // ------------------------------------------ Render ------------------------------------------
 
-  return <button onClick={handleQuery}>{props.text}</button>;
+  return (
+    <div>
+      <Button
+        variant='contained'
+        onClick={handleQuery}>
+        {props.text}
+      </Button>
+    </div>
+  )
 };
 
 export default FetchButton;

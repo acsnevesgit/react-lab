@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initState = {
+  options: {
+    loading: false,
+    question_category: '',
+    question_difficulty: '',
+    question_type: '',
+    number_of_questions: 16,
+  },
   questions: [],
   index: 0,
   score: 0,
-  options: {
-    loading: false,
-    question_category: ``,
-    question_difficulty: ``,
-    question_type: ``,
-    number_of_questions: 30,
-  },
 };
 
-const QuestionReducer = createSlice({
-  name: 'quiz',
+const questionReducer = createSlice({
+  name: 'quiz', // name it will have in the store
   initialState: initState,
   reducers: {
     changeLoading: (state, action) => {
@@ -33,7 +33,7 @@ const QuestionReducer = createSlice({
       state.options.number_of_questions = action.payload;
     },
     setQuestions: (state, action) => {
-      state.questions = action.payload;
+      state.questions = action.questions;
     },
     setIndex: (state, action) => {
       state.index += action.payload;
@@ -45,5 +45,5 @@ const QuestionReducer = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber, setQuestions, setIndex, setScore } = QuestionReducer.actions;
-export default QuestionReducer.reducer;
+export const { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber, setQuestions, setIndex, setScore } = questionReducer.actions;
+export default questionReducer.reducer;

@@ -10,6 +10,6 @@ export default configureStore({
   // Tell the store to use this slice reducer function to handle all updates to that state
   reducer: {
     counter: counterReducer,
-    question: questionreducer,
+    quiz: questionreducer,
   },
 });

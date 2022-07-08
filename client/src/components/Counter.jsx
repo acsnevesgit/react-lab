@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Button from '@mui/material/Button';
 
@@ -6,8 +6,6 @@ import Button from '@mui/material/Button';
 import { decrement, increment } from '../reducers/CounterReducer';
 
 const Counter = () => {
-  const [amount, setAmount] = useState();
-
   // Read data from the store with hook useSelector and dispatch actions with hook useDispatch
   const count = useSelector((state) => state.counter.value);
 
