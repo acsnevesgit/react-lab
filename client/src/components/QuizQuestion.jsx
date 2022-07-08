@@ -78,13 +78,13 @@ const QuizQuestion = () => {
 
   const getClass = option => {
     if (!answerSelected) {
-      return '';
+      return ``;
     }
     if (option === answer) {
-      return 'correct';
+      return `correct`;
     }
     if (option === selectedAnswer) {
-      return 'selected';
+      return `selected`;
     }
   };
 
@@ -102,7 +102,7 @@ const QuizQuestion = () => {
         <ul className='questions-list'>
           {options.map((option, i) => (
             <li key={i} onClick={handleListItemClick} className={getClass(option)}>
-              👉{' '}{option}
+              {option}
             </li>
           ))}
         </ul>
