@@ -181,7 +181,7 @@ const Calculator = () => {
         <img
           className='activity-img-vert'
           src={laptopholding}
-          alt='person with laptop'
+          alt='person holding laptop'
         />
       </div>
     </div>

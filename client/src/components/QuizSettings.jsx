@@ -5,6 +5,9 @@ import FetchButton from './FetchButton';
 // Reducers
 import { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber } from '../reducers/QuestionReducer';
 
+// Components
+import bookreading from '../assets/collections/3D/bookreading.png';
+
 // Using react-redux:
 // - replace state hooks with useSelector
 // - replace setState with actions
@@ -43,43 +46,54 @@ const QuizSettings = () => {
           Loading...
         </p>
       ) : (
-        <div>
+        <div className='side-by-side'>
           <div>
-            <h4>Select Quiz Category:</h4>
-            <select className='quiz-option' value={questionCategory} onChange={(event) => dispatch(changeCategory(event.target.value))}>
-              <option>All</option>
-              {options &&
-                options.map((option) => (
-                  <option value={option.id} key={option.id}>
-                    {option.name}
-                  </option>
-                ))}
-            </select>
+            <div>
+              <h4>Select Quiz Category:</h4>
+              <select className='quiz-option' value={questionCategory} onChange={(event) => dispatch(changeCategory(event.target.value))}>
+                <option>All</option>
+                {options &&
+                  options.map((option) => (
+                    <option value={option.id} key={option.id}>
+                      {option.name}
+                    </option>
+                  ))}
+              </select>
+            </div>
+            <div>
+              <h4>Select Difficulty Level:</h4>
+              <select className='quiz-option' value={questionDifficulty} onChange={(event) => dispatch(changeDifficulty(event.target.value))}>
+                <option value='' key='difficulty-0'>All</option>
+                <option value='easy' key='difficulty-1'>Easy</option>
+                <option value='medium' key='difficulty-2'>Medium</option>
+                <option value='hard' key='difficulty-3'>Hard</option>
+              </select>
+            </div>
+            <div>
+              <h4>Select Question Type:</h4>
+              <select className='quiz-option' value={questionType} onChange={(event) => dispatch(changeType(event.target.value))}>
+                <option value='' key='type-0'>All</option>
+                <option value='multiple' key='type-1'>Multiple Choice</option>
+                <option value='boolean' key='type-2'>True/False</option>
+              </select>
+            </div>
+            <div>
+              <h4>Number of Questions:</h4>
+              <input className='quiz-option' value={numberOfQuestions} onChange={(event) => dispatch(changeNumber(event.target.value))} />
+            </div>
+            <FetchButton text='Start!' />
           </div>
           <div>
-            <h4>Select Difficulty Level:</h4>
-            <select className='quiz-option' value={questionDifficulty} onChange={(event) => dispatch(changeDifficulty(event.target.value))}>
-              <option value='' key='difficulty-0'>All</option>
-              <option value='easy' key='difficulty-1'>Easy</option>
-              <option value='medium' key='difficulty-2'>Medium</option>
-              <option value='hard' key='difficulty-3'>Hard</option>
-            </select>
+            <img
+              className='activity-img-vert'
+              src={bookreading}
+              alt='person holding and reading a book'
+            />
           </div>
-          <div>
-            <h4>Select Question Type:</h4>
-            <select className='quiz-option' value={questionType} onChange={(event) => dispatch(changeType(event.target.value))}>
-              <option value='' key='type-0'>All</option>
-              <option value='multiple' key='type-1'>Multiple Choice</option>
-              <option value='boolean' key='type-2'>True/False</option>
-            </select>
-          </div>
-          <div>
-            <h4>Number of Questions:</h4>
-            <input className='quiz-option' value={numberOfQuestions} onChange={(event) => dispatch(changeNumber(event.target.value))} />
-          </div>
-          <FetchButton text='Start!' />
-        </div>
+        </div >
+
       )}
+
     </div >
   )
 };

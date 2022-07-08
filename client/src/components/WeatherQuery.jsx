@@ -66,7 +66,7 @@ const WeatherQuery = () => {
         <img
           className='activity-img-horiz'
           src={laptopfloor}
-          alt='woman on laptop'
+          alt='person laying on the floor with a laptop'
         />
       </div>
       <div className='weather-info last-line paragraph'>

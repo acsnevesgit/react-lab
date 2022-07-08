@@ -6,7 +6,6 @@ import { setIndex, setScore } from '../reducers/QuestionReducer';
 
 // Components
 import { DarkModeContext } from '../contexts/DarkModeContext';
-import coffeedrinker from '../assets/collections/3D/coffeedrinker.png';
 
 // Function to decode the text sent from the API
 const decodeHTML = function (html) {
@@ -23,6 +22,7 @@ const QuizQuestion = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [options, setOptions] = useState([]);
 
+  // TODO: fix score
   const score = useSelector((state) => state.quiz.score);
   const encodedQuestions = useSelector((state) => state.quiz.questions);
 

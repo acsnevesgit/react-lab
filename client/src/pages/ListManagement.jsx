@@ -109,7 +109,7 @@ const ListManagement = () => {
           <img
             className='activity-img-vert'
             src={checklist}
-            alt='woman with pencil'
+            alt='person with pencil and checklist'
           />
         </div>
         <div className='to-do-list'>

@@ -286,7 +286,7 @@ const ReportAnalytics = () => {
           <img
             className='activity-img-vert'
             src={phoneholding}
-            alt='person holding phone'
+            alt='person typing on phone'
           />
         </div>
         <div className='charts'>
