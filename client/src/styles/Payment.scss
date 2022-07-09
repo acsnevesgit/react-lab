@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './Colors.scss';
+
+#card-form-light,
+#card-form-dark {
+  background: rgba(0, 0, 0, 0.05);
+  max-width: 30em;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em 2em 2em;
+  border-radius: 10px;
+  position: relative;
+}
+
+#card-form-dark {
+  background-color: rgba(247, 247, 247, 0.2);
+  p {
+    color: white;
+  }
+}
+
+.card-holder,
+.card-number,
+.cvv-number {
+  padding: 1em 1em;
+  border-radius: 0.4em;
+  width: 100%;
+  background-color: white;
+}
+
+.card-form {
+  margin: 1em 3em 1em 0;
+}
+
+.card-type {
+  display: flex;
+}
+
+.card-type-logo {
+  width: 5em;
+  height: auto;
+  margin: 2em 1em 8em 1em;
+}
+
+.card-body-dark,
+.card-body-light {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.card-body-light {
+  color: var(--dark);
+  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+
+.card-number {
+  padding: 1em 1em;
+  border-radius: 0.4em;
+  width: 100%;
+  font: message-box;
+  height: 2.5em;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  ::placeholder {
+    color: rgba(0, 0, 0, 0.35);
+  }
+  :hover {
+    border: 1px solid var(--dark) !important;
+  }
+}
+
+.exp-month,
+.exp-year {
+  color: var(--dark);
+}
+
+input.card-number:focus {
+  outline: none;
+  border: 2px solid var(--tertiary) !important;
+}
+
+.payment-container {
+  margin-top: 8em;
+}
+
+#payment-card-light,
+#payment-card-dark {
+  height: 12em;
+  width: 20em;
+  position: absolute;
+  top: -5em;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  transition: all 1s ease;
+  color: var(--light);
+  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
+  filter: drop-shadow(1px 1px 5px var(--secondary));
+  animation: fadeIn 0.5s linear;
+}
+
+#payment-card-light {
+  background-image: url('https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+  background-size: cover;
+  transition: all 1s ease;
+  color: var(--dark);
+  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
+  filter: drop-shadow(1px 1px 5px var(--secondary));
+}
+
+/* --------------------------------------- keyframes --------------------------------------- */
+
+@keyframes fadeIn {
+  from {
+    top: -4em;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

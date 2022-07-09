@@ -72,19 +72,19 @@ const QuizQuestion = () => {
         setAnswerSelected(false);
         setSelectedAnswer(null);
         dispatch(setIndex(questionIndex + 1))
-      }, 2500);
+      }, 2000);
     }
   };
 
   const getClass = option => {
     if (!answerSelected) {
-      return ``;
+      return '';
     }
     if (option === answer) {
-      return `correct`;
+      return 'correct';
     }
     if (option === selectedAnswer) {
-      return `selected`;
+      return 'selected';
     }
   };
 

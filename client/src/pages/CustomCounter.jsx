@@ -10,8 +10,7 @@ const CustomCounter = () => {
   return (
     <div className='main'>
       <h3>
-        Custom Counter{' '}
-        <span className='under-construction'>(* under-construction 🚧)</span>
+        Custom Counter
       </h3>
       <p className='first-line paragraph'>
         Here you can use a custom counter whose state is handled with the help

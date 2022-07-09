@@ -13,7 +13,7 @@ import MapInteractor from './MapInteractor';
 import ReportAnalytics from './ReportAnalytics';
 import SearchFilter from './SearchFilter';
 import ProgressBar from './ProgressBar';
-import StepperEdit from './StepperEdit';
+import StepperEditor from './StepperEditor';
 import TimelineGraph from './TimelineGraph';
 import UserInfo from './UserInfo';
 import WeatherForecast from './WeatherForecast';
@@ -34,7 +34,7 @@ export {
   ReportAnalytics,
   SearchFilter,
   ProgressBar,
-  StepperEdit,
+  StepperEditor,
   TimelineGraph,
   UserInfo,
   WeatherForecast,

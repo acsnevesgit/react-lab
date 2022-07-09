@@ -1,20 +1,15 @@
+/* colors */
+@import './styles/Colors.scss';
+
+/* components styles */
+@import './styles/Art.scss';
 @import './styles/Calculator.scss';
 @import './styles/List.scss';
+@import './styles/Payment.scss';
 @import './styles/Quiz.scss';
+@import './styles/Table.scss';
 
-/* colors */
-:root {
-  --primary: #000000; /* (0, 0, 0) */
-  --secondary: #8f8f8f; /* (143,143,143) */
-  --tertiary: #1976d2; /* (25, 118, 210) */
-  --dark: #222222; /* (34,34,34) */
-  --light: #f7f7f7; /* (247, 247, 247) */
-  --warning: #f39c12; /* (243, 156, 18) */
-  --danger: #ff1900; /* (255, 25, 0) */
-  --react: #61dafb; /* (97, 218, 251) */
-  --day: #aad4e6; /* (170, 212, 230) */
-  --night: #163681;  /* (22,54,129) */
-}
+/* --------------------------------------- general --------------------------------------- */
 
 * {
   margin: 0;
@@ -222,39 +217,6 @@ button.arrow-right-dark {
   }
 }
 
-#card-form-light,
-#card-form-dark {
-  background: rgba(0, 0, 0, 0.05);
-  max-width: 30em;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1em 2em 2em;
-  border-radius: 10px;
-  position: relative;
-}
-
-#card-form-dark {
-  background-color: rgba(247, 247, 247, 0.2);
-  p {
-    color: white;
-  }
-}
-
-.card-holder,
-.card-number,
-.cvv-number {
-  padding: 1em 1em;
-  border-radius: 0.4em;
-  width: 100%;
-  background-color: white;
-}
-
-.card-form {
-  margin: 1em 3em 1em 0;
-}
-
 .activity-img-vert {
   height: 25em;
   width: auto;
@@ -268,54 +230,6 @@ button.arrow-right-dark {
 
 .bottomed {
   align-self: self-end;
-}
-
-.card-type {
-  display: flex;
-}
-
-.card-type-logo {
-  width: 5em;
-  height: auto;
-  margin: 2em 1em 8em 1em;
-}
-
-.card-body-dark,
-.card-body-light {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 60%;
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
-}
-
-.card-body-light {
-  color: var(--dark);
-  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
-}
-
-.card-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 75px;
-}
-
-.card-number {
-  padding: 1em 1em;
-  border-radius: 0.4em;
-  width: 100%;
-  font: message-box;
-  height: 2.5em;
-  border: 1px solid rgba(0, 0, 0, 0.23);
-  ::placeholder {
-    color: rgba(0, 0, 0, 0.35);
-  }
-  :hover {
-    border: 1px solid var(--dark) !important;
-  }
 }
 
 .centered {
@@ -353,11 +267,6 @@ button.arrow-right-dark {
   margin: 2em 0 2em 0;
 }
 
-.exp-month,
-.exp-year {
-  color: var(--dark);
-}
-
 .first-line, .to-do-list {
   margin-top: 2em !important;
 }
@@ -390,11 +299,6 @@ img.logo {
   :hover {
     transform: scale(1.05);
   }
-}
-
-input.card-number:focus {
-  outline: none;
-  border: 2px solid var(--tertiary) !important;
 }
 
 .input-group {
@@ -476,41 +380,6 @@ li.react-datepicker__time-list-item--selected,
   padding: 0.5em 0;
 }
 
-.payment-container {
-  margin-top: 8em;
-}
-
-#payment-card-light,
-#payment-card-dark {
-  height: 12em;
-  width: 20em;
-  position: absolute;
-  top: -5em;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 1em;
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-image: url('https://images.unsplash.com/photo-1597773150796-e5c14ebecbf5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-  background-size: cover;
-  transition: all 1s ease;
-  color: var(--light);
-  text-shadow: 1px 2px rgba(0, 0, 0, 0.3);
-  filter: drop-shadow(1px 1px 5px var(--secondary));
-  animation: fadeIn 0.5s linear;
-}
-
-#payment-card-light {
-  background-image: url('https://images.unsplash.com/photo-1552083974-186346191183?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
-  background-size: cover;
-  transition: all 1s ease;
-  color: var(--dark);
-  text-shadow: 1px 2px rgba(143, 143, 143, 0.8);
-  filter: drop-shadow(1px 1px 5px var(--secondary));
-}
-
 .pie-chart {
   min-width: 30em !important;
   margin: 2em 0 2em 0;
@@ -544,52 +413,6 @@ li.react-datepicker__time-list-item--selected,
 .row2 {
   display: flex;
   justify-content: center;
-}
-
-.sea {
-  width: 0.5*1100px;
-  height: 0.5*1450px;
-}
-
-.sea div {
-  width: 50%;
-  height: 50%;
-  float: left;
-  transition: all 0.2s;
-  background-size: 200% auto;
-}
-
-.sea-light div {
-  background-image: url('./assets/images/sea-light.png');
-  border:0.5em solid var(--light);
-  transition: all 1s ease;
-}
-
-.sea-dark div {
-  background-image: url('./assets/images/sea-dark.png');
-  border:0.5em solid var(--dark);
-  transition: all 1s ease;
-}
-
-.sea div:nth-child(1){
-  background-position: left top;
-}
-.sea div:nth-child(2){
-  height: 100%;
-  background-position: right;
-  float: right;
-  background-size: 200% 100%;
-}
-.sea div:nth-child(3){
-  background-position: left bottom;
-}
-.sea-light:hover div{
-  border:0 solid var(--light);
-  transition: all 0.2s linear;
-}
-.sea-dark:hover div{
-  border:0 solid var(--dark);
-  transition: all 0.2s linear;
 }
 
 .search-button,
@@ -774,53 +597,6 @@ li.react-datepicker__time-list-item--selected,
   font-size: 0.9em;
 }
 
-/* --------------------------------------- table --------------------------------------- */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 4em 0 2em 0;
-}
-
-thead {
-  tr th {
-    text-align: left;
-    border-bottom: 2px solid var(--secondary);
-  }
-  button {
-    border: 0;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 0.5em;
-    margin-bottom: 1px;
-    background: none !important;
-  }
-  button:hover {
-    cursor: pointer;
-  }
-  button.ascending::after {
-    content: '👇';
-    display: inline-block;
-    margin-left: 0.5em;
-  }
-  button.descending::after {
-    content: '☝️';
-    display: inline-block;
-    margin-left: 0.5em;
-  }
-}
-
-tbody {
-  td {
-    padding: 0.6em;
-    border-bottom: 1px solid var(--secondary);
-    font-size: 16px;
-  }
-  tr:hover {
-    background-color: rgba(143, 143, 143, 0.2);
-  }
-}
-
 /* --------------------------------------- media queries --------------------------------------- */
 
 @media only screen and (max-width: 1380px) {
@@ -837,16 +613,6 @@ tbody {
 }
 
 /* --------------------------------------- keyframes --------------------------------------- */
-
-@keyframes fadeIn {
-  from {
-    top: -4em;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
 @keyframes spin {
   0% { transform: rotate(360deg); }

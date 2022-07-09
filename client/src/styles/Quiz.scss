@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import '../styles/Colors.scss';
+@import './Colors.scss';
 
 .all-quiz-btn {
   display: inline-flex;
@@ -15,7 +15,6 @@
 .questions-box {
   width: 54em;
   border: 2px solid rgba(143,143,143, 0.5);
-
   padding: 1em;
   border-radius: 0.6em;
   h4 {
@@ -41,27 +40,33 @@
   font-size: 1.2em;
   font-weight: bold;
 }
+
 .final-score-dark {
   color: var(--day);
+  .result-reaction {
+    color: var(--light);
+  }
 }
+
 .final-score-light {
   color: var(--night);
+  .result-reaction {
+    color: var(--dark);
+  }
 }
 
 .questions-list {
   list-style: none;
-}
-
-.questions-list li {
-  margin: 0.2em 0;
-  padding: 0.5em;
-  width: max-content;
-}
-
-.questions-list li:hover {
-  cursor: pointer;
-  background-color: rgba(143,143,143, 0.5);
-  font-weight: bolder;
+  li {
+    margin: 0.2em 0;
+    padding: 0.5em;
+    width: max-content;
+  }
+  li:hover {
+    cursor: pointer;
+    background-color: rgba(143,143,143, 0.5);
+    font-weight: bolder;
+  }
 }
 
 .questions-list li.correct {

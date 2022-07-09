@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './Colors.scss';
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 4em 0 2em 0;
+}
+
+thead {
+  tr th {
+    text-align: left;
+    border-bottom: 2px solid var(--secondary);
+  }
+  button {
+    border: 0;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0.5em;
+    margin-bottom: 1px;
+    background: none !important;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button.ascending::after {
+    content: '👇';
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+  button.descending::after {
+    content: '☝️';
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+}
+
+tbody {
+  td {
+    padding: 0.6em;
+    border-bottom: 1px solid var(--secondary);
+    font-size: 16px;
+  }
+  tr:hover {
+    background-color: rgba(143, 143, 143, 0.2);
+  }
+}

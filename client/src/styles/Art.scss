@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import './Colors.scss';
+
+.sea {
+  width: 0.5*1100px;
+  height: 0.5*1450px;
+}
+
+.sea div {
+  width: 50%;
+  height: 50%;
+  float: left;
+  transition: all 0.2s;
+  background-size: 200% auto;
+}
+
+.sea-light div {
+  background-image: url('../assets/images/sea-light.png');
+  border:0.5em solid var(--light);
+  transition: all 1s ease;
+}
+
+.sea-dark div {
+  background-image: url('../assets/images/sea-dark.png');
+  border:0.5em solid var(--dark);
+  transition: all 1s ease;
+}
+
+.sea div:nth-child(1){
+  background-position: left top;
+}
+.sea div:nth-child(2){
+  height: 100%;
+  background-position: right;
+  float: right;
+  background-size: 200% 100%;
+}
+.sea div:nth-child(3){
+  background-position: left bottom;
+}
+.sea-light:hover div{
+  border:0 solid var(--light);
+  transition: all 0.2s linear;
+}
+.sea-dark:hover div{
+  border:0 solid var(--dark);
+  transition: all 0.2s linear;
+}

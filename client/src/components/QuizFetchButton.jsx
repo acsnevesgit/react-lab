@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 // Reducers
 import { changeLoading, setIndex, setScore, setQuestions } from '../reducers/QuestionReducer';
 
-const FetchButton = (props) => {
+const QuizFetchButton = (props) => {
   // Access the settings that will be used to construct the API query
   const questionCategory = useSelector(state => state.quiz.options.question_category);
   const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
@@ -60,4 +60,4 @@ const FetchButton = (props) => {
   )
 };
 
-export default FetchButton;
+export default QuizFetchButton;

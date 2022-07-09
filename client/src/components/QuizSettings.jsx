@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux'; //  access the state, update the state
-import FetchButton from './FetchButton';
+import QuizFetchButton from './QuizFetchButton';
 
 // Reducers
 import { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber } from '../reducers/QuestionReducer';
@@ -81,7 +81,7 @@ const QuizSettings = () => {
               <h4>Number of Questions:</h4>
               <input className='quiz-option' value={numberOfQuestions} onChange={(event) => dispatch(changeNumber(event.target.value))} />
             </div>
-            <FetchButton text='Start!' />
+            <QuizFetchButton text='Let&#39;s go!' />
           </div>
           <div>
             <img

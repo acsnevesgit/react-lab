@@ -1,6 +1,5 @@
 import React, { createContext, useReducer } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ScrollToTop } from './components/Scroller';
 
 import './App.scss';
 import {
@@ -19,16 +18,18 @@ import {
   ReportAnalytics,
   SearchFilter,
   ProgressBar,
-  StepperEdit,
+  StepperEditor,
   TimelineGraph,
   UserInfo,
   WeatherForecast,
 } from './pages/index';
+
 import { DarkModeProvider } from './contexts/DarkModeContext';
+import { ScrollToTop } from './helpers/Scroller';
 
 // TODO:
 // ------------------------------------------ User Authentication ------------------------------------------
-export const AuthContext = createContext(); // Pass the auth state to any other component that requires it
+export const AuthContext = createContext(); // pass the auth state to any other component that requires it
 
 const initialState = {
   isAuthenticated: false,
@@ -62,7 +63,7 @@ const reducer = (state, action) => {
 };
 
 const App = () => {
-  const [state, dispatch] = useReducer(reducer, initialState); // If no action is dispatched, return the initial state
+  const [state, dispatch] = useReducer(reducer, initialState); // if no action is dispatched, return the initial state
 
   // ------------------------------------------ Render ------------------------------------------
 
@@ -88,7 +89,7 @@ const App = () => {
                 <Route path='reportandanalytics' element={<ReportAnalytics />} />
                 <Route path='searchfilter' element={<SearchFilter />} />
                 <Route path='progressbar' element={<ProgressBar />} />
-                <Route path='stepperedit' element={<StepperEdit />} />
+                <Route path='steppereditor' element={<StepperEditor />} />
                 <Route path='timelinegraph' element={<TimelineGraph />} />
                 {!state.isAuthenticated ? (
                   <Route path='userinfo' element={<UserInfo />} />
@@ -100,7 +101,7 @@ const App = () => {
                   path='*'
                   element={
                     <main>
-                      <p>Sorry! This page does not exist.</p>
+                      <p>t(Sorry! This page does not exist.)</p>
                     </main>
                   }
                 />
