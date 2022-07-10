@@ -9,13 +9,6 @@ const ChatBot = () => {
     <div className='main'>
       <h3>Chat Bot</h3>
       <p className='first-line paragraph'>🚧</p>
-      <div>
-        <img
-          className='activity-img-vert'
-          src={constructor}
-          alt='under construction'
-        />
-      </div>
     </div>
   );
 };

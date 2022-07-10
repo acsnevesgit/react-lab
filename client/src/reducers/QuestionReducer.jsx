@@ -6,7 +6,7 @@ const initState = {
     question_category: '',
     question_difficulty: '',
     question_type: '',
-    number_of_questions: 5,
+    amount_of_questions: 5,
   },
   questions: [],
   index: 0,
@@ -29,8 +29,8 @@ const questionReducer = createSlice({
     changeType: (state, action) => {
       state.options.question_type = action.payload;
     },
-    changeNumber: (state, action) => {
-      state.options.number_of_questions = action.payload;
+    changeAmount: (state, action) => {
+      state.options.amount_of_questions = action.payload;
     },
     setQuestions: (state, action) => {
       state.questions = action.payload;
@@ -45,5 +45,5 @@ const questionReducer = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber, setQuestions, setIndex, setScore } = questionReducer.actions;
+export const { changeLoading, changeCategory, changeDifficulty, changeType, changeAmount, setQuestions, setIndex, setScore } = questionReducer.actions;
 export default questionReducer.reducer;

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'; //  access the state, up
 import QuizFetchButton from './QuizFetchButton';
 
 // Reducers
-import { changeLoading, changeCategory, changeDifficulty, changeType, changeNumber } from '../reducers/QuestionReducer';
+import { changeLoading, changeCategory, changeDifficulty, changeType, changeAmount } from '../reducers/QuestionReducer';
 
 // Components
 import bookreading from '../assets/collections/3D/bookreading.png';
@@ -20,7 +20,7 @@ const QuizSettings = () => {
   const questionCategory = useSelector(state => state.quiz.options.question_category);
   const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
   const questionType = useSelector(state => state.quiz.options.question_type);
-  const numberOfQuestions = useSelector(state => state.quiz.options.number_of_questions);
+  const amountOfQuestions = useSelector(state => state.quiz.options.amount_of_questions);
 
   const dispatch = useDispatch();
 
@@ -78,8 +78,8 @@ const QuizSettings = () => {
               </select>
             </div>
             <div>
-              <h4>Number of Questions:</h4>
-              <input className='quiz-option' value={numberOfQuestions} onChange={(event) => dispatch(changeNumber(event.target.value))} />
+              <h4>Amount of Questions:</h4>
+              <input className='quiz-option' value={amountOfQuestions} onChange={(event) => dispatch(changeAmount(event.target.value))} />
             </div>
             <QuizFetchButton text='Let&#39;s go!' />
           </div>

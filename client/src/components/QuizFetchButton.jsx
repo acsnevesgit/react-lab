@@ -10,7 +10,7 @@ const QuizFetchButton = (props) => {
   const questionCategory = useSelector(state => state.quiz.options.question_category);
   const questionDifficulty = useSelector(state => state.quiz.options.question_difficulty);
   const questionType = useSelector(state => state.quiz.options.question_type);
-  const questionNumber = useSelector(state => state.quiz.options.number_of_questions);
+  const questionAmount = useSelector(state => state.quiz.options.amount_of_questions);
   const questionIndex = useSelector(state => state.quiz.index);
 
   const dispatch = useDispatch();
@@ -18,21 +18,21 @@ const QuizFetchButton = (props) => {
   // ------------------------------------------ Functions ------------------------------------------
 
   const handleQuery = async () => {
-    let apiUrl = `https://opentdb.com/api.php?amount=${questionNumber}`;
+    let API_URL = `https://opentdb.com/api.php?amount=${questionAmount}`;
 
     if (questionCategory.length) {
-      apiUrl = apiUrl.concat(`&category=${questionCategory}`);
-    }
+      API_URL = API_URL.concat(`&category=${questionCategory}`);
+    };
     if (questionDifficulty.length) {
-      apiUrl = apiUrl.concat(`&difficulty=${questionDifficulty}`);
-    }
+      API_URL = API_URL.concat(`&difficulty=${questionDifficulty}`);
+    };
     if (questionType.length) {
-      apiUrl = apiUrl.concat(`&type=${questionType}`);
-    }
+      API_URL = API_URL.concat(`&type=${questionType}`);
+    };
 
     dispatch(changeLoading(true));
 
-    await fetch(apiUrl)
+    await fetch(API_URL)
       .then((res) => res.json())
       .then((response) => {
         // Set questions in the state using an action

@@ -4,7 +4,7 @@ import { GET_WEATHER_QUERY } from '../graphql/WeatherQueries';
 import { Button, capitalize, TextField } from '@mui/material';
 
 // Components
-import laptopfloor from '../assets/collections/3D/laptopfloor.png';
+import sittingphone from '../assets/collections/3D/sittingphone.png';
 
 const WeatherQuery = () => {
   // City searched for the query
@@ -62,35 +62,37 @@ const WeatherQuery = () => {
           Search
         </Button>
       </div>
-      <div>
-        <img
-          className='activity-img-horiz'
-          src={laptopfloor}
-          alt='person laying on the floor with a laptop'
-        />
-      </div>
-      <div className='weather-info last-line paragraph'>
-        {loading && <p>Loading...</p>}
-        {error && <p>Oops! An error has occurred. Try entering a new City.</p>}
-        {data && data.getCityByName !== null && (
-          <>
-            <p className='weather-summary paragraph'>
-              {capitalize(data.getCityByName.weather.summary.description)}
-            </p>
-            <p>City : {data.getCityByName.name}</p>
-            <p>Country : {getFlagEmoji(data.getCityByName.country)}</p>
-            <p>
-              Current temperature :{' '}
-              {convertTemp(data.getCityByName.weather.temperature.actual)}
-              °C
-            </p>
-            <p>Humidity : {data.getCityByName.weather.clouds.humidity}%</p>
-            <p>
-              Wind Speed : {data.getCityByName.weather.wind.speed}
-              m/s
-            </p>
-          </>
-        )}
+      <div className='weather-results'>
+        <div>
+          <img
+            className='activity-img-horiz-square'
+            src={sittingphone}
+            alt='person sitting on the floor with a phone'
+          />
+        </div>
+        <div className='weather-info last-line paragraph'>
+          {loading && <p>Loading...</p>}
+          {error && <p>Oops! An error has occurred. Try entering a new City.</p>}
+          {data && data.getCityByName !== null && (
+            <>
+              <p className='weather-summary paragraph'>
+                {capitalize(data.getCityByName.weather.summary.description)}
+              </p>
+              <p>City : {data.getCityByName.name}</p>
+              <p>Country : {getFlagEmoji(data.getCityByName.country)}</p>
+              <p>
+                Current temperature :{' '}
+                {convertTemp(data.getCityByName.weather.temperature.actual)}
+                °C
+              </p>
+              <p>Humidity : {data.getCityByName.weather.clouds.humidity}%</p>
+              <p>
+                Wind Speed : {data.getCityByName.weather.wind.speed}
+                m/s
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </div>
   );

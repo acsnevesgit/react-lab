@@ -4,6 +4,7 @@
 /* components styles */
 @import './styles/Art.scss';
 @import './styles/Calculator.scss';
+@import './styles/Contacts.scss';
 @import './styles/List.scss';
 @import './styles/Payment.scss';
 @import './styles/Quiz.scss';
@@ -222,10 +223,10 @@ button.arrow-right-dark {
   width: auto;
 }
 
-.activity-img-horiz {
-  width: 24em;
+.activity-img-horiz-square {
+  width: 12em;
   height: auto;
-  margin-top: 2em;
+  margin: 1.8em 2em 1em 0;
 }
 
 .bottomed {
@@ -345,7 +346,8 @@ li.react-datepicker__time-list-item--selected,
 
 .movie-genre,
 .movie-country,
-.movie-year {
+.movie-year,
+.language-select {
   color: var(--dark);
   width: 16em;
   margin: 1em 2em 0 0;
@@ -475,6 +477,10 @@ li.react-datepicker__time-list-item--selected,
   p {
     margin: 0.5em 0;
   }
+}
+
+.weather-results {
+  display: flex;
 }
 
 .weather-summary {
