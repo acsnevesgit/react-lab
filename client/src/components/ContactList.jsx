@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // Components
 import { Contact } from './Contact';
@@ -9,9 +9,9 @@ const ContactList = ({ contacts, search, deleteContact }) => {
 
   return (
     <div className='contact-list-container'>
-      {contacts.map((item) => {
+      {contacts.map((contact) => {
         return (
-          <Contact key={item.id} contactData={item} deleteContact={deleteContact} />
+          <Contact key={contact.id} contactData={contact} deleteContact={deleteContact} />
         )
       })}
       {contacts.length <= 0 && (

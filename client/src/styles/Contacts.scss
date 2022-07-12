@@ -7,7 +7,11 @@
 
 .add-contact-container {
   margin: 0 1em 2em 0;
-} 
+}
+
+.back-arrow {
+  background-color: var(--secondary) !important;
+}
 
 .contact-add {
   height: 32px !important;
@@ -63,6 +67,7 @@
 
 .contact-delete {
   border: none;
+  background-color: var(--dark) !important;
   transition: 0.4s;
   cursor: pointer;
 }

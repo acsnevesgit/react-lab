@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { TextField } from '@mui/material';
 
 // Components
-import Contact from '../components/Contact';
 import ContactAdd from '../components/ContactAdd';
 import ContactList from '../components/ContactList'
 
@@ -13,13 +12,13 @@ const UserInfo = () => {
 
   const setContactsAndSave = (newContacts) => {
     setContacts(newContacts);
-    localStorage.setItem('contactList', JSON.stringify(newContacts));
+    localStorage.setItem('contactsList', JSON.stringify(newContacts));
   };
 
   const loadSavedContacts = () => {
-    const contacts = localStorage.getItem('contactList');
-    if (contacts) {
-      setContacts(JSON.parse(contacts));
+    const contactExists = localStorage.getItem('contactsList');
+    if (contactExists) {
+      setContacts(JSON.parse(contactExists));
     }
   };
 
@@ -35,8 +34,8 @@ const UserInfo = () => {
   };
 
   const deleteContact = (contactId) => {
-    const newContacts = contacts.filter((item) => {
-      return item.id !== contactId
+    const newContacts = contacts.filter((contact) => {
+      return contact.id !== contactId
     });
     setContactsAndSave(newContacts);
   };
@@ -45,8 +44,8 @@ const UserInfo = () => {
     setSearch(event.target.value);
   };
 
-  const filteredContacts = contacts.filter((item) => {
-    return item.name.toLowerCase().includes(search.toLowerCase());
+  const filteredContacts = contacts.filter((contact) => {
+    return contact.name.toLowerCase().includes(search.toLowerCase());
   });
 
   // ------------------------------------------ Render ------------------------------------------

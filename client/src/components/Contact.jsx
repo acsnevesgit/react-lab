@@ -1,24 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Button } from '@mui/material';
-import { MdDeleteForever } from 'react-icons/md';
-
-// Components
-import peopletalking from '../assets/collections/3D/peopletalking.png';
 
 export const Contact = ({ contactData, deleteContact }) => {
+  // const randomSeed = Math.random().toString(36).substring(2, 7);
+
   // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='contact-container'>
       <div>
-        <img src={contactData.avatar} alt={contactData.name} />
+        <img src={contactData.avatar ?? `https://avatars.dicebear.com/api/open-peeps/:${contactData.name}.svg`} alt={contactData.name} />
         <div className='contact-details'>
-          <p>{contactData.name}</p>
+          <p><b>{contactData.name}</b></p>
           <p>{contactData.phone}</p>
         </div>
       </div>
       <Button onClick={() => deleteContact(contactData.id)} className='contact-delete' variant='contained'>
-        {/* <MdDeleteForever size={20} /> */}
         Delete
       </Button>
     </div>
