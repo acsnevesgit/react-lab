@@ -35,7 +35,7 @@ const App = () => {
       <DarkModeProvider>
           <Router>
             <Routes>
-              <Route path='/' element={<Layout />}>
+              <Route exact path='/' element={<Layout />}>
                 <Route path='artdisplayer' element={<ArtDisplayer />} />
                 <Route path='cardpayment' element={<CardPayment />} />
                 <Route path='chatbot' element={<ChatBot />} />
@@ -58,7 +58,7 @@ const App = () => {
                   path='*'
                   element={
                     <main>
-                      <p>t(Sorry! This page does not exist.)</p>
+                      <p>Sorry! This page does not exist.</p>
                     </main>
                   }
                 />

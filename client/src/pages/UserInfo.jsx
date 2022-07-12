@@ -1,28 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import ContactCard from '../components/ContactCard';
-import mockData from '../databases/MockPeople.json';
+import { TextField } from '@mui/material';
 
 // Components
-import { AddContact } from '../components/AddContact'
-import { Input } from '../components/Input';
-import { List } from '../components/List'
-import constructor from '../assets/collections/3D/constructor.png';
+import Contact from '../components/Contact';
+import ContactAdd from '../components/ContactAdd';
+import ContactList from '../components/ContactList'
 
 const UserInfo = () => {
   const [contacts, setContacts] = useState([]);
   const [search, setSearch] = useState('');
 
-  const contactsData = mockData;
 
   const setContactsAndSave = (newContacts) => {
     setContacts(newContacts);
-    localStorage.setItem('contacts:saved', JSON.stringify(newContacts));
+    localStorage.setItem('contactList', JSON.stringify(newContacts));
   };
 
   const loadSavedContacts = () => {
-    const saved = localStorage.getItem('contacts:saved');
-    if (saved) {
-      setContacts(JSON.parse(saved));
+    const contacts = localStorage.getItem('contactList');
+    if (contacts) {
+      setContacts(JSON.parse(contacts));
     }
   };
 
@@ -57,11 +54,12 @@ const UserInfo = () => {
   return (
     <div className='main'>
       <h3>User Info</h3>
-      <p className='first-line paragraph'>🚧</p>
+      <p className='first-line paragraph'>Here you can view and manage contacts on a list based on the status you choose.</p>
+      <p className='last-line paragraph'>This is useful, for example, to target your audience - your contacts are more likely to open your email and engage with it when its content is relevant to them.</p>
       <div>
-        {/* <AddContact addContact={addContact} />
-        <Input onChange={onChangeSearch} value={search} placeholder='Buscar contato...' />
-        <List contacts={filteredContacts} search={search} deleteContact={deleteContact} /> */}
+        <TextField className='search-contact' onChange={onChangeSearch} value={search} type='text' placeholder='Search contact...' />
+        <ContactAdd addContact={addContact} />
+        <ContactList contacts={filteredContacts} search={search} deleteContact={deleteContact} />
       </div>
 
     </div>

@@ -1,25 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Button } from '@mui/material';
 import { MdDeleteForever } from 'react-icons/md';
 
 // Components
 import peopletalking from '../assets/collections/3D/peopletalking.png';
 
-export const Contact = (props) => {
-
-  // ------------------------------------------ Render ------------------------------------------ (Presentational Component == no logic)
+export const Contact = ({ contactData, deleteContact }) => {
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='contact-container'>
       <div>
-        <img src={props.contactData.avatar ?? peopletalking} alt={props.contactData.name} />
+        <img src={contactData.avatar} alt={contactData.name} />
         <div className='contact-details'>
-          <strong>{props.contactData.name}</strong>
-          <span>{props.contactData.phone}</span>
+          <p>{contactData.name}</p>
+          <p>{contactData.phone}</p>
         </div>
       </div>
-      <button onClick={() => props.deleteContact(props.contactData.id)} className='contact-delete'>
-        <MdDeleteForever size={20} />
-      </button>
+      <Button onClick={() => deleteContact(contactData.id)} className='contact-delete' variant='contained'>
+        {/* <MdDeleteForever size={20} /> */}
+        Delete
+      </Button>
     </div>
   );
 };
