@@ -5,7 +5,7 @@ import { Contact } from './Contact';
 
 const ContactList = ({ contacts, search, deleteContact }) => {
 
-  // ------------------------------------------ Render ------------------------------------------ (Presentational Component == no logic)
+  // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='contact-list-container'>

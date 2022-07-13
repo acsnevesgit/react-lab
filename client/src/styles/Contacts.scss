@@ -6,20 +6,30 @@
 }
 
 .add-contact-container {
-  margin: 0 1em 2em 0;
+  margin: 0 0 2em 0;
+}
+
+.alert {
+  padding: 0 1em !important;
+  margin-left: 1em;
 }
 
 .back-arrow {
   background-color: var(--secondary) !important;
 }
 
+.buttons-row {
+  display: flex;
+}
+
 .contact-add {
-  height: 32px !important;
+  height: 36.5px !important;
+  margin-left: 1em !important;
 }
 
 .contact-list-container {
   width: 75%;
-  display: flex;
+  display: contents;
   flex-direction: column;
   gap: 1em;
 }
@@ -28,18 +38,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background: rgba(143,143,143,0.5);
+  width: 70%;
+  margin: 1em 0;
   border-radius: 57.5px 0.4em 0.4em 57.5px;
   overflow: hidden;
   padding-right: 20px;
-
   & > div {
       display: flex;
       align-items: center;
       gap: 20px;
   }
-
   img {
       margin: 1em;
       width: 80px;
@@ -49,16 +57,25 @@
       background-color: white;
       object-fit: cover;
   }
+}
 
+#contact-container-light {
+  background: rgba(170, 212, 230, 0.8);
   &:hover {
-    background: rgba(143,143,143,0.6);
+    background: rgba(170, 212, 230, 1);
+  }
+}
+
+#contact-container-dark {
+  background: rgba(22,54,129, 0.8);
+  &:hover {
+    background: rgba(22,54,129, 1);
   }
 }
 
 .contact-details{
   display: flex;
   flex-direction: column;
-  
   span {
       opacity: 0.5;
       font-size: 14px;
@@ -67,7 +84,7 @@
 
 .contact-delete {
   border: none;
-  background-color: var(--dark) !important;
+  background-color: var(--secondary) !important;
   transition: 0.4s;
   cursor: pointer;
 }
@@ -75,7 +92,7 @@
 #contact-form-light,
 #contact-form-dark {
   margin: 2em 0;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.1);
   max-height: 100%;
   display: flex;
   justify-content: center;
@@ -85,16 +102,15 @@
 }
 
 #contact-form-dark {
-  background-color: rgba(247, 247, 247, 0.2);
+  background-color: rgba(247, 247, 247, 0.1);
   p {
     color: white;
   }
 }
 
-.contact-input {
-  padding: 1em;
-  width: 18em;
-  margin-right: 2em;
+div .contact-input {
+  width: 20em;
+  margin: 0.5em;
   border-radius: 0.4em;
   background-color: white;
     &:focus {
@@ -110,7 +126,6 @@
   gap: 15px;
   text-align: center;
   margin-top: 50px;
-
   p {
       font-size: 0.9em;
       opacity: 0.5;
@@ -131,4 +146,11 @@ div .search-contact {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
+}
+
+.name-details {
+  margin: 0 2em 0 1em;
+  p {
+    font-size: 2em;
+  }
 }

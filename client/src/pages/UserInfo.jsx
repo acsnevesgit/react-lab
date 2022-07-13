@@ -45,7 +45,7 @@ const UserInfo = () => {
   };
 
   const filteredContacts = contacts.filter((contact) => {
-    return contact.name.toLowerCase().includes(search.toLowerCase());
+    return contact.firstname.toLowerCase().includes(search.toLowerCase());
   });
 
   // ------------------------------------------ Render ------------------------------------------
@@ -57,10 +57,9 @@ const UserInfo = () => {
       <p className='last-line paragraph'>This is useful, for example, to target your audience - your contacts are more likely to open your email and engage with it when its content is relevant to them.</p>
       <div>
         <TextField className='search-contact' onChange={onChangeSearch} value={search} type='text' placeholder='Search contact...' />
-        <ContactAdd addContact={addContact} />
+        <ContactAdd contacts={contacts} addContact={addContact} />
         <ContactList contacts={filteredContacts} search={search} deleteContact={deleteContact} />
       </div>
-
     </div>
   );
 };
