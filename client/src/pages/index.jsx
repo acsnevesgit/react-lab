@@ -15,7 +15,7 @@ import SearchFilter from './SearchFilter';
 import ProgressBar from './ProgressBar';
 import StepperEditor from './StepperEditor';
 import TimelineGraph from './TimelineGraph';
-import UserInfo from './UserInfo';
+import ContactInfo from './ContactInfo';
 import WeatherForecast from './WeatherForecast';
 
 export {
@@ -36,6 +36,6 @@ export {
   ProgressBar,
   StepperEditor,
   TimelineGraph,
-  UserInfo,
+  ContactInfo,
   WeatherForecast,
 };
