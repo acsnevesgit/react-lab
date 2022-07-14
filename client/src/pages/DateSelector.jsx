@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { DarkModeContext } from '../contexts/DarkModeContext';
 
 // Components
-import timemanagement from '../assets/collections/3D/timemanagement.png';
+import Peep22 from '../assets/collections/open-peeps/22.png';
 
 const DateSelector = () => {
   const [startDate, setStartDate] = useState(new Date());
@@ -64,8 +64,9 @@ const DateSelector = () => {
         <div>
           <img
             className='activity-img-vert'
-            src={timemanagement}
-            alt='time scheduling'
+            src={Peep22}
+            alt='person pointing'
+            style={{width: 220, height: 400 }}
           />
         </div>
       </div>

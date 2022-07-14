@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import { DarkModeContext } from '../contexts/DarkModeContext';
 
 // Components
-import laptopholding from '../assets/collections/3D/laptopholding.png';
+import Peep30 from '../assets/collections/open-peeps/30.png';
 
 // !Inspired in: https://www.sitepoint.com/react-tutorial-build-calculator-app/
 
@@ -180,8 +180,9 @@ const Calculator = () => {
       <div>
         <img
           className='activity-img-vert'
-          src={laptopholding}
-          alt='person holding laptop'
+          src={Peep30}
+          alt='person thinking'
+          style={{width: 200, height: 290, marginTop: 16 }}
         />
       </div>
     </div>

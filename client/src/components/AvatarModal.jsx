@@ -97,7 +97,7 @@ const AvatarModal = () => {
           className='avatar'
           src={`${avatar}`}
           alt='avatar'
-          sx={{ width: 60, height: 60 }}
+          sx={{ width: 50, height: 50 }}
         />
       </Button>
       <Modal

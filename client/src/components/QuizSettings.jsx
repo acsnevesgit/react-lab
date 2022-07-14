@@ -6,7 +6,7 @@ import QuizFetchButton from './QuizFetchButton';
 import { changeLoading, changeCategory, changeDifficulty, changeType, changeAmount } from '../reducers/QuestionReducer';
 
 // Components
-import bookreading from '../assets/collections/3D/bookreading.png';
+import Peep5 from '../assets/collections/open-peeps/5.png';
 
 // Using react-redux:
 // - replace state hooks with useSelector
@@ -86,8 +86,9 @@ const QuizSettings = () => {
           <div>
             <img
               className='activity-img-vert'
-              src={bookreading}
-              alt='person holding and reading a book'
+              src={Peep5}
+              alt='person challenge accepted'
+              style={{ width: 200, height: 280, marginTop: 48, marginLeft: 32 }}
             />
           </div>
         </div >

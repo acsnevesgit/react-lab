@@ -11,7 +11,8 @@ import amex from '../assets/svg/amex.svg';
 import maestro from '../assets/svg/maestro.svg';
 import mastercard from '../assets/svg/mastercard.svg';
 import visa from '../assets/svg/visa.svg';
-import payment from '../assets/collections/3D/payment.png';
+
+import Peep3 from '../assets/collections/open-peeps/3.png';
 
 const paymentCards = [amex, maestro, mastercard, visa];
 
@@ -167,8 +168,9 @@ const Payment = () => {
         <div>
           <img
             className='activity-img-vert'
-            src={payment}
-            alt='card payment'
+            src={Peep3}
+            alt='person holding laptop'
+            style={{ width: 250, height: 280, marginTop: 220 }}
           />
         </div>
       </div>

@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineOppositeContent, TimelineDot } from '@mui/lab';
 
 // Components
-import ladylaptop from '../assets/collections/3D/ladylaptop.png';
-import ladypointing from '../assets/collections/3D/ladypointing.png';
+import Peep21 from '../assets/collections/open-peeps/21.png';
+import Peep32 from '../assets/collections/open-peeps/32.png';
 import MilestoneData from '../databases/MilestoneData.json';
 import ScheduleData from '../databases/ScheduleData.json';
 import { DarkModeContext } from '../contexts/DarkModeContext';
@@ -24,8 +24,9 @@ const TimelineGraph = () => {
           <div>
             <img
               className='activity-img-vert img-smaller'
-              src={ladylaptop}
-              alt='lady holding laptop'
+              src={Peep21}
+              alt='person laughing'
+              style={{width: 180, height: 430, marginTop: 48 }}
             />
           </div>
           <div className='timeline-schedule'>
@@ -64,8 +65,9 @@ const TimelineGraph = () => {
           <div className='bottomed'>
             <img
               className='activity-img-vert img-smaller'
-              src={ladypointing}
-              alt='lady pointing'
+              src={Peep32}
+              alt='person chewing'
+              style={{width: 180, height: 250, marginBottom: 48 }}
             />
           </div>
         </div>

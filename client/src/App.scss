@@ -134,7 +134,7 @@ button.arrow-right-dark {
 .light-basic-modal,
 .dark-basic-modal {
   position: absolute;
-  top: 20%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   border: 2px solid var(--secondary);
@@ -172,8 +172,9 @@ button.arrow-right-dark {
 }
 
 .avatar {
+  background-color: var(--secondary);
   margin: 0 1em 0 2em;
-  outline: 1px solid var(--secondary);
+  outline: 1px solid var(--dark);
   background-color: none !important;
   button {
     background-color: none !important;
@@ -191,7 +192,8 @@ button.arrow-right-dark {
 
 .avatar-pic {
   margin: 2em 0.5em 0 0.5em;
-  outline: 1px solid var(--secondary);
+  background-color: var(--secondary);
+  outline: 1px solid var(--dark);
   :hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -218,12 +220,6 @@ button.arrow-right-dark {
 .activity-img-vert {
   height: 25em;
   width: auto;
-}
-
-.activity-img-horiz-square {
-  width: 12em;
-  height: auto;
-  margin: 1.8em 2em 1em 0;
 }
 
 .bottomed {
@@ -470,7 +466,7 @@ li.react-datepicker__time-list-item--selected,
 }
 
 .weather-info {
-  margin: 1em 2em 1em 0;
+  margin: 3em 2em 1em 0;
   p {
     margin: 0.5em 0;
   }
@@ -567,6 +563,7 @@ li.react-datepicker__time-list-item--selected,
 .react-datepicker {
   font-size: 1em !important;
   height: 16.5em;
+  margin-right: 2em;
 }
 
 .react-datepicker__month-container {

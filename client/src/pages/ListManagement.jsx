@@ -5,7 +5,7 @@ import { DarkModeContext } from '../contexts/DarkModeContext';
 // !Inspired in: https://mui.com/material-ui/react-transfer-list/
 
 // Components
-import checklist from '../assets/collections/3D/checklist.png';
+import Peep19 from '../assets/collections/open-peeps/19.png';
 
 function not(a, b) {
   return a.filter((value) => b.indexOf(value) === -1);
@@ -108,8 +108,9 @@ const ListManagement = () => {
         <div>
           <img
             className='activity-img-vert'
-            src={checklist}
-            alt='person with pencil and checklist'
+            src={Peep19}
+            alt='person feeling content'
+            style={{width: 180, height: 400, marginTop: 48, marginRight: 48 }}
           />
         </div>
         <div className='to-do-list'>

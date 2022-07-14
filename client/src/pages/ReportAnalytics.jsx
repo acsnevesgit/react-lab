@@ -12,7 +12,9 @@ import {
 import { Bar, Doughnut, Pie } from 'react-chartjs-2';
 
 // Components
-import phoneholding from '../assets/collections/3D/phoneholding.png';
+import Peep10 from '../assets/collections/open-peeps/10.png';
+import Peep31 from '../assets/collections/open-peeps/31.png';
+
 import {
   yearData_80,
   yearData_8085,
@@ -285,8 +287,9 @@ const ReportAnalytics = () => {
         <div>
           <img
             className='activity-img-vert'
-            src={phoneholding}
-            alt='person typing on phone'
+            src={Peep10}
+            alt='person with arms crossed'
+            style={{ width: 180, height: 260, marginTop: 64, marginLeft: 0 }}
           />
         </div>
         <div className='charts'>
@@ -354,6 +357,14 @@ const ReportAnalytics = () => {
               }}
             />
           </div>
+        </div>
+        <div>
+          <img
+            className='activity-img-vert'
+            src={Peep31}
+            alt='person sitting'
+            style={{ width: 220, height: 300, marginTop: 800, marginLeft: 0 }}
+          />
         </div>
       </div>
     </div>

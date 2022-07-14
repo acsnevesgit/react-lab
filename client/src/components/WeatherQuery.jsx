@@ -4,10 +4,9 @@ import { GET_WEATHER_QUERY } from '../graphql/WeatherQueries';
 import { Button, capitalize, TextField } from '@mui/material';
 
 // Components
-import sittingphone from '../assets/collections/3D/sittingphone.png';
+import Peep1 from '../assets/collections/open-peeps/1.png';
 
 const WeatherQuery = () => {
-  // City searched for the query
   const [citySearched, setCitySearched] = useState('');
 
   // Function for the query using Apollo Client
@@ -26,12 +25,12 @@ const WeatherQuery = () => {
     console.log(data);
   }
 
-  //Funtions for conversion from API default
+  // Funtion for conversion from API default
   const convertTemp = (temp) => {
     return (temp - 273.15).toFixed(1); // Kelvin to Celsius
   };
 
-  //Function to get flag emoji
+  // Function to get flag emoji
   const getFlagEmoji = (countryCode) => {
     const codePoints = countryCode
       .toUpperCase()
@@ -65,9 +64,10 @@ const WeatherQuery = () => {
       <div className='weather-results'>
         <div>
           <img
-            className='activity-img-horiz-square'
-            src={sittingphone}
-            alt='person sitting on the floor with a phone'
+            className='activity-img-vert'
+            src={Peep1}
+            alt='person checking the phone'
+            style={{width: 180, height: 280, marginTop: 32, marginRight: 48 }}
           />
         </div>
         <div className='weather-info last-line paragraph'>

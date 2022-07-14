@@ -35,7 +35,7 @@ const App = () => {
       <DarkModeProvider>
           <Router>
             <Routes>
-              <Route exact path='/' element={<Layout />}>
+              <Route path='/' element={<Layout />}>
                 <Route path='artdisplayer' element={<ArtDisplayer />} />
                 <Route path='cardpayment' element={<CardPayment />} />
                 <Route path='chatbot' element={<ChatBot />} />
