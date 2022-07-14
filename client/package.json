@@ -2,7 +2,7 @@
   "name": "react-lab",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/artdisplayer",
+  "homepage": ".",
   "main": "index.js",
   "dependencies": {
     "@apollo/client": "^3.6.6",
