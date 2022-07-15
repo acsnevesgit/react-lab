@@ -5,6 +5,7 @@ import { DarkModeContext } from '../contexts/DarkModeContext';
 // !Inspired in: https://mui.com/material-ui/react-transfer-list/
 
 // Components
+import { PageTransition } from '../components/PageTransitions';
 import Peep19 from '../assets/collections/open-peeps/19.png';
 
 function not(a, b) {
@@ -25,7 +26,7 @@ const ListManagement = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   // ------------------------------------------ Functions ---------------------------------------
-  
+
   const leftChecked = intersection(checked, left);
   const rightChecked = intersection(checked, right);
 
@@ -101,73 +102,75 @@ const ListManagement = () => {
   // ------------------------------------------ Render ------------------------------------------
   return (
     <div className='main'>
-      <h3>List Management</h3>
-      <p className='first-line paragraph'>Here you can see an interactive transfer list, where one or more list items can be transferred between left and right columns.</p>
-      <p className='last-line paragraph'>By default all items can be transferred at once using <b>&gt;&gt;</b> or <b>&lt;&lt;</b> buttons from one column to another. If no item is selected <b>&gt;</b> and <b>&lt;</b> buttons are disabled. But if at least one item is specifically checked, it is possible to only trasfer that(those) checked item(s).</p>
-      <div className='side-by-side'>
-        <div>
-          <img
-            className='activity-img-vert'
-            src={Peep19}
-            alt='person feeling content'
-            style={{width: 180, height: 400, marginTop: 48, marginRight: 48 }}
-          />
-        </div>
-        <div className='to-do-list'>
-          <Grid container spacing={4} justifyContent='center' alignItems='center'>
-            <Grid item>{customList(left)}</Grid>
-            <Grid item>
-              <Grid container direction='column' alignItems='center'>
-                <Button
-                  sx={{ mx: 1, my: 1 }}
-                  className='list-btn'
-                  variant='contained'
-                  size='medium'
-                  onClick={handleAllRight}
-                  disabled={left.length === 0}
-                  aria-label='move all right'
-                >
-                  ≫
-                </Button>
-                <Button
-                  sx={{ mx: 1, my: 1 }}
-                  className='list-btn'
-                  variant='contained'
-                  size='medium'
-                  onClick={handleCheckedRight}
-                  disabled={leftChecked.length === 0}
-                  aria-label='move selected right'
-                >
-                  &gt;
-                </Button>
-                <Button
-                  sx={{ mx: 1, my: 1 }}
-                  className='list-btn'
-                  variant='contained'
-                  size='medium'
-                  onClick={handleCheckedLeft}
-                  disabled={rightChecked.length === 0}
-                  aria-label='move selected left'
-                >
-                  &lt;
-                </Button>
-                <Button
-                  sx={{ mx: 1, my: 1 }}
-                  className='list-btn'
-                  variant='contained'
-                  size='medium'
-                  onClick={handleAllLeft}
-                  disabled={right.length === 0}
-                  aria-label='move all left'
-                >
-                  ≪
-                </Button>
+      <PageTransition>
+        <h3>List Management</h3>
+        <p className='first-line paragraph'>Here you can see an interactive transfer list, where one or more list items can be transferred between left and right columns.</p>
+        <p className='last-line paragraph'>By default all items can be transferred at once using <b>&gt;&gt;</b> or <b>&lt;&lt;</b> buttons from one column to another. If no item is selected <b>&gt;</b> and <b>&lt;</b> buttons are disabled. But if at least one item is specifically checked, it is possible to only trasfer that(those) checked item(s).</p>
+        <div className='side-by-side'>
+          <div>
+            <img
+              className='activity-img-vert'
+              src={Peep19}
+              alt='person feeling content'
+              style={{ width: 180, height: 400, marginTop: 48, marginRight: 48 }}
+            />
+          </div>
+          <div className='to-do-list'>
+            <Grid container spacing={4} justifyContent='center' alignItems='center'>
+              <Grid item>{customList(left)}</Grid>
+              <Grid item>
+                <Grid container direction='column' alignItems='center'>
+                  <Button
+                    sx={{ mx: 1, my: 1 }}
+                    className='list-btn'
+                    variant='contained'
+                    size='medium'
+                    onClick={handleAllRight}
+                    disabled={left.length === 0}
+                    aria-label='move all right'
+                  >
+                    ≫
+                  </Button>
+                  <Button
+                    sx={{ mx: 1, my: 1 }}
+                    className='list-btn'
+                    variant='contained'
+                    size='medium'
+                    onClick={handleCheckedRight}
+                    disabled={leftChecked.length === 0}
+                    aria-label='move selected right'
+                  >
+                    &gt;
+                  </Button>
+                  <Button
+                    sx={{ mx: 1, my: 1 }}
+                    className='list-btn'
+                    variant='contained'
+                    size='medium'
+                    onClick={handleCheckedLeft}
+                    disabled={rightChecked.length === 0}
+                    aria-label='move selected left'
+                  >
+                    &lt;
+                  </Button>
+                  <Button
+                    sx={{ mx: 1, my: 1 }}
+                    className='list-btn'
+                    variant='contained'
+                    size='medium'
+                    onClick={handleAllLeft}
+                    disabled={right.length === 0}
+                    aria-label='move all left'
+                  >
+                    ≪
+                  </Button>
+                </Grid>
               </Grid>
+              <Grid className='done-list' item>{customList(right)}</Grid>
             </Grid>
-            <Grid className='done-list' item>{customList(right)}</Grid>
-          </Grid>
+          </div>
         </div>
-      </div>
+      </PageTransition>
     </div>
   );
 };

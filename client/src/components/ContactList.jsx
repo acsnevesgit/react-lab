@@ -23,7 +23,7 @@ const ContactList = ({ contacts, search, deleteContact }) => {
               </>
             ) : (
               <>
-                <p>Your list is empty. Go ahead and starting adding new contacts.</p>
+                <p>Your list is empty. Go ahead and start adding new contacts.</p>
               </>
             )}
           </div>

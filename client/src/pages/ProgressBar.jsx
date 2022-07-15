@@ -1,12 +1,16 @@
 import React from 'react';
 
+import { PageTransition } from '../components/PageTransitions';
+
 const ProgressBar = () => {
   // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>
-      <h3>Progress Bar</h3>
-      <p className='first-line paragraph'>🚧</p>
+      <PageTransition>
+        <h3>Progress Bar</h3>
+        <p className='first-line paragraph'>🚧</p>
+      </PageTransition>
     </div>
   );
 };

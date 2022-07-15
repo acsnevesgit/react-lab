@@ -16,6 +16,7 @@ const decodeHTML = function (html) {
 
 const QuizQuestion = () => {
   const { darkMode } = useContext(DarkModeContext);
+  const dispatch = useDispatch();
 
   const [questions, setQuestions] = useState([]);
   const [answerSelected, setAnswerSelected] = useState(false);
@@ -39,8 +40,6 @@ const QuizQuestion = () => {
   }, [encodedQuestions]);
 
   const questionIndex = useSelector((state) => state.quiz.index);
-
-  const dispatch = useDispatch();
 
   const question = questions[questionIndex];
   const answer = question && question.correct_answer;
@@ -101,7 +100,7 @@ const QuizQuestion = () => {
         <p className='question-ask'>{question.question}</p>
         <ul className='questions-list'>
           {options.map((option, i) => (
-            <li key={i} onClick={handleListItemClick} className={getClass(option)}>
+            <li key={i} onClick={answerSelected? null : handleListItemClick} className={getClass(option)}>
               {option}
             </li>
           ))}

@@ -10,10 +10,14 @@ import ModeSwitch from '../components/ModeSwitch';
 import reactLogoDark from '../assets/images/react-logo-dark.png';
 import reactLogoLight from '../assets/images/react-logo-light.png';
 
-import facebook from '../assets/collections/3D/facebook.png';
-import instagram from '../assets/collections/3D/instagram.png';
-import twitter from '../assets/collections/3D/twitter.png';
-import youtube from '../assets/collections/3D/youtube.png';
+import facebookw from '../assets/images/facebook-w.png';
+import facebookb from '../assets/images/facebook-b.png';
+import instagramw from '../assets/images/instagram-w.png';
+import instagramb from '../assets/images/instagram-b.png';
+import twitterw from '../assets/images/twitter-w.png';
+import twitterb from '../assets/images/twitter-b.png';
+import youtubew from '../assets/images/youtube-w.png';
+import youtubeb from '../assets/images/youtube-b.png';
 
 const Layout = () => {
   const navigate = useNavigate();
@@ -21,7 +25,7 @@ const Layout = () => {
   const { darkMode } = useContext(DarkModeContext);
 
   const [selectedIndex, setSelectedIndex] = useState(
-    () => JSON.parse(localStorage.getItem('selectedIndex')) ?? null
+    () => JSON.parse(localStorage.getItem('selectedIndex')) ?? 0
   );
 
   const stickyRef = useStickyBox({
@@ -33,25 +37,22 @@ const Layout = () => {
   const optionsSelect = [
     { id: 1, to: '/artdisplayer' },
     { id: 2, to: '/cardpayment' },
-    { id: 3, to: '/chatbot' },
-    { id: 4, to: '/contactinfo' },
-    { id: 5, to: '/customcounter' },
-    { id: 6, to: '/dateselector' },
-    { id: 7, to: '/emailhandler' },
-    { id: 8, to: '/imagegallery' },
-    { id: 9, to: '/languageselector' },
-    { id: 10, to: '/listmanagement' },
-    { id: 11, to: '/mapinteractor' },
-    { id: 12, to: '/progressbar' },
-    { id: 13, to: '/quizgame' },
-    { id: 14, to: '/reportandanalytics' },
-    { id: 15, to: '/searchfilter' },
-    { id: 16, to: '/steppereditor' },
-    { id: 17, to: '/timelinegraph' },
-    { id: 18, to: '/weatherforecast' },
+    { id: 3, to: '/contactinfo' },
+    { id: 4, to: '/customcounter' },
+    { id: 5, to: '/dateselector' },
+    { id: 6, to: '/emailhandler' },
+    { id: 7, to: '/imagegallery' },
+    { id: 8, to: '/languageselector' },
+    { id: 9, to: '/listmanagement' },
+    { id: 10, to: '/mapinteractor' },
+    { id: 11, to: '/progressbar' },
+    { id: 12, to: '/quizgame' },
+    { id: 13, to: '/reportandanalytics' },
+    { id: 14, to: '/searchfilter' },
+    { id: 15, to: '/steppereditor' },
+    { id: 16, to: '/timelinegraph' },
+    { id: 17, to: '/weatherforecast' },
   ];
-
-  console.log('tamanho', optionsSelect.length);
 
   // ------------------------------------------ Functions ---------------------------------------
 
@@ -67,7 +68,7 @@ const Layout = () => {
   };
 
   const nextListItemClick = (event) => {
-    if (selectedIndex <= optionsSelect.length-2) {
+    if (selectedIndex <= optionsSelect.length - 2) {
       navigate(`${optionsSelect[selectedIndex + 1].to}`);
       setSelectedIndex(selectedIndex + 1);
     }
@@ -81,14 +82,14 @@ const Layout = () => {
 
   return (
     <div className={darkMode ? 'dark-mode' : 'light-mode'}>
-      <nav>
+      <nav className='layout-nav'>
         <ModeSwitch />
       </nav>
       <div className='all-container'>
         <div className='content'>
           <List>
             <div className='sidebar' ref={stickyRef}>
-              <Link className='link-logo' to={'/artdisplayer'} onClick={(event) => handleListItemClick(event, 0)}>
+              <Link className='link-logo' to={'/home'} onClick={(event) => handleListItemClick(event, 0)}>
                 <img
                   className='logo'
                   src={darkMode ? reactLogoDark : reactLogoLight}
@@ -132,20 +133,10 @@ const Layout = () => {
                   <ListItemText className='choice' primary={`💳 ${t('card_payment')}`} />
                 </ListItemButton>
               </NavLink>
-              <NavLink to='/chatbot'>
+              <NavLink to='/contactinfo'>
                 <ListItemButton
                   selected={selectedIndex === 2}
                   onClick={(event) => handleListItemClick(event, 2)}
-                >
-                  <ListItemText
-                    className='choice'
-                    primary={`💬 ${t('chat_bot')}`} />
-                </ListItemButton>
-              </NavLink>
-              <NavLink to='/contactinfo'>
-                <ListItemButton
-                  selected={selectedIndex === 3}
-                  onClick={(event) => handleListItemClick(event, 3)}
                 >
                   <ListItemText
                     className='choice'
@@ -154,8 +145,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/customcounter'>
                 <ListItemButton
-                  selected={selectedIndex === 4}
-                  onClick={(event) => handleListItemClick(event, 4)}
+                  selected={selectedIndex === 3}
+                  onClick={(event) => handleListItemClick(event, 3)}
                 >
                   <ListItemText
                     className='choice'
@@ -165,8 +156,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/dateselector'>
                 <ListItemButton
-                  selected={selectedIndex === 5}
-                  onClick={(event) => handleListItemClick(event, 5)}
+                  selected={selectedIndex === 4}
+                  onClick={(event) => handleListItemClick(event, 4)}
                 >
                   <ListItemText
                     className='choice'
@@ -175,8 +166,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/emailhandler'>
                 <ListItemButton
-                  selected={selectedIndex === 6}
-                  onClick={(event) => handleListItemClick(event, 6)}
+                  selected={selectedIndex === 5}
+                  onClick={(event) => handleListItemClick(event, 5)}
                 >
                   <ListItemText
                     className='choice'
@@ -185,8 +176,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/imagegallery'>
                 <ListItemButton
-                  selected={selectedIndex === 7}
-                  onClick={(event) => handleListItemClick(event, 7)}
+                  selected={selectedIndex === 6}
+                  onClick={(event) => handleListItemClick(event, 6)}
                 >
                   <ListItemText
                     className='choice'
@@ -195,8 +186,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/languageselector'>
                 <ListItemButton
-                  selected={selectedIndex === 8}
-                  onClick={(event) => handleListItemClick(event, 8)}
+                  selected={selectedIndex === 7}
+                  onClick={(event) => handleListItemClick(event, 7)}
                 >
                   <ListItemText
                     className='choice'
@@ -206,8 +197,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/listmanagement'>
                 <ListItemButton
-                  selected={selectedIndex === 9}
-                  onClick={(event) => handleListItemClick(event, 9)}
+                  selected={selectedIndex === 8}
+                  onClick={(event) => handleListItemClick(event, 8)}
                 >
                   <ListItemText
                     className='choice'
@@ -217,8 +208,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/mapinteractor'>
                 <ListItemButton
-                  selected={selectedIndex === 10}
-                  onClick={(event) => handleListItemClick(event, 10)}
+                  selected={selectedIndex === 9}
+                  onClick={(event) => handleListItemClick(event, 9)}
                 >
                   <ListItemText
                     className='choice'
@@ -228,8 +219,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/reportandanalytics'>
                 <ListItemButton
-                  selected={selectedIndex === 11}
-                  onClick={(event) => handleListItemClick(event, 11)}
+                  selected={selectedIndex === 10}
+                  onClick={(event) => handleListItemClick(event, 10)}
                 >
                   <ListItemText
                     className='choice'
@@ -239,8 +230,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/searchfilter'>
                 <ListItemButton
-                  selected={selectedIndex === 12}
-                  onClick={(event) => handleListItemClick(event, 12)}
+                  selected={selectedIndex === 11}
+                  onClick={(event) => handleListItemClick(event, 11)}
                 >
                   <ListItemText
                     className='choice'
@@ -250,19 +241,19 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/progressbar'>
                 <ListItemButton
-                  selected={selectedIndex === 13}
-                  onClick={(event) => handleListItemClick(event, 1132)}
+                  selected={selectedIndex === 12}
+                  onClick={(event) => handleListItemClick(event, 12)}
                 >
                   <ListItemText
                     className='choice'
-                    primary={`⌛ ${t('pogress_bar')}`} />
+                    primary={`⌛ ${t('progress_bar')}`} />
                 </ListItemButton>
               </NavLink>
 
               <NavLink to='/quizgame'>
                 <ListItemButton
-                  selected={selectedIndex === 14}
-                  onClick={(event) => handleListItemClick(event, 14)}
+                  selected={selectedIndex === 13}
+                  onClick={(event) => handleListItemClick(event, 13)}
                 >
                   <ListItemText
                     className='choice'
@@ -273,8 +264,8 @@ const Layout = () => {
 
               <NavLink to='/steppereditor'>
                 <ListItemButton
-                  selected={selectedIndex === 15}
-                  onClick={(event) => handleListItemClick(event, 15)}
+                  selected={selectedIndex === 14}
+                  onClick={(event) => handleListItemClick(event, 14)}
                 >
                   <ListItemText
                     className='choice'
@@ -283,8 +274,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/timelinegraph'>
                 <ListItemButton
-                  selected={selectedIndex === 16}
-                  onClick={(event) => handleListItemClick(event, 16)}
+                  selected={selectedIndex === 15}
+                  onClick={(event) => handleListItemClick(event, 15)}
                 >
                   <ListItemText
                     className='choice'
@@ -294,8 +285,8 @@ const Layout = () => {
               </NavLink>
               <NavLink to='/weatherforecast'>
                 <ListItemButton
-                  selected={selectedIndex === 17}
-                  onClick={(event) => handleListItemClick(event, 17)}
+                  selected={selectedIndex === 16}
+                  onClick={(event) => handleListItemClick(event, 16)}
                 >
                   <ListItemText
                     className='choice'
@@ -315,22 +306,22 @@ const Layout = () => {
         <div className='social-media-logos'>
           <img
             className='media-icon'
-            src={facebook}
+            src={darkMode ? facebookw : facebookb}
             alt='facebook-logo'
           />
           <img
             className='media-icon'
-            src={instagram}
+            src={darkMode ? instagramw : instagramb}
             alt='instagram-logo'
           />
           <img
             className='media-icon'
-            src={twitter}
+            src={darkMode ? twitterw : twitterb}
             alt='twitter-logo'
           />
           <img
             className='media-icon'
-            src={youtube}
+            src={darkMode ? youtubew : youtubeb}
             alt='youtube-logo'
           />
         </div>

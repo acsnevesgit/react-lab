@@ -1,12 +1,15 @@
 import React from 'react';
+import { PageTransition } from '../components/PageTransitions';
 
 const EmailHandler = () => {
   // ------------------------------------------ Render ------------------------------------------
 
   return (
     <div className='main'>
-      <h3>Email Handler</h3>
-      <p className='first-line paragraph'>🚧</p>
+      <PageTransition>
+        <h3>Email Handler</h3>
+        <p className='first-line paragraph'>🚧</p>
+      </PageTransition>
     </div>
   );
 };

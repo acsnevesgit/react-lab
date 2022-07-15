@@ -1,7 +1,7 @@
 import Layout from './Layout';
+import Home from './Home';
 import ArtDisplayer from './ArtDisplayer';
 import CardPayment from './CardPayment';
-import ChatBot from './ChatBot';
 import CustomCounter from './CustomCounter';
 import DateSelector from './DateSelector';
 import EmailHandler from './EmailHandler';
@@ -20,9 +20,9 @@ import WeatherForecast from './WeatherForecast';
 
 export {
   Layout,
+  Home,
   ArtDisplayer,
   CardPayment,
-  ChatBot,
   CustomCounter,
   DateSelector,
   EmailHandler,

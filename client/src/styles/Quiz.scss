@@ -36,6 +36,10 @@
   }
 }
 
+.correct, .selected {
+  cursor: default;
+}
+
 .final-score {
   font-size: 1.2em;
   font-weight: bold;
@@ -91,3 +95,4 @@ input.quiz-option, select.quiz-option {
 .fetch-btn {
   margin: 2em 2em 0 0 !important;
 }
+

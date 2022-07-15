@@ -12,6 +12,7 @@ import {
 import { Bar, Doughnut, Pie } from 'react-chartjs-2';
 
 // Components
+import { PageTransition } from '../components/PageTransitions';
 import Peep10 from '../assets/collections/open-peeps/10.png';
 import Peep31 from '../assets/collections/open-peeps/31.png';
 
@@ -264,109 +265,111 @@ const ReportAnalytics = () => {
 
   return (
     <div className='main'>
-      <h3>Report and Analytics</h3>
-      <p className='first-line paragraph'>
-        Here you can view graphs that present interesting statistics about the
-        movie database (partially made-up data). These graphs make part-to-whole
-        relationships easy to grasp at a glance.
-      </p>
-      <p className='last-line paragraph'>
-        These graphs were created with the help of{' '}
-        <i>
-          <b>chart.js</b>
-        </i>{' '}
-        and{' '}
-        <i>
-          <b>react-chartjs-2</b>
-        </i>{' '}
-        packages. You can mousehover over the pie and doughnut charts to check
-        out info about each slice. You can also click on the legend labels in
-        order to filter what you want to see.
-      </p>
-      <div className='side-by-side'>
-        <div>
-          <img
-            className='activity-img-vert'
-            src={Peep10}
-            alt='person with arms crossed'
-            style={{ width: 180, height: 260, marginTop: 64, marginLeft: 0 }}
-          />
-        </div>
-        <div className='charts'>
-          <div className='pie-chart'>
-            <Pie
-              data={chartYears}
-              options={{
-                maintainAspectRatio: true,
-                responsive: true,
-                plugins: {
-                  legend: {
-                    position: 'bottom',
-                    labels: {
-                      display: true,
-                      usePointStyle: true,
-                      pointStyle: 'circle',
-                      padding: 20,
-                    },
-                    title: {
-                      display: true,
-                      text: 'Year',
-                      position: 'top',
-                      font: {
-                        weight: 'bold',
-                        size: 25,
+      <PageTransition>
+        <h3>Report and Analytics</h3>
+        <p className='first-line paragraph'>
+          Here you can view graphs that present interesting statistics about the
+          movie database (partially made-up data). These graphs make part-to-whole
+          relationships easy to grasp at a glance.
+        </p>
+        <p className='last-line paragraph'>
+          These graphs were created with the help of{' '}
+          <i>
+            <b>chart.js</b>
+          </i>{' '}
+          and{' '}
+          <i>
+            <b>react-chartjs-2</b>
+          </i>{' '}
+          packages. You can mousehover over the pie and doughnut charts to check
+          out info about each slice. You can also click on the legend labels in
+          order to filter what you want to see.
+        </p>
+        <div className='side-by-side'>
+          <div>
+            <img
+              className='activity-img-vert'
+              src={Peep10}
+              alt='person with arms crossed'
+              style={{ width: 180, height: 260, marginTop: 64, marginLeft: 0 }}
+            />
+          </div>
+          <div className='charts'>
+            <div className='pie-chart'>
+              <Pie
+                data={chartYears}
+                options={{
+                  maintainAspectRatio: true,
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'bottom',
+                      labels: {
+                        display: true,
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 20,
                       },
-                      padding: {
-                        top: 25,
+                      title: {
+                        display: true,
+                        text: 'Year',
+                        position: 'top',
+                        font: {
+                          weight: 'bold',
+                          size: 25,
+                        },
+                        padding: {
+                          top: 25,
+                        },
                       },
                     },
                   },
-                },
-              }}
-            />
-          </div>
-          <div className='doughnut-chart'>
-            <Doughnut
-              data={chartGenre}
-              options={{
-                maintainAspectRatio: true,
-                responsive: true,
-                plugins: {
-                  legend: {
-                    position: 'bottom',
-                    labels: {
-                      display: true,
-                      usePointStyle: true,
-                      pointStyle: 'circle',
-                      padding: 20,
-                    },
-                    title: {
-                      display: true,
-                      text: 'Genre',
-                      position: 'top',
-                      font: {
-                        weight: 'bold',
-                        size: 25,
+                }}
+              />
+            </div>
+            <div className='doughnut-chart'>
+              <Doughnut
+                data={chartGenre}
+                options={{
+                  maintainAspectRatio: true,
+                  responsive: true,
+                  plugins: {
+                    legend: {
+                      position: 'bottom',
+                      labels: {
+                        display: true,
+                        usePointStyle: true,
+                        pointStyle: 'circle',
+                        padding: 20,
                       },
-                      padding: {
-                        top: 25,
+                      title: {
+                        display: true,
+                        text: 'Genre',
+                        position: 'top',
+                        font: {
+                          weight: 'bold',
+                          size: 25,
+                        },
+                        padding: {
+                          top: 25,
+                        },
                       },
                     },
                   },
-                },
-              }}
+                }}
+              />
+            </div>
+          </div>
+          <div>
+            <img
+              className='activity-img-vert'
+              src={Peep31}
+              alt='person sitting'
+              style={{ width: 220, height: 300, marginTop: 800, marginLeft: 0 }}
             />
           </div>
         </div>
-        <div>
-          <img
-            className='activity-img-vert'
-            src={Peep31}
-            alt='person sitting'
-            style={{ width: 220, height: 300, marginTop: 800, marginLeft: 0 }}
-          />
-        </div>
-      </div>
+      </PageTransition>
     </div>
   );
 };

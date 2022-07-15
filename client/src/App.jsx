@@ -4,9 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import {
   Layout,
+  Home,
   ArtDisplayer,
   CardPayment,
-  ChatBot,
   ContactInfo,
   CustomCounter,
   DateSelector,
@@ -35,10 +35,10 @@ const App = () => {
       <DarkModeProvider>
         <Router>
           <Routes>
+            <Route path='home' element={<Home />} />
             <Route path='/' element={<Layout />}>
               <Route path='artdisplayer' element={<ArtDisplayer />} />
               <Route path='cardpayment' element={<CardPayment />} />
-              <Route path='chatbot' element={<ChatBot />} />
               <Route path='contactinfo' element={<ContactInfo />} />
               <Route path='customcounter' element={<CustomCounter />} />
               <Route path='dateselector' element={<DateSelector />} />
