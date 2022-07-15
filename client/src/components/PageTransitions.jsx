@@ -18,7 +18,7 @@ const variants = {
 
 const variantsHome = {
   initial: {
-    opacity: 0,
+    opacity: 0.8,
   },
   enter: {
     opacity: 1,
@@ -27,11 +27,18 @@ const variantsHome = {
       ease: [0.5, 1, 0.5, 1],
     },
   },
+  exit: {
+    opacity: 1,
+    transition: {
+      duration: 2,
+      ease: [0.5, 1, 0.5, 1],
+    },
+  },
 };
 
 const PageTransition = ({ children }) => (
   <AnimatePresence>
-    <motion.div initial='initial' animate='enter' variants={variants}>
+    <motion.div initial='initial' animate='enter' exit='exit' variants={variants}>
       {children}
     </motion.div>
   </AnimatePresence>
@@ -39,10 +46,10 @@ const PageTransition = ({ children }) => (
 
 const PageTransitionHome = ({ children }) => (
   <AnimatePresence>
-    <motion.div initial='initial' animate='enter' variants={variantsHome}>
+    <motion.div initial='initial' animate='enter' exit='exit' variants={variants}>
       {children}
     </motion.div>
   </AnimatePresence>
 );
 
-export {PageTransition, PageTransitionHome};
+export { PageTransition, PageTransitionHome };

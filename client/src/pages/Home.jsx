@@ -5,8 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 // Components
 import { DarkModeContext } from '../contexts/DarkModeContext';
+import { PageTransitionHome } from '../components/PageTransitions';
+import Typewriter from '../components/Typewriter';
 import ModeSwitch from '../components/ModeSwitch';
-import {PageTransitionHome} from '../components/PageTransitions';
 import Peep1 from '../assets/images/1.png';
 import Peep2 from '../assets/images/2.png';
 import Peep3 from '../assets/images/3.png';
@@ -41,6 +42,7 @@ const Home = () => {
             style={{ width: 170, height: 460, marginLeft: -60, marginRight: 80 }}
           />
           <div className='welcome'>
+            <Typewriter content={'Hello...'} speed={100} />
             <h1>{t('welcome')}</h1>
             <Button className='home-btn' onClick={handleClick} variant='contained' size='large'>Enter</Button>
             <p className='first-line paragraph'>( * Enter at your own risk ⚠️ )</p>
