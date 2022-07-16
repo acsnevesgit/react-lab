@@ -42,11 +42,11 @@ const Home = () => {
             style={{ width: 170, height: 460, marginLeft: -60, marginRight: 80 }}
           />
           <div className='welcome'>
-            <Typewriter content={'Hello...'} speed={100} />
+            {/* <Typewriter content={'Hello...'} speed={100} /> */}
             <h1>{t('welcome')}</h1>
-            <Button className='home-btn' onClick={handleClick} variant='contained' size='large'>Enter</Button>
+            <Button className='home-btn' onClick={handleClick} variant='contained' size='large'><span className='noselect'>Enter</span></Button>
             <p className='first-line paragraph'>( * Enter at your own risk ⚠️ )</p>
-            <p>( ** Feel free to experiment or even break the code 🤯 )</p>
+            <p>( ** Feel free to experiment 🧪 )</p>
           </div>
           <img
             className='activity-img-vert'
